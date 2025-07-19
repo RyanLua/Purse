@@ -99,7 +99,25 @@ local VRService = game:GetService("VRService")
 local GamepadService = game:GetService("GamepadService")
 RobloxGui:WaitForChild("Modules"):WaitForChild("TenFootInterface")
 local IsTenFootInterface = GuiService.IsTenFootInterface -- ROBLOX deviation: use GuiService
-local Create = require(CorePackages.Workspace.Packages.AppCommonLib).Create
+local function Create(instanceType) -- ROBLOX deviation: use a custom Create function
+	return function(data)
+		local obj = Instance.new(instanceType)
+		local parent = nil
+		for k, v in pairs(data) do
+			if type(k) == "number" then
+				v.Parent = obj
+			elseif k == "Parent" then
+				parent = v
+			else
+				obj[k] = v
+			end
+		end
+		if parent then
+			obj.Parent = parent
+		end
+		return obj
+	end
+end
 local GameTranslator = require(Modules.GameTranslator)
 
 pcall(function()
