@@ -1,0 +1,41 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/ryanlua/templates/tree/main/src/roblox
+{
+	"name": "Roblox",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+	"features": {
+		"ghcr.io/ryanlua/features/rojo:0.2.1": {
+			"version": "latest",
+			"toolchainManager": "rokit"
+		}
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"kampfkarren.selene-vscode",
+				"johnnymorganz.stylua",
+				"johnnymorganz.luau-lsp"
+			]
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [34872],
+	"portsAttributes": {
+			"34872": {
+				"label": "Rojo"
+			}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "rokit install --force",
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "root"
+}
