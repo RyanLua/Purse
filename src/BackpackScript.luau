@@ -11,7 +11,6 @@ local CorePackages = game:GetService("CorePackages")
 local Modules = RobloxGui.Modules
 -- local InExperienceAppChatModal = require(CorePackages.Workspace.Packages.AppChat).App.InExperienceAppChatModal
 -- local getFFlagAppChatCoreUIConflictFix = require(CorePackages.Workspace.Packages.SharedFlags).getFFlagAppChatCoreUIConflictFix
--- local FFlagMountCoreGuiBackpack = require(Modules.Flags.FFlagMountCoreGuiBackpack)
 local FFlagMountCoreGuiBackpack = true -- ROBLOX deviation: always true for now
 -- local isInExperienceUIVREnabled = require(CorePackages.Workspace.Packages.SharedExperimentDefinition).isInExperienceUIVREnabled
 
@@ -100,7 +99,7 @@ local ContextActionService = game:GetService("ContextActionService")
 local VRService = game:GetService("VRService")
 local GamepadService = game:GetService("GamepadService")
 RobloxGui:WaitForChild("Modules"):WaitForChild("TenFootInterface")
-local IsTenFootInterface = require(Modules.TenFootInterface):IsEnabled()
+local IsTenFootInterface = GuiService.IsTenFootInterface -- ROBLOX deviation: use GuiService
 local Create = require(CorePackages.Workspace.Packages.AppCommonLib).Create
 local GameTranslator = require(Modules.GameTranslator)
 
@@ -1987,7 +1986,6 @@ OnCoreGuiChanged(healthType, StarterGui:GetCoreGuiEnabled(healthType))
 
 GuiService.MenuOpened:Connect(function()
 	-- ROBLOX deviation: remove FFlag isInExperienceUIVREnabled
-	-- if BackpackScript.IsOpen and (if isInExperienceUIVREnabled then not VRService.VREnabled else true) then
 	if BackpackScript.IsOpen then
 		BackpackScript.OpenClose()
 	end
