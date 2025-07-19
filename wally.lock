@@ -8,6 +8,6 @@ version = "3.2.5"
 dependencies = []
 
 [[package]]
-name = "root/purse"
+name = "purse"
 version = "0.1.0"
 dependencies = [["topbarplus", "1foreverhd/topbarplus@3.2.5"]]
