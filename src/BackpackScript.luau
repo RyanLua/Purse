@@ -4,7 +4,7 @@
 -- Backpack Version 5.1
 -- OnlyTwentyCharacters, SolarCrane
 
-local UserGameSettings = UserSettings():GetService("UserGameSettings")
+local GuiService = game:GetService("GuiService") -- ROBLOX deviation: use GuiService instead of UserGameSettings
 local CoreGui = game:GetService("CoreGui")
 local RobloxGui = CoreGui:WaitForChild("RobloxGui")
 local CorePackages = game:GetService("CorePackages")
@@ -30,7 +30,7 @@ local FONT_SIZE = Enum.FontSize.Size14
 local ICON_BUFFER = 5
 
 local BACKGROUND_FADE_DEFAULT = 0.50
-local backgroundFade = BACKGROUND_FADE_DEFAULT * UserGameSettings.PreferredTransparency
+local backgroundFade = BACKGROUND_FADE_DEFAULT * GuiService.PreferredTransparency -- ROBLOX deviation: use GuiService instead of UserGameSettings
 local BACKGROUND_COLOR = Color3.new(31 / 255, 31 / 255, 31 / 255)
 
 local VR_FADE_TIME = 1
@@ -40,7 +40,7 @@ local SLOT_DRAGGABLE_COLOR = Color3.new(49 / 255, 49 / 255, 49 / 255)
 local SLOT_EQUIP_COLOR = Color3.new(90 / 255, 142 / 255, 233 / 255)
 local SLOT_EQUIP_THICKNESS = 0.1 -- Relative
 local SLOT_FADE_LOCKED_DEFAULT = 0.50 -- Locked means undraggable
-local slotFadeLocked = SLOT_FADE_LOCKED_DEFAULT * UserGameSettings.PreferredTransparency
+local slotFadeLocked = SLOT_FADE_LOCKED_DEFAULT * GuiService.PreferredTransparency -- ROBLOX deviation: use GuiService instead of UserGameSettings
 local SLOT_BORDER_COLOR = Color3.new(1, 1, 1) -- Appears when dragging
 
 local TOOLTIP_BUFFER = 6
@@ -73,7 +73,7 @@ local SEARCH_TEXT = "   Search"
 local SEARCH_TEXT_OFFSET_FROMLEFT = 0
 local SEARCH_BACKGROUND_COLOR = Color3.new(0.37, 0.37, 0.37)
 local SEARCH_BACKGROUND_FADE_DEFAULT = 0.15
-local searchBackgroundFade = SEARCH_BACKGROUND_FADE_DEFAULT * UserGameSettings.PreferredTransparency
+local searchBackgroundFade = SEARCH_BACKGROUND_FADE_DEFAULT * GuiService.PreferredTransparency -- ROBLOX deviation: use GuiService instead of UserGameSettings
 
 local DOUBLE_CLICK_TIME = 0.5
 
@@ -94,7 +94,6 @@ local GAMEPAD_INPUT_TYPES = {
 local PlayersService = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
 local StarterGui = game:GetService("StarterGui")
-local GuiService = game:GetService("GuiService")
 local ContextActionService = game:GetService("ContextActionService")
 local VRService = game:GetService("VRService")
 local GamepadService = game:GetService("GamepadService")
@@ -2001,9 +2000,9 @@ end)
 -- end
 
 local function OnPreferredTransparencyChanged()
-	local preferredTransparency = UserGameSettings.PreferredTransparency
+	local preferredTransparency = GuiService.PreferredTransparency -- ROBLOX deviation: use GuiService instead of UserGameSettings
 
-	backgroundFade = BACKGROUND_FADE_DEFAULT * UserGameSettings.PreferredTransparency
+	backgroundFade = BACKGROUND_FADE_DEFAULT * GuiService.PreferredTransparency -- ROBLOX deviation: use GuiService instead of UserGameSettings
 	InventoryFrame.BackgroundTransparency = backgroundFade
 
 	slotFadeLocked = SLOT_FADE_LOCKED_DEFAULT * preferredTransparency
@@ -2011,7 +2010,7 @@ local function OnPreferredTransparencyChanged()
 		slot.Frame.BackgroundTransparency = slotFadeLocked
 	end
 
-	searchBackgroundFade = SEARCH_BACKGROUND_FADE_DEFAULT * UserGameSettings.PreferredTransparency
+	searchBackgroundFade = SEARCH_BACKGROUND_FADE_DEFAULT * GuiService.PreferredTransparency -- ROBLOX deviation: use GuiService instead of UserGameSettings
 	searchFrame.BackgroundTransparency = searchBackgroundFade
 end
 UserGameSettings:GetPropertyChangedSignal("PreferredTransparency"):connect(OnPreferredTransparencyChanged)
