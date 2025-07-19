@@ -9,10 +9,11 @@ local CoreGui = game:GetService("CoreGui")
 local RobloxGui = CoreGui:WaitForChild("RobloxGui")
 local CorePackages = game:GetService("CorePackages")
 local Modules = RobloxGui.Modules
-local InExperienceAppChatModal = require(CorePackages.Workspace.Packages.AppChat).App.InExperienceAppChatModal
+-- local InExperienceAppChatModal = require(CorePackages.Workspace.Packages.AppChat).App.InExperienceAppChatModal
 -- local getFFlagAppChatCoreUIConflictFix =
 -- 	require(CorePackages.Workspace.Packages.SharedFlags).getFFlagAppChatCoreUIConflictFix
-local FFlagMountCoreGuiBackpack = require(Modules.Flags.FFlagMountCoreGuiBackpack)
+-- local FFlagMountCoreGuiBackpack = require(Modules.Flags.FFlagMountCoreGuiBackpack)
+local FFlagMountCoreGuiBackpack = true -- ROBLOX deviation: always true for now
 local isInExperienceUIVREnabled =
 	require(CorePackages.Workspace.Packages.SharedExperimentDefinition).isInExperienceUIVREnabled
 
@@ -1992,14 +1993,14 @@ GuiService.MenuOpened:Connect(function()
 	end
 end)
 
--- ROBLOX deviation: replace getFFlagAppChatCoreUIConflictFix() with true
-if true then
-	InExperienceAppChatModal.default.visibilitySignal.Event:Connect(function(visible)
-		if visible and BackpackScript.IsOpen then
-			BackpackScript.OpenClose()
-		end
-	end)
-end
+-- ROBLOX deviation: remove fflag AppChatCoreUIConflictFix
+-- if getFFlagAppChatCoreUIConflictFix() then
+-- 	InExperienceAppChatModal.default.visibilitySignal.Event:Connect(function(visible)
+-- 		if visible and BackpackScript.IsOpen then
+-- 			BackpackScript.OpenClose()
+-- 		end
+-- 	end)
+-- end
 
 local function OnPreferredTransparencyChanged()
 	local preferredTransparency = UserGameSettings.PreferredTransparency
