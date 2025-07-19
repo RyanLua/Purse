@@ -7,8 +7,8 @@
 local GuiService = game:GetService("GuiService") -- ROBLOX deviation: use GuiService instead of UserGameSettings
 local CoreGui = game:GetService("CoreGui")
 local RobloxGui = CoreGui:WaitForChild("RobloxGui")
-local CorePackages = game:GetService("CorePackages")
-local Modules = RobloxGui.Modules
+-- local CorePackages = game:GetService("CorePackages")
+-- local Modules = RobloxGui.Modules
 -- local InExperienceAppChatModal = require(CorePackages.Workspace.Packages.AppChat).App.InExperienceAppChatModal
 -- local getFFlagAppChatCoreUIConflictFix = require(CorePackages.Workspace.Packages.SharedFlags).getFFlagAppChatCoreUIConflictFix
 local FFlagMountCoreGuiBackpack = true -- ROBLOX deviation: always true for now
