@@ -1,4 +1,5 @@
 --!nonstrict
+-- ROBLOX upstream https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/829cb13cc98870ddbcf4ba6bd48b774a87ae549f/scripts/CoreScripts/Modules/BackpackScript.lua#L17
 
 -- Backpack Version 5.1
 -- OnlyTwentyCharacters, SolarCrane
@@ -9,8 +10,8 @@ local RobloxGui = CoreGui:WaitForChild("RobloxGui")
 local CorePackages = game:GetService("CorePackages")
 local Modules = RobloxGui.Modules
 local InExperienceAppChatModal = require(CorePackages.Workspace.Packages.AppChat).App.InExperienceAppChatModal
-local getFFlagAppChatCoreUIConflictFix =
-	require(CorePackages.Workspace.Packages.SharedFlags).getFFlagAppChatCoreUIConflictFix
+-- local getFFlagAppChatCoreUIConflictFix =
+-- 	require(CorePackages.Workspace.Packages.SharedFlags).getFFlagAppChatCoreUIConflictFix
 local FFlagMountCoreGuiBackpack = require(Modules.Flags.FFlagMountCoreGuiBackpack)
 local isInExperienceUIVREnabled =
 	require(CorePackages.Workspace.Packages.SharedExperimentDefinition).isInExperienceUIVREnabled
@@ -1991,7 +1992,8 @@ GuiService.MenuOpened:Connect(function()
 	end
 end)
 
-if getFFlagAppChatCoreUIConflictFix() then
+-- ROBLOX deviation: replace getFFlagAppChatCoreUIConflictFix() with true
+if true then
 	InExperienceAppChatModal.default.visibilitySignal.Event:Connect(function(visible)
 		if visible and BackpackScript.IsOpen then
 			BackpackScript.OpenClose()
