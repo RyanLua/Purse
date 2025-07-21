@@ -1,5 +1,5 @@
 --!nonstrict
--- ROBLOX upstream https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/829cb13cc98870ddbcf4ba6bd48b774a87ae549f/scripts/CoreScripts/Modules/BackpackScript.lua#L17
+-- ROBLOX upstream https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/829cb13cc98870ddbcf4ba6bd48b774a87ae549f/scripts/CoreScripts/Modules/BackpackScript.lua
 
 -- Backpack Version 5.1
 -- OnlyTwentyCharacters, SolarCrane
