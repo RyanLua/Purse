@@ -1282,7 +1282,7 @@ end
 function changeSlot(slot)
 	local gamepadCursorEnabled = GamepadService.GamepadCursorEnabled
 
-	if slot.Frame == GuiService.SelectedCoreObject and not gamepadCursorEnabled then
+	if slot.Frame == GuiService.SelectedObject and not gamepadCursorEnabled then
 		local currentlySelectedSlot = getGamepadSwapSlot()
 
 		if currentlySelectedSlot then
@@ -1292,15 +1292,15 @@ function changeSlot(slot)
 				VRInventorySelector.SelectionImageObject.Visible = false
 
 				if slot.Index > NumberOfHotbarSlots and not slot.Tool then
-					if GuiService.SelectedCoreObject == slot.Frame then
-						GuiService.SelectedCoreObject = currentlySelectedSlot.Frame
+					if GuiService.SelectedObject == slot.Frame then
+						GuiService.SelectedObject = currentlySelectedSlot.Frame
 					end
 					slot:Delete()
 				end
 
 				if currentlySelectedSlot.Index > NumberOfHotbarSlots and not currentlySelectedSlot.Tool then
-					if GuiService.SelectedCoreObject == currentlySelectedSlot.Frame then
-						GuiService.SelectedCoreObject = slot.Frame
+					if GuiService.SelectedObject == currentlySelectedSlot.Frame then
+						GuiService.SelectedObject = slot.Frame
 					end
 					currentlySelectedSlot:Delete()
 				end
@@ -1364,7 +1364,7 @@ function enableGamepadInventoryControl()
 
 	-- Gaze select will automatically select the object for us!
 	if not UseGazeSelection() then
-		GuiService.SelectedCoreObject = HotbarFrame:FindFirstChild("1")
+		GuiService.SelectedObject = HotbarFrame:FindFirstChild("1")
 	end
 end
 
@@ -1378,8 +1378,8 @@ function disableGamepadInventoryControl()
 		end
 	end
 
-	if GuiService.SelectedCoreObject and GuiService.SelectedCoreObject:IsDescendantOf(MainFrame) then
-		GuiService.SelectedCoreObject = nil
+	if GuiService.SelectedObject and GuiService.SelectedObject:IsDescendantOf(MainFrame) then
+		GuiService.SelectedObject = nil
 	end
 end
 
@@ -1877,12 +1877,12 @@ do -- Make the Inventory expand/collapse arrow (unless TopBar)
 		if state ~= Enum.UserInputState.Begin then
 			return
 		end
-		if not GuiService.SelectedCoreObject then
+		if not GuiService.SelectedObject then
 			return
 		end
 
 		for i = 1, NumberOfHotbarSlots do
-			if Slots[i].Frame == GuiService.SelectedCoreObject and Slots[i].Tool then
+			if Slots[i].Frame == GuiService.SelectedObject and Slots[i].Tool then
 				Slots[i]:MoveToInventory()
 				return
 			end
