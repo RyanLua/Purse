@@ -2038,6 +2038,6 @@ local function OnPreferredTransparencyChanged()
 	searchBackgroundFade = SEARCH_BACKGROUND_FADE_DEFAULT * GuiService.PreferredTransparency -- ROBLOX deviation: use GuiService instead of UserGameSettings
 	searchFrame.BackgroundTransparency = searchBackgroundFade
 end
-UserGameSettings:GetPropertyChangedSignal("PreferredTransparency"):connect(OnPreferredTransparencyChanged)
+GuiService:GetPropertyChangedSignal("PreferredTransparency"):connect(OnPreferredTransparencyChanged)
 
 return BackpackScript
