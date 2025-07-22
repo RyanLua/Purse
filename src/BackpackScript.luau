@@ -5,8 +5,12 @@
 -- OnlyTwentyCharacters, SolarCrane
 
 local GuiService = game:GetService("GuiService") -- ROBLOX deviation: use GuiService instead of UserGameSettings
-local CoreGui = game:GetService("CoreGui")
-local RobloxGui = CoreGui:WaitForChild("RobloxGui")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local playerGui = player.PlayerGui
+local BackpackGui = Instance.new("ScreenGui") -- ROBLOX deviation: Use BackpackGui instead of RobloxGui (CoreGui only)
+BackpackGui.Name = "BackpackGui"
+BackpackGui.Parent = playerGui
 -- local CorePackages = game:GetService("CorePackages")
 -- local Modules = RobloxGui.Modules
 -- local InExperienceAppChatModal = require(CorePackages.Workspace.Packages.AppChat).App.InExperienceAppChatModal
@@ -97,7 +101,7 @@ local StarterGui = game:GetService("StarterGui")
 local ContextActionService = game:GetService("ContextActionService")
 local VRService = game:GetService("VRService")
 local GamepadService = game:GetService("GamepadService")
-RobloxGui:WaitForChild("Modules"):WaitForChild("TenFootInterface")
+-- RobloxGui:WaitForChild("Modules"):WaitForChild("TenFootInterface")
 local IsTenFootInterface = GuiService.IsTenFootInterface -- ROBLOX deviation: use GuiService
 local function Create(instanceType) -- ROBLOX deviation: use a custom Create function
 	return function(data)
@@ -1478,11 +1482,11 @@ end
 MainFrame = NewGui("Frame", "Backpack")
 if FFlagMountCoreGuiBackpack then
 	if StarterGui:GetCoreGuiEnabled(Enum.CoreGuiType.Backpack) then
-		MainFrame.Parent = RobloxGui
+		MainFrame.Parent = BackpackGui
 	end
 else
 	MainFrame.Visible = false
-	MainFrame.Parent = RobloxGui
+	MainFrame.Parent = BackpackGui
 end
 
 -- Make the HotbarFrame, which holds only the Hotbar Slots
