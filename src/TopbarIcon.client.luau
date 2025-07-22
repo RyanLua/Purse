@@ -3,13 +3,14 @@
 local BackpackScript = require(script.Parent.BackpackScript)
 local Icon = require(script.Parent.Packages:WaitForChild("topbarplus"))
 
-local ARROW_IMAGE_OPEN = "rbxasset://textures/ui/Backpack_Open.png"
-local ARROW_IMAGE_CLOSE = "rbxasset://textures/ui/Backpack_Close.png"
+local iconSelectedImage = "rbxasset://textures/ui/TopBar/inventoryOn.png"
+local iconDeselectedImage = "rbxasset://textures/ui/TopBar/inventoryOff.png"
 
 local icon = Icon.new()
-icon:setCaption("Backpack")
-icon:setImage(ARROW_IMAGE_OPEN, "Selected")
-icon:setImage(ARROW_IMAGE_CLOSE, "Deselected")
+icon:setCaption("Inventory")
+icon:setImage(iconSelectedImage, "Selected")
+icon:setImage(iconDeselectedImage, "Deselected")
+icon:setImageScale(1)
 icon:autoDeselect(false)
 icon:setOrder(-1)
 
