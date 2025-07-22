@@ -4,6 +4,8 @@
 local LocalizationService = game:GetService("LocalizationService")
 local Players = game:GetService("Players")
 
+local CoreScriptTranslateGameText = false -- ROBLOX deviation: Don't use CoreGui
+
 local playerTranslator = nil
 local player = nil
 local localeId = nil
@@ -82,12 +84,12 @@ local function registerGui(element, context, text)
 		updateRegistryInfo(registryInfoMap[element], context, text)
 	end
 end
-
-Players:GetPropertyChangedSignal("LocalPlayer"):Connect(function()
-	reset()
-	getTranslator()
-end)
-
+if CoreScriptTranslateGameText then
+	Players:GetPropertyChangedSignal("LocalPlayer"):Connect(function()
+		reset()
+		getTranslator()
+	end)
+end
 local GameTranslator = {}
 
 GameTranslator.LocaleChanged = localeChangedEvent.Event
@@ -100,9 +102,13 @@ GameTranslator.LocaleChanged = localeChangedEvent.Event
 -- and the CoreScriptLocalization table, NOT user tables with the game locale ID.
 
 function GameTranslator:TranslateGameText(context, text)
-	local translator = getTranslator()
-	if translator then
-		return translator:RobloxOnlyTranslate(context, text)
+	if CoreScriptTranslateGameText then
+		local translator = getTranslator()
+		if translator then
+			return translator:RobloxOnlyTranslate(context, text)
+		else
+			return text
+		end
 	else
 		return text
 	end
@@ -114,11 +120,15 @@ local function retranslateAll()
 	end
 end
 
-LocalizationService.AutoTranslateWillRun:Connect(retranslateAll)
+if CoreScriptTranslateGameText then
+	LocalizationService.AutoTranslateWillRun:Connect(retranslateAll)
+end
 
 function GameTranslator:TranslateAndRegister(element, context, text)
-	element.Text = self:TranslateGameText(context, text)
-	registerGui(element, context, text)
+	if CoreScriptTranslateGameText then
+		element.Text = self:TranslateGameText(context, text)
+		registerGui(element, context, text)
+	end
 	return text
 end
 
