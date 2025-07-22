@@ -1424,39 +1424,40 @@ function gamepadConnected()
 	end
 end
 
-local function OnCoreGuiChanged(coreGuiType, enabled)
-	-- Check for enabling/disabling the whole thing
-	if coreGuiType == Enum.CoreGuiType.Backpack or coreGuiType == Enum.CoreGuiType.All then
-		enabled = enabled and TopbarEnabled
-		WholeThingEnabled = enabled
-		if FFlagMountCoreGuiBackpack then
-			if enabled then
-				MainFrame.Parent = RobloxGui
-			else
-				MainFrame.Parent = nil
-			end
-		else
-			MainFrame.Visible = enabled
-		end
+-- ROBLOX deviation: Disable CoreGui toggling for Backpack
+-- local function OnCoreGuiChanged(coreGuiType, enabled)
+-- 	-- Check for enabling/disabling the whole thing
+-- 	if coreGuiType == Enum.CoreGuiType.Backpack or coreGuiType == Enum.CoreGuiType.All then
+-- 		enabled = enabled and TopbarEnabled
+-- 		WholeThingEnabled = enabled
+-- 		if FFlagMountCoreGuiBackpack then
+-- 			if enabled then
+-- 				MainFrame.Parent = RobloxGui
+-- 			else
+-- 				MainFrame.Parent = nil
+-- 			end
+-- 		else
+-- 			MainFrame.Visible = enabled
+-- 		end
 
-		-- Eat/Release hotkeys (Doesn't affect UserInputService)
-		for _, keyString in pairs(HotkeyStrings) do
-			if enabled then
-				GuiService:AddKey(keyString)
-			else
-				GuiService:RemoveKey(keyString)
-			end
-		end
+-- 		-- Eat/Release hotkeys (Doesn't affect UserInputService)
+-- 		for _, keyString in pairs(HotkeyStrings) do
+-- 			if enabled then
+-- 				GuiService:AddKey(keyString)
+-- 			else
+-- 				GuiService:RemoveKey(keyString)
+-- 			end
+-- 		end
 
-		if enabled then
-			if FullHotbarSlots >= 1 then
-				bindBackpackHotbarAction()
-			end
-		else
-			unbindBackpackHotbarAction()
-		end
-	end
-end
+-- 		if enabled then
+-- 			if FullHotbarSlots >= 1 then
+-- 				bindBackpackHotbarAction()
+-- 			end
+-- 		else
+-- 			unbindBackpackHotbarAction()
+-- 		end
+-- 	end
+-- end
 
 local function MakeVRRoundButton(name, image)
 	local newButton = NewGui("ImageButton", name)
@@ -1993,17 +1994,19 @@ do -- Hotkey stuff
 	end)
 end
 
-function BackpackScript:TopbarEnabledChanged(enabled)
-	TopbarEnabled = enabled
-	-- Update coregui to reflect new topbar status
-	OnCoreGuiChanged(Enum.CoreGuiType.Backpack, StarterGui:GetCoreGuiEnabled(Enum.CoreGuiType.Backpack))
-end
+-- ROBLOX deviation: Disable CoreGui toggling for Backpack
+-- function BackpackScript:TopbarEnabledChanged(enabled)
+-- 	TopbarEnabled = enabled
+-- 	-- Update coregui to reflect new topbar status
+-- 	OnCoreGuiChanged(Enum.CoreGuiType.Backpack, StarterGui:GetCoreGuiEnabled(Enum.CoreGuiType.Backpack))
+-- end
 
+-- ROBLOX deviation: Disable CoreGui toggling for Backpack
 -- Listen to enable/disable signals from the StarterGui
-StarterGui.CoreGuiChangedSignal:connect(OnCoreGuiChanged)
-local backpackType, healthType = Enum.CoreGuiType.Backpack, Enum.CoreGuiType.Health
-OnCoreGuiChanged(backpackType, StarterGui:GetCoreGuiEnabled(backpackType))
-OnCoreGuiChanged(healthType, StarterGui:GetCoreGuiEnabled(healthType))
+-- StarterGui.CoreGuiChangedSignal:connect(OnCoreGuiChanged)
+-- local backpackType, healthType = Enum.CoreGuiType.Backpack, Enum.CoreGuiType.Health
+-- OnCoreGuiChanged(backpackType, StarterGui:GetCoreGuiEnabled(backpackType))
+-- OnCoreGuiChanged(healthType, StarterGui:GetCoreGuiEnabled(healthType))
 
 GuiService.MenuOpened:Connect(function()
 	-- ROBLOX deviation: remove FFlag isInExperienceUIVREnabled
