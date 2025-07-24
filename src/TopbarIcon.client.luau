@@ -13,7 +13,7 @@ icon:setImage(iconDeselectedImage, "Deselected")
 icon:setImageScale(1)
 icon:autoDeselect(false)
 icon:setOrder(-1)
-icon:bindToggleKey(Enum.KeyCode.Backquote)
+icon:setCaptionHint(Enum.KeyCode.Backquote)
 
 icon.toggled:Connect(function(): ()
 	BackpackScript.OpenClose()
