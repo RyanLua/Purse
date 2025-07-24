@@ -11,4 +11,4 @@ local function handleAction(actionName, inputState, _inputObject)
 	end
 end
 
-ContextActionService:BindAction(ACTION_NAME, handleAction, true, Enum.KeyCode.Backquote)
+ContextActionService:BindAction(ACTION_NAME, handleAction, false, Enum.KeyCode.Backquote)
