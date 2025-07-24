@@ -1,0 +1,16 @@
+{
+  "name": "Develop Purse",
+  "emitLegacyScripts": false,
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Purse": {
+        "$path": "src",
+        "Packages": {
+          "$path": "Packages"
+        }
+      }
+    }
+  }
+}

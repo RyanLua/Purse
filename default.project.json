@@ -1,5 +1,6 @@
 {
   "name": "Purse",
+  "emitLegacyScripts": false,
   "tree": {
     "$path": "src",
     "Packages": {
