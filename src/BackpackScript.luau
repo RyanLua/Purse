@@ -102,7 +102,7 @@ local ContextActionService = game:GetService("ContextActionService")
 local VRService = game:GetService("VRService")
 local GamepadService = game:GetService("GamepadService")
 -- RobloxGui:WaitForChild("Modules"):WaitForChild("TenFootInterface")
-local IsTenFootInterface = GuiService.IsTenFootInterface -- ROBLOX deviation: use GuiService
+local IsTenFootInterface = GuiService:IsTenFootInterface() -- ROBLOX deviation: use GuiService
 local function Create(instanceType) -- ROBLOX deviation: use a custom Create function
 	return function(data)
 		local obj = Instance.new(instanceType)
