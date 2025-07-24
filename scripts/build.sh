@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "Building Rojo project..."
+echo "Building Rojo projects..."
 
 BUILD_DIR="builds"
 
@@ -13,11 +13,9 @@ cd "$BUILD_DIR"
 
 # Build .rbxm file
 rojo build --output builds/Purse.rbxm default.project.json
-echo ".rbxm built successfully"
 
 # Build  .rbxmx file
 rojo build --output builds/Purse.rbxmx default.project.json
 cd ..
-echo ".rbxmx built successfully"
 
 echo "Build completed successfully!"

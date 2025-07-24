@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-echo Building Rojo project...
+echo Building Rojo projects...
 
 set "BUILD_DIR=builds"
 
@@ -13,11 +13,9 @@ cd "%BUILD_DIR%"
 
 REM Build .rbxm file
 rojo build --output ..\builds\Purse.rbxm ..\default.project.json
-echo .rbxm built successfully
 
 REM Build .rbxmx file
 rojo build --output ..\builds\Purse.rbxmx ..\default.project.json
-echo .rbxmx built successfully
 
 echo Build completed successfully!
 cd ..
