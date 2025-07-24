@@ -1,0 +1,7 @@
+site_name: Purse
+site_url: https://ryanlua.github.io/Purse/
+repo_name: RyanLua/Purse
+repo_url: https://github.com/RyanLua/Purse
+
+theme:
+  name: material
