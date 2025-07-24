@@ -1,8 +1,8 @@
 [package]
-name = "purse"
+name = "ryanlua/purse"
 version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
-topbarplus = "1foreverhd/topbarplus@3.2.5"
+topbarplus = "1foreverhd/topbarplus@3.3.1"
