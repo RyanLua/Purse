@@ -5,6 +5,8 @@ repo_url: https://github.com/RyanLua/Purse
 
 theme:
   name: material
+  features:
+    - navigation.footer
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -25,5 +27,5 @@ theme:
 
 nav:
   - Home: index.md
-  - API Reference: api-reference.md
   - Philosophy: philosophy.md
+  - API Reference: api-reference.md
