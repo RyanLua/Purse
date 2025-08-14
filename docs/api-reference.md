@@ -6,6 +6,8 @@
 BackpackScript.OpenClose() -> nil
 ```
 
+Toggles the backpack open/closed state. If the backpack is currently open, it will close it. If closed, it will open it.
+
 ## Properties
 
 ### IsHotbarVisible
@@ -14,23 +16,15 @@ BackpackScript.OpenClose() -> nil
 BackpackScript.IsHotbarVisible -> boolean
 ```
 
+Returns if the hotbar is currently visible to the player.
+
 ### IsOpen
 
 ```
 BackpackScript.IsOpen -> boolean
 ```
 
-### ModuleName
-
-```
-BackpackScript.ModuleName -> string
-```
-
-### KeepVRTopbarOpen
-
-```
-BackpackScript.KeepVRTopbarOpen -> boolean
-```
+Returns if the inventory is currently open to the player.
 
 ### ModuleName
 
@@ -38,11 +32,15 @@ BackpackScript.KeepVRTopbarOpen -> boolean
 BackpackScript.ModuleName -> string
 ```
 
+Returns the module name. This will always return "Backpack".
+
 ### KeepVRTopbarOpen
 
 ```
 BackpackScript.KeepVRTopbarOpen -> boolean
 ```
+
+Returns `true`.
 
 ### VRIsExclusive
 
@@ -50,17 +48,23 @@ BackpackScript.KeepVRTopbarOpen -> boolean
 BackpackScript.VRIsExclusive -> boolean
 ```
 
+Returns `true`.
+
 ### VRClosesNonExclusive
 
 ```
 BackpackScript.VRClosesNonExclusive -> boolean
 ```
 
+Returns `true`.
+
 ### IsInventoryEmpty
 
 ```
 BackpackScript.IsInventoryEmpty -> boolean
 ```
+
+Returns if the inventory is empty.
 
 ## Events
 
@@ -70,11 +74,15 @@ BackpackScript.IsInventoryEmpty -> boolean
 BackpackScript.StateChanged -> BindableEvent
 ```
 
+Fires when the backpack is closed or opened.
+
 ### BackpackEmpty
 
 ```
 BackpackScript.BackpackEmpty -> BindableEvent
 ```
+
+Fires when the inventory is empty.
 
 ### BackpackItemAdded
 
@@ -82,8 +90,12 @@ BackpackScript.BackpackEmpty -> BindableEvent
 BackpackScript.BackpackItemAdded -> BindableEvent
 ```
 
+Fires when a item is added to the inventory.
+
 ### BackpackItemRemoved
 
 ```
 BackpackScript.BackpackItemRemoved -> BindableEvent
 ```
+
+Fires when a item is removed from the inventory.
