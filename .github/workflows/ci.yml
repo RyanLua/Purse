@@ -4,14 +4,13 @@ on:
   push:
     branches: ["main"]
 
-  workflow_dispatch:
-
 permissions:
   contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: github.event.repository.fork == false
     steps:
       - uses: actions/checkout@v5
       - name: Configure Git Credentials
@@ -25,8 +24,11 @@ jobs:
       - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
-          path: ~/.cache
+          path: ~/.cache 
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material
+      - run: apt-get install pngquant 
+      - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
       - run: mkdocs gh-deploy --force
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
