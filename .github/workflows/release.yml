@@ -1,0 +1,72 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Choose an existing tag, or create a new tag when you publish this release."
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  discussions: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup Rokit
+        uses: CompeyDev/setup-rokit@v0.1.2
+
+      - name: Setup Wally
+        run: wally install
+
+      - name: Build using Rojo
+        run: |
+          mkdir builds
+          rojo build --output builds/Purse.rbxm default.project.json
+          rojo build --output builds/Purse.rbxmx default.project.json
+
+      - name: Archive build files
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-file-builds
+          path: builds/
+          if-no-files-found: error
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup Rokit
+        uses: CompeyDev/setup-rokit@v0.1.2
+
+      - name: Setup Wally
+        env:
+          WALLY_AUTH_TOKEN: ${{ secrets.WALLY_AUTH_TOKEN }}
+        run: |
+          wally login --token "$WALLY_AUTH_TOKEN"
+          wally install
+
+      - name: Download build files
+        uses: actions/download-artifact@v5
+        with:
+          name: release-file-builds
+          path: builds/
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: builds/
+          generate_release_notes: true
+          # tag_name: ${{ inputs.tag }}
+          draft: true
+
+      - name: Publish to Wally
+        run: wally publish
