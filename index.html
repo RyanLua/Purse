@@ -273,6 +273,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -289,6 +307,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -368,6 +416,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -387,7 +454,16 @@
 
 
 <h1 id="purse">Purse</h1>
-<p>Purse is a fork of the default Roblox backpack which is decoupled from the CoreGui, allowing creators access to APIs that were previously unavailable and allowing for code modifications.</p>
+<p>Purse is a fork of the <a href="https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/roblox/scripts/CoreScripts/Modules/BackpackScript.lua">default Roblox backpack</a> which is decoupled from the CoreGui, allowing developers access to APIs that were previously unavailable and allowing for code modifications.</p>
+<ul>
+<li>Source code modification</li>
+<li>Developer APIs for controlling the inventory</li>
+<li>Not reliant on CoreGui permissions</li>
+</ul>
+<p><img alt="Screenshot of Purse" src="assets/screenshot.png" /></p>
+<p>What Purse is not is being a major improvement over the CoreGui backpack but a copy of it so that developers can iterate on it themselves. They are no additional features beyond what the CoreGui backpack provides.</p>
+<h2 id="notes">Notes</h2>
+<p>Because we can't access the topbar without CoreGui, we use <a href="https://devforum.roblox.com/t/topbarplus/1017485">TopbarPlus</a>. This is one of the major differences in terms of functionality. TopbarPlus may not be as familiar to use on consoles and VR.</p>
 
 
 
