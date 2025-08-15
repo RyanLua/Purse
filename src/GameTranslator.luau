@@ -1,5 +1,6 @@
 --!nonstrict
 -- ROBLOX upstream https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/829cb13cc98870ddbcf4ba6bd48b774a87ae549f/scripts/CoreScripts/Modules/GameTranslator.lua
+--# selene: allow(unused_variable)
 
 local LocalizationService = game:GetService("LocalizationService")
 local Players = game:GetService("Players")
