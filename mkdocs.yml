@@ -3,6 +3,8 @@ site_url: https://ryanlua.github.io/Purse/
 repo_name: RyanLua/Purse
 repo_url: https://github.com/RyanLua/Purse
 
+copyright: Copyright &copy; Ryan Luu
+
 theme:
   name: material
   features:
