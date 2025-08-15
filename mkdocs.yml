@@ -6,8 +6,6 @@ repo_url: https://github.com/RyanLua/Purse
 copyright: Copyright &copy; Ryan Luu
 
 theme:
-  logo: assets/logo.svg
-  favicon: assets/favicon.svg
   name: material
   features:
     - content.code.copy
@@ -28,6 +26,8 @@ theme:
         name: Switch to system preference
   icon:
     repo: fontawesome/brands/github
+  favicon: assets/favicon.svg
+  logo: assets/logo.svg
 
 extra:
   social:
