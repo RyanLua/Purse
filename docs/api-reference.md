@@ -21,7 +21,7 @@ Returns if the hotbar is currently visible to the player.
 
 #### Returns
 
-`boolean`
+[boolean]
 
 ### IsOpen
 
@@ -29,7 +29,7 @@ Returns if the inventory is currently open to the player.
 
 #### Returns
 
-`boolean`
+[boolean]
 
 ### ModuleName
 
@@ -37,7 +37,7 @@ Returns the module name. This will always return "Backpack".
 
 #### Returns
 
-`string`
+[string]
 
 ### KeepVRTopbarOpen
 
@@ -45,7 +45,7 @@ Returns `true`.
 
 #### Returns
 
-`boolean`
+[boolean]
 
 ### VRIsExclusive
 
@@ -53,7 +53,7 @@ Returns `true`.
 
 #### Returns
 
-`boolean`
+[boolean]
 
 ### VRClosesNonExclusive
 
@@ -61,7 +61,7 @@ Returns `true`.
 
 #### Returns
 
-`boolean`
+[boolean]
 
 ### IsInventoryEmpty
 
@@ -69,7 +69,7 @@ Returns if the inventory is empty.
 
 #### Returns
 
-`boolean`
+[boolean]
 
 ## Events
 
@@ -79,8 +79,7 @@ Fires when the backpack is closed or opened.
 
 #### Returns
 
-`BindableEvent`
-
+[BindableEvent]
 
 ### BackpackEmpty
 
@@ -88,7 +87,7 @@ Fires when the inventory is empty.
 
 #### Returns
 
-`BindableEvent`
+[BindableEvent]
 
 ### BackpackItemAdded
 
@@ -96,7 +95,7 @@ Fires when a item is added to the inventory.
 
 #### Returns
 
-`BindableEvent`
+[BindableEvent]
 
 ### BackpackItemRemoved
 
@@ -104,4 +103,8 @@ Fires when a item is removed from the inventory.
 
 #### Returns
 
-`BindableEvent`
+[BindableEvent]
+
+  [BindableEvent]: https://create.roblox.com/docs/reference/engine/classes/BindableEvent
+  [boolean]: https://create.roblox.com/docs/luau/booleans
+  [string]: https://create.roblox.com/docs/luau/strings
