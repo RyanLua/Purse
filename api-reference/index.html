@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16+insiders-4.53.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17+insiders-4.53.16">
     
     
       
@@ -804,55 +804,53 @@
 </code></pre></div></td></tr></table></div>
 <h2 id="methods">Methods</h2>
 <h3 id="openclose">OpenClose</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>BackpackScript:OpenClose() -&gt; nil
-</code></pre></div></td></tr></table></div>
 <p>Toggles the backpack open/closed state. If the backpack is currently open, it will close it. If closed, it will open it.</p>
 <h2 id="properties">Properties</h2>
 <h3 id="ishotbarvisible">IsHotbarVisible</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>BackpackScript.IsHotbarVisible -&gt; boolean
-</code></pre></div></td></tr></table></div>
 <p>Returns if the hotbar is currently visible to the player.</p>
+<h4 id="returns">Returns</h4>
+<p><a href="https://create.roblox.com/docs/luau/booleans">boolean</a></p>
 <h3 id="isopen">IsOpen</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>BackpackScript.IsOpen -&gt; boolean
-</code></pre></div></td></tr></table></div>
 <p>Returns if the inventory is currently open to the player.</p>
+<h4 id="returns_1">Returns</h4>
+<p><a href="https://create.roblox.com/docs/luau/booleans">boolean</a></p>
 <h3 id="modulename">ModuleName</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>BackpackScript.ModuleName -&gt; string
-</code></pre></div></td></tr></table></div>
 <p>Returns the module name. This will always return "Backpack".</p>
+<h4 id="returns_2">Returns</h4>
+<p><a href="https://create.roblox.com/docs/luau/strings">string</a></p>
 <h3 id="keepvrtopbaropen">KeepVRTopbarOpen</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>BackpackScript.KeepVRTopbarOpen -&gt; boolean
-</code></pre></div></td></tr></table></div>
 <p>Returns <code>true</code>.</p>
+<h4 id="returns_3">Returns</h4>
+<p><a href="https://create.roblox.com/docs/luau/booleans">boolean</a></p>
 <h3 id="vrisexclusive">VRIsExclusive</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>BackpackScript.VRIsExclusive -&gt; boolean
-</code></pre></div></td></tr></table></div>
 <p>Returns <code>true</code>.</p>
+<h4 id="returns_4">Returns</h4>
+<p><a href="https://create.roblox.com/docs/luau/booleans">boolean</a></p>
 <h3 id="vrclosesnonexclusive">VRClosesNonExclusive</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>BackpackScript.VRClosesNonExclusive -&gt; boolean
-</code></pre></div></td></tr></table></div>
 <p>Returns <code>true</code>.</p>
+<h4 id="returns_5">Returns</h4>
+<p><a href="https://create.roblox.com/docs/luau/booleans">boolean</a></p>
 <h3 id="isinventoryempty">IsInventoryEmpty</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>BackpackScript.IsInventoryEmpty -&gt; boolean
-</code></pre></div></td></tr></table></div>
 <p>Returns if the inventory is empty.</p>
+<h4 id="returns_6">Returns</h4>
+<p><a href="https://create.roblox.com/docs/luau/booleans">boolean</a></p>
 <h2 id="events">Events</h2>
 <h3 id="statechanged">StateChanged</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>BackpackScript.StateChanged -&gt; BindableEvent
-</code></pre></div></td></tr></table></div>
 <p>Fires when the backpack is closed or opened.</p>
+<h4 id="returns_7">Returns</h4>
+<p><a href="https://create.roblox.com/docs/reference/engine/classes/BindableEvent">BindableEvent</a></p>
 <h3 id="backpackempty">BackpackEmpty</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>BackpackScript.BackpackEmpty -&gt; BindableEvent
-</code></pre></div></td></tr></table></div>
 <p>Fires when the inventory is empty.</p>
+<h4 id="returns_8">Returns</h4>
+<p><a href="https://create.roblox.com/docs/reference/engine/classes/BindableEvent">BindableEvent</a></p>
 <h3 id="backpackitemadded">BackpackItemAdded</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>BackpackScript.BackpackItemAdded -&gt; BindableEvent
-</code></pre></div></td></tr></table></div>
 <p>Fires when a item is added to the inventory.</p>
+<h4 id="returns_9">Returns</h4>
+<p><a href="https://create.roblox.com/docs/reference/engine/classes/BindableEvent">BindableEvent</a></p>
 <h3 id="backpackitemremoved">BackpackItemRemoved</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>BackpackScript.BackpackItemRemoved -&gt; BindableEvent
-</code></pre></div></td></tr></table></div>
 <p>Fires when a item is removed from the inventory.</p>
+<h4 id="returns_10">Returns</h4>
+<p><a href="https://create.roblox.com/docs/reference/engine/classes/BindableEvent">BindableEvent</a></p>
 
 
 
@@ -926,10 +924,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.ad38c271.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.26099bd0.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.b66b2b78.min.js"></script>
+      <script src="../assets/javascripts/bundle.bb65021c.min.js"></script>
       
     
   </body>
