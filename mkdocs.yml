@@ -8,15 +8,14 @@ copyright: Copyright &copy; Ryan Luu
 theme:
   name: material
   features:
-    - navigation.top
-    - navigation.footer
+    - content.code.copy
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -39,6 +38,11 @@ extra:
     - icon: simple/discord
       link: https://discord.gg/N2KEnHzrsW
       name: Discord
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
 
 nav:
   - Home: index.md
