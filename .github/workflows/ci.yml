@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    paths:
+      - ".github/workflows/ci.ya?ml"
+      - "**.luau"
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup Selene
+        uses: CompeyDev/setup-rokit@v0.1.2
+
+      - name: Run Selene
+        run: selene src
+
+  style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Run StyLua
+        uses: JohnnyMorganz/stylua-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: latest
+          args: --check src
