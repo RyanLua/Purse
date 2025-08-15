@@ -126,7 +126,7 @@ local function Create(instanceType) -- ROBLOX deviation: use a custom Create fun
 		return obj
 	end
 end
-local GameTranslator = require(script.Parent.GameTranslator)
+local GameTranslator = require(script.GameTranslator)
 
 pcall(function()
 	local LocalizationService = game:GetService("LocalizationService")

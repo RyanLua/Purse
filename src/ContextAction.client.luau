@@ -1,7 +1,7 @@
 --!strict
 
 local ContextActionService = game:GetService("ContextActionService")
-local BackpackScript = require(script.Parent.BackpackScript)
+local BackpackScript = require(script.Parent)
 
 local ACTION_NAME = "RBXBackpackToggle"
 

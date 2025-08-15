@@ -1,3 +1,3 @@
 --!strict
 
-require(script.Parent.BackpackScript)
+require(script.Parent)
