@@ -1,9 +1,18 @@
+Purse unlocks APIs for the CoreGui backpack which were previously locked to other CoreGui scripts. To access the APIs, just require Purse like any other [module script](https://create.roblox.com/docs/reference/engine/classes/ModuleScript):
+
+```lua
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Purse = require(ReplicatedStorage:WaitForChild("Purse"))
+
+BackpackScript:OpenClose() -- Toggle the inventory
+```
+
 ## Methods
 
 ### OpenClose
 
 ```
-BackpackScript.OpenClose() -> nil
+BackpackScript:OpenClose() -> nil
 ```
 
 Toggles the backpack open/closed state. If the backpack is currently open, it will close it. If closed, it will open it.
