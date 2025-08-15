@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     paths:
-      - ".github/workflows/ci.ya?ml"
+      - ".github/workflows/ci.yml"
       - "**.luau"
 
 permissions:

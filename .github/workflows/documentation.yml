@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - ".github/workflows/documentation.yml"
+      - "docs/**"
+      - "mkdocs.yml"
 
 permissions:
   contents: write
