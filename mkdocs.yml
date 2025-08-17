@@ -1,5 +1,5 @@
 site_name: Purse Documentation
-site_url: https://ryanlua.github.io/Purse/
+site_url: https://purse.luau.page
 repo_name: RyanLua/Purse
 repo_url: https://github.com/RyanLua/Purse
 
@@ -9,6 +9,8 @@ theme:
   name: material
   features:
     - content.code.copy
+    - navigation.footer
+    - navigation.top
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
