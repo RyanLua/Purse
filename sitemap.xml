@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://ryanlua.github.io/Purse/</loc>
-         <lastmod>2025-08-15</lastmod>
+         <loc>https://purse.luau.page/</loc>
+         <lastmod>2025-08-17</lastmod>
     </url>
     <url>
-         <loc>https://ryanlua.github.io/Purse/api-reference/</loc>
-         <lastmod>2025-08-15</lastmod>
+         <loc>https://purse.luau.page/api-reference/</loc>
+         <lastmod>2025-08-17</lastmod>
     </url>
     <url>
-         <loc>https://ryanlua.github.io/Purse/philosophy/</loc>
-         <lastmod>2025-08-15</lastmod>
+         <loc>https://purse.luau.page/philosophy/</loc>
+         <lastmod>2025-08-17</lastmod>
     </url>
 </urlset>
