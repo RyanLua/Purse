@@ -2,7 +2,8 @@ Purse unlocks APIs for the CoreGui backpack which were previously locked to othe
 
 ``` lua title="Toggle Inventory Example"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Purse = require(ReplicatedStorage:WaitForChild("Purse"))
+
+local Purse = require(ReplicatedStorage.Purse)
 
 Purse.OpenClose() -- Toggle the inventory
 ```
