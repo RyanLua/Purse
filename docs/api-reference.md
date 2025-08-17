@@ -4,7 +4,7 @@ Purse unlocks APIs for the CoreGui backpack which were previously locked to othe
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Purse = require(ReplicatedStorage:WaitForChild("Purse"))
 
-Purse:OpenClose() -- Toggle the inventory
+Purse.OpenClose() -- Toggle the inventory
 ```
 
 ## Methods
