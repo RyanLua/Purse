@@ -3,6 +3,8 @@ name = "ryanlua/purse"
 version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+exclude = ["**"]
+include = ["src", "src/**", "wally.toml", "wally.lock", "default.project.json", "LICENSE", "README.md"]
 
 [dependencies]
 topbarplus = "1foreverhd/topbarplus@3.3.1"
