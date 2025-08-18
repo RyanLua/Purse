@@ -11,9 +11,9 @@ rm -rf "$BUILD_DIR"
 mkdir -p "$BUILD_DIR"
 
 # Build .rbxm file
-rojo build --output "$BUILD_DIR/Purse.rbxm" default.project.json
+rojo build --output "$BUILD_DIR/Purse.rbxm" package.project.json
 
 # Build .rbxmx file
-rojo build --output "$BUILD_DIR/Purse.rbxmx" default.project.json
+rojo build --output "$BUILD_DIR/Purse.rbxmx" package.project.json
 
 echo "Build completed successfully!"

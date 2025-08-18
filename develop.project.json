@@ -5,10 +5,10 @@
     "$className": "DataModel",
     "ReplicatedStorage": {
       "$className": "ReplicatedStorage",
-      "Purse": {
-        "$path": "src",
-        "Packages": {
-          "$path": "Packages"
+      "Packages": {
+        "$path": "Packages",
+        "Purse": {
+          "$path": "src"
         }
       }
     }

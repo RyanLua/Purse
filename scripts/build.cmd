@@ -12,10 +12,10 @@ mkdir "%BUILD_DIR%"
 cd "%BUILD_DIR%"
 
 REM Build .rbxm file
-rojo build --output ..\builds\Purse.rbxm ..\default.project.json
+rojo build --output ..\builds\Purse.rbxm ..\package.project.json
 
 REM Build .rbxmx file
-rojo build --output ..\builds\Purse.rbxmx ..\default.project.json
+rojo build --output ..\builds\Purse.rbxmx ..\package.project.json
 
 echo Build completed successfully!
 cd ..
