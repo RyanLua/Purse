@@ -1,3 +1,0 @@
---!strict
-
-require(script.Parent)

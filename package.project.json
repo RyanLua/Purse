@@ -1,8 +1,8 @@
 {
-  "name": "Purse",
+  "name": "PurseLoader",
   "emitLegacyScripts": false,
   "tree": {
-    "$path": "include/Linking.luau",
+    "$path": "include/Loader.client.luau",
     "Packages": {
       "$path": "Packages",
       "purse": {

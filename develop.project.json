@@ -5,8 +5,8 @@
     "$className": "DataModel",
     "ReplicatedStorage": {
       "$className": "ReplicatedStorage",
-      "Purse": {
-        "$path": "include/Linking.luau",
+      "PurseLoader": {
+        "$path": "include/Loader.client.luau",
         "Packages": {
           "$path": "Packages",
           "purse": {
