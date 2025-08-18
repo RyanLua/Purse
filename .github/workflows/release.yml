@@ -22,8 +22,8 @@ jobs:
       - name: Build using Rojo
         run: |
           mkdir builds
-          rojo build --output builds/Purse.rbxm default.project.json
-          rojo build --output builds/Purse.rbxmx default.project.json
+          rojo build --output builds/Purse.rbxm package.project.json
+          rojo build --output builds/Purse.rbxmx package.project.json
 
       - name: Archive build files
         uses: actions/upload-artifact@v4
