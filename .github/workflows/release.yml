@@ -2,11 +2,6 @@ name: Create Release
 
 on:
   workflow_dispatch:
-    inputs:
-      tag:
-        description: "Choose an existing tag, or create a new tag when you publish this release."
-        required: true
-        type: string
 
 permissions:
   contents: write
@@ -65,7 +60,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           files: builds/
           generate_release_notes: true
-          # tag_name: ${{ inputs.tag }}
           draft: true
 
       - name: Publish to Wally
