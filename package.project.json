@@ -2,7 +2,7 @@
   "name": "PurseLoader",
   "emitLegacyScripts": false,
   "tree": {
-    "$path": "include/Loader.client.luau",
+    "$path": "models",
     "Purse": {
       "$path": "include/Linking.luau",
       "Packages": {

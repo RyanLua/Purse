@@ -6,7 +6,7 @@
     "ReplicatedStorage": {
       "$className": "ReplicatedStorage",
       "PurseLoader": {
-        "$path": "include/Loader.client.luau",
+        "$path": "models",
         "Purse": {
           "$path": "include/Linking.luau",
           "Packages": {
