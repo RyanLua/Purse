@@ -1,3 +1,3 @@
 --!strict
 
-require(script.Packages["purse"])
+require(script.Purse)

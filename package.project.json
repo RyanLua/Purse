@@ -3,10 +3,13 @@
   "emitLegacyScripts": false,
   "tree": {
     "$path": "include/Loader.client.luau",
-    "Packages": {
-      "$path": "Packages",
-      "purse": {
-        "$path": "src"
+    "Purse": {
+      "$path": "include/Linking.luau",
+      "Packages": {
+        "$path": "Packages",
+        "purse": {
+          "$path": "src"
+        }
       }
     }
   }
