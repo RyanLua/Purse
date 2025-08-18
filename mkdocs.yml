@@ -40,6 +40,9 @@ extra:
     - icon: simple/roblox
       link: https://www.roblox.com/games/106146309450120
       name: Roblox
+    - icon: simple/robloxstudio
+      link: https://create.roblox.com/store/asset/112061170330936
+      name: Creator Store
     - icon: simple/discord
       link: https://discord.gg/N2KEnHzrsW
       name: Discord
