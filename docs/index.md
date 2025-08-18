@@ -1,6 +1,6 @@
 # Purse
 
-Purse is a fork of the [default Roblox backpack](https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/roblox/scripts/CoreScripts/Modules/BackpackScript.lua) which is decoupled from the CoreGui, allowing developers access to APIs that were previously unavailable and allowing for code modifications.
+Purse is a fork of the [default Roblox backpack](https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/roblox/scripts/CoreScripts/Modules/BackpackScript.lua) decoupled from the CoreGui, allowing developers access to APIs that were previously unavailable and allowing for code modifications.
 
 * Source code modification
 * Developer APIs for controlling the inventory
