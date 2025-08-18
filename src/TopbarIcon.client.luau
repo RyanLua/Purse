@@ -3,7 +3,7 @@
 local UserInputService = game:GetService("UserInputService")
 
 local BackpackScript = require(script.Parent)
-local Icon = require(script.Parent.Packages:WaitForChild("topbarplus"))
+local Icon = require(script.Parent.Parent.topbarplus)
 
 local iconSelectedImage = "rbxasset://textures/ui/TopBar/inventoryOn.png"
 local iconDeselectedImage = "rbxasset://textures/ui/TopBar/inventoryOff.png"
