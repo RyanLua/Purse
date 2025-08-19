@@ -60,11 +60,11 @@ You are expected to already have Wally setup in your Rojo project and basic know
 
 1. Install Purse from Wally by running `wally install`.
 
-1. Use [`#!lua require`][require] in a script to run Purse.
+1. Use [`#!lua require()`][require] in a script to run Purse.
 
     !!! warning
 
-        Wally does not include the Purse loader script so you need to [`#!lua require`][require] it to run. Below is the loader script usually included with Purse except for Wally:
+        Wally does not include the Purse loader script so you need to [`#!lua require()`][require] it to run. Below is the loader script usually included with Purse except for Wally:
         ``` lua title="Purse Loader"
         --8<-- "models/init.client.luau"
         ```
