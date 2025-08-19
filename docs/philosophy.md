@@ -1,6 +1,8 @@
-Purse is a sub project of [Satchel](https://satchel.luau.page), another backpack system designed to improve on Roblox's implementation. While both aim to be a backpack system, the design principles of each are different.
+Purse is a sub project of [Satchel], another backpack system designed to improve on Roblox's implementation. While both aim to be a backpack system, the design principles of each are different.
 
 The basic rundown is that **Purse aims to be as close to the CoreGui** while **Satchel aims to be an improvement over the CoreGui**.
+
+  [Satchel]: https://satchel.luau.page
 
 ## Design principles
 

@@ -12,4 +12,6 @@ What Purse is not is being a major improvement over the CoreGui backpack but a c
 
 ## Notes
 
-Because we can't access the topbar without CoreGui, we use [TopbarPlus](https://devforum.roblox.com/t/topbarplus/1017485). This is one of the major differences in terms of functionality. TopbarPlus may not be as familiar to use on consoles and VR.
+Because we can't access the topbar without CoreGui, we use [TopbarPlus]. This is one of the major differences in terms of functionality. TopbarPlus may not be as familiar to use on consoles and VR.
+
+  [TopbarPlus]: https://devforum.roblox.com/t/topbarplus/1017485
