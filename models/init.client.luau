@@ -1,3 +1,1 @@
---!strict
-
 require(script.Purse)
