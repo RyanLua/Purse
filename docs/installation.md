@@ -1,0 +1,72 @@
+Purse is available on the [Creator Store], [Wally], and [GitHub Releases].
+
+!!! tip
+
+    While Purse can run anywhere because it uses [RunContext](https://devforum.roblox.com/t/1938784), it is recommeneded parent Purse to [`ReplicatedStorage`][ReplicatedStorage] for best practices and organizational reasons.
+
+  [Creator Store]: https://create.roblox.com/store/asset/112061170330936
+  [Wally]: https://wally.run/package/ryanlua/purse
+  [GitHub Releases]: https://github.com/RyanLua/Purse/releases
+  [ReplicatedStorage]: https://create.roblox.com/docs/reference/engine/classes/ReplicatedStorage
+
+## Creator Store
+
+1. Get the **Purse** model from the [Creator Store].
+
+1. Open Roblox Studio and create a new place or open an existing place.
+
+1. From the [View] tab, open the [Toolbox] and select the **Inventory** tab.
+
+    ![View Tab Toolbox](https://prod.docsiteassets.roblox.com/assets/studio/general/View-Tab-Toolbox.png)
+
+    ![Inventory Tab](https://prod.docsiteassets.roblox.com/assets/studio/toolbox/Inventory-Tab.png)
+
+1. Locate the **Purse** model and click it, or drag-and-drop it into the 3D view.
+
+1. In the [Explorer] window, move the **Purse** model into [`ReplicatedStorage`][ReplicatedStorage].
+
+  [View]: https://create.roblox.com/docs/studio/view-tab
+  [Toolbox]: https://create.roblox.com/docs/projects/assets/toolbox
+  [Explorer]: https://create.roblox.com/docs/studio/explorer
+
+## GitHub Releases
+
+1. Download the `Purse.rbxm` or `Purse.rbxmx` model file from [GitHub Releases].
+
+    !!! info
+
+        Binary (`.rbxm`) and XML (`.rbxmx`) model files contain the exact same model. `.rbxm` is a smaller file size to download.
+
+1. Open Roblox Studio and create a new place or open an existing place.
+
+1. In the [Explorer] window, insert **Purse** into [`ReplicatedStorage`][ReplicatedStorage].
+
+    ![Contextual menu](https://prod.docsiteassets.roblox.com/assets/studio/explorer/Context-Menu-Service.png.webp)
+
+1. Select the **Purse** model file you downloaded from GitHub and click `Open`.
+
+## Wally
+
+You are expected to already have Wally setup in your Rojo project and basic knowledge on how to use Wally packages.
+
+1. Open your Rojo project in the code editor of your choice.
+
+1. In the `wally.toml` file, add the [latest Wally version for Purse][Wally]. Your dependencies should look similar to this:
+
+    ``` toml title="wally.toml"
+    [dependencies]
+    purse = "ryanlua/purse@1.0.0"
+    ```
+
+1. Install Purse from Wally by running `wally install`.
+
+1. Use [`#!lua require`][require] in a script to run Purse.
+
+    !!! warning
+
+        Wally does not include the Purse loader script so you need to [`#!lua require`][require] it to run. Below is the loader script usually included with Purse except for Wally:
+        ``` lua title="Purse Loader"
+        --8<-- "models/init.client.luau"
+        ```
+
+  [require]: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#require
