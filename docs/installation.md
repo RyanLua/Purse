@@ -9,7 +9,7 @@ Purse is available on the [Creator Store], [Wally], and [GitHub Releases].
   [GitHub Releases]: https://github.com/RyanLua/Purse/releases
   [ReplicatedStorage]: https://create.roblox.com/docs/reference/engine/classes/ReplicatedStorage
 
-## Creator Store
+## Creator Store <small>recommended</small> { #creator-store data-toc-label="Creator Store" }
 
 1. Get the **Purse** model from the [Creator Store].
 
@@ -59,14 +59,3 @@ You are expected to already have Wally setup in your Rojo project and basic know
     ```
 
 1. Install Purse from Wally by running `wally install`.
-
-1. Use [`#!lua require()`][require] in a script to run Purse.
-
-    !!! warning
-
-        Wally does not include the Purse loader script so you need to [`#!lua require()`][require] it to run. Below is the loader script usually included with Purse except for Wally:
-        ``` lua title="Purse Loader"
-        require(script.Purse)
-        ```
-
-  [require]: https://create.roblox.com/docs/reference/engine/globals/LuaGlobals#require
