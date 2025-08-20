@@ -1,7 +1,3 @@
----
-icon: material/download-outline
----
-
 Purse is available on the [Creator Store], [Wally], and [GitHub Releases].
 
 !!! tip

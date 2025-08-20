@@ -1,7 +1,3 @@
----
-icon: material/home-outline
----
-
 # Purse
 
 Purse is a fork of the [default Roblox backpack](https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/roblox/scripts/CoreScripts/Modules/BackpackScript.lua) decoupled from the CoreGui, allowing developers access to APIs that were previously unavailable and allowing for code modifications.

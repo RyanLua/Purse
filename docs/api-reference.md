@@ -1,7 +1,3 @@
----
-icon: material/book-outline
----
-
 Purse unlocks APIs for the CoreGui backpack which were previously locked to other CoreGui scripts. To access the APIs, just require Purse like any other [module script](https://create.roblox.com/docs/reference/engine/classes/ModuleScript):
 
 ``` lua title="Toggle Inventory Example"
