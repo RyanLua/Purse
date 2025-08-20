@@ -126,7 +126,7 @@ local function Create(instanceType) -- ROBLOX deviation: use a custom Create fun
 		return obj
 	end
 end
-local GameTranslator = require(script.GameTranslator)
+-- local GameTranslator = require(script.GameTranslator) -- ROBLOX deviation: Remove GameTranslator
 
 pcall(function()
 	local LocalizationService = game:GetService("LocalizationService")
@@ -412,10 +412,10 @@ local function MakeSlot(parent, index)
 				ToolName.Visible = true
 			end
 
-			GameTranslator:TranslateAndRegister(ToolName, tool, tool.Name)
+			ToolName.Text = tool.Name -- ROBLOX deviation: Remove GameTranslator
 
 			if ToolTip and tool:IsA("Tool") then --NOTE: HopperBin
-				GameTranslator:TranslateAndRegister(ToolTip, tool, tool.ToolTip)
+				ToolTip.Text = tool.ToolTip -- ROBLOX deviation: Remove GameTranslator
 				local width = ToolTip.TextBounds.X + TOOLTIP_BUFFER
 				ToolTip.Size = UDim2.new(0, width, 0, TOOLTIP_HEIGHT)
 				ToolTip.Position = UDim2.new(0.5, -width / 2, 0, TOOLTIP_OFFSET)
