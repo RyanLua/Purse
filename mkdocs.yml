@@ -51,11 +51,9 @@ markdown_extensions:
   - admonition
   - toc:
       toc_depth: 3
+  - pymdownx.inlinehilite
   - pymdownx.highlight:
       linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
 
 nav:
   - Home: index.md
