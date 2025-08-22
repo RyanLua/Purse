@@ -171,7 +171,7 @@ local Dragging = {} -- Only used to check if anything is being dragged, to disab
 local FullHotbarSlots = 0 -- Now being used to also determine whether or not LB and RB on the gamepad are enabled.
 local ActiveHopper = nil -- NOTE: HopperBin
 local StarterToolFound = false -- Special handling is required for the gear currently equipped on the site
-local WholeThingEnabled = false
+local WholeThingEnabled = true -- ROBLOX deviation: Always emulate being enabled
 local TextBoxFocused = false -- ANY TextBox, not just the search box
 local ViewingSearchResults = false -- If the results of a search are currently being viewed
 local HotkeyStrings = {} -- Used for eating/releasing hotkeys
@@ -1929,13 +1929,13 @@ do -- Make the Inventory expand/collapse arrow (unless TopBar)
 		BackpackScript.StateChanged:Fire(InventoryFrame.Visible)
 	end
 
-	HotkeyFns[ARROW_HOTKEY] = function()
-		if GuiService.MenuIsOpen then
-			return
-		end
+	-- HotkeyFns[ARROW_HOTKEY] = function()
+	-- 	if GuiService.MenuIsOpen then
+	-- 		return
+	-- 	end
 
-		openClose()
-	end
+	-- 	openClose()
+	-- end
 	StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false) -- ROBLOX deviation: Disable CoreGui Backpack
 	BackpackScript.OpenClose = openClose -- Exposed
 end
