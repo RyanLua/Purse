@@ -65,7 +65,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           files: builds/
           generate_release_notes: true
-          draft: true
           tag_name: ${{ inputs.tag_name }}
 
       - name: Publish to Wally
