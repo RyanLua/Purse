@@ -63,9 +63,10 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          files: builds/
+          files: builds/*
           generate_release_notes: true
           tag_name: ${{ inputs.tag_name }}
+          draft: true
 
       - name: Publish to Wally
         run: wally publish
