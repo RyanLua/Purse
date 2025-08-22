@@ -2,12 +2,13 @@ Purse is available on the [Creator Store], [Wally], and [GitHub Releases].
 
 !!! tip
 
-    While Purse can run anywhere because it uses [RunContext](https://devforum.roblox.com/t/1938784), it is recommeneded parent Purse to [`ReplicatedStorage`][ReplicatedStorage] for best practices and organizational reasons.
+    While Purse can run anywhere because it uses [RunContext], it is recommeneded parent Purse to [`ReplicatedStorage`][ReplicatedStorage] for best practices and organizational reasons.
 
   [Creator Store]: https://create.roblox.com/store/asset/112061170330936
   [Wally]: https://wally.run/package/ryanlua/purse
   [GitHub Releases]: https://github.com/RyanLua/Purse/releases
   [ReplicatedStorage]: https://create.roblox.com/docs/reference/engine/classes/ReplicatedStorage
+  [RunContext]: https://devforum.roblox.com/t/1938784
 
 ## Creator Store <small>recommended</small> { #creator-store data-toc-label="Creator Store" }
 
