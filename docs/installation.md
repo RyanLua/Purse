@@ -2,7 +2,7 @@ Purse is available on the [Creator Store], [Wally], and [GitHub Releases].
 
 !!! tip
 
-    While Purse can run anywhere because it uses [RunContext], it is recommeneded parent Purse to [`ReplicatedStorage`][ReplicatedStorage] for best practices and organizational reasons.
+    While Purse can run anywhere because it uses [RunContext], it is recommeneded to parent Purse to [`ReplicatedStorage`][ReplicatedStorage] for best practices and organizational reasons.
 
   [Creator Store]: https://create.roblox.com/store/asset/112061170330936
   [Wally]: https://wally.run/package/ryanlua/purse
@@ -44,7 +44,7 @@ Purse is available on the [Creator Store], [Wally], and [GitHub Releases].
 
     ![Contextual menu](https://prod.docsiteassets.roblox.com/assets/studio/explorer/Context-Menu-Service.png.webp)
 
-1. Select the **Purse** model file you downloaded from GitHub and click `Open`.
+1. Select the **Purse** model file you downloaded from GitHub.
 
 ## Wally
 
