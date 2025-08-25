@@ -12,6 +12,12 @@ What Purse is not is being a major improvement over the CoreGui backpack but a c
 
   [default Roblox backpack]: https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/roblox/scripts/CoreScripts/Modules/BackpackScript.lua
 
+## Demo
+
+You can play the [Purse Demo] on Roblox to try out Purse before using it. The place is uncopylocked so you can access an editable copy of the experience
+
+  [Purse Demo]: https://www.roblox.com/games/106146309450120
+
 ## Notes
 
 Because we can't access the topbar without CoreGui, we use [TopbarPlus]. This is one of the major differences in terms of functionality. TopbarPlus may not be as familiar to use on consoles and VR.
