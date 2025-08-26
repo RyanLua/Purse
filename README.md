@@ -17,3 +17,7 @@ Purse is a fork of the [default Roblox backpack](https://github.com/MaximumADHD/
 ![Screenshot of Purse](docs/assets/screenshot.png)
 
 For more information, see the [documentation](https://purse.luau.page/).
+
+## License
+
+Purse is available under the Apache 2.0 license. See [LICENSE](LICENSE) for details.
