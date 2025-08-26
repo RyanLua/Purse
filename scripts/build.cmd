@@ -4,6 +4,8 @@ setlocal enabledelayedexpansion
 echo Building Rojo projects...
 
 set "BUILD_DIR=builds"
+set "OUTPUT_NAME=Purse"
+set "BUILD_PROJECT=package.project.json"
 
 REM Setup build directory
 echo Cleaning up build directory...
@@ -12,10 +14,10 @@ mkdir "%BUILD_DIR%"
 cd "%BUILD_DIR%"
 
 REM Build .rbxm file
-rojo build --output ..\builds\Purse.rbxm ..\package.project.json
+rojo build --output "%BUILD_DIR%\%OUTPUT_NAME%.rbxm" ..\%BUILD_PROJECT%
 
 REM Build .rbxmx file
-rojo build --output ..\builds\Purse.rbxmx ..\package.project.json
+rojo build --output "%BUILD_DIR%\%OUTPUT_NAME%.rbxmx" ..\%BUILD_PROJECT%
 
 echo Build completed successfully!
 cd ..
