@@ -14,6 +14,7 @@ local player = Players.LocalPlayer
 local playerGui = player.PlayerGui
 local BackpackGui = Instance.new("ScreenGui") -- ROBLOX deviation: Use BackpackGui instead of RobloxGui (CoreGui only)
 BackpackGui.Name = "BackpackGui"
+BackpackGui.ResetOnSpawn = false
 BackpackGui.Parent = playerGui
 -- local CorePackages = game:GetService("CorePackages")
 -- local Modules = RobloxGui.Modules
