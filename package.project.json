@@ -2,12 +2,6 @@
   "name": "Purse",
   "emitLegacyScripts": false,
   "tree": {
-    "$path": "models",
-    "Packages": {
-      "$path": "Packages",
-      "purse": {
-        "$path": "src"
-      }
-    }
+    "$path": "models"
   }
 }
