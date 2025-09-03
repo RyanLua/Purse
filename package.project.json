@@ -1,15 +1,12 @@
 {
-  "name": "PurseLoader",
+  "name": "Purse",
   "emitLegacyScripts": false,
   "tree": {
     "$path": "models",
-    "Purse": {
-      "$path": "models",
-      "Packages": {
-        "$path": "Packages",
-        "purse": {
-          "$path": "src"
-        }
+    "Packages": {
+      "$path": "Packages",
+      "purse": {
+        "$path": "src"
       }
     }
   }
