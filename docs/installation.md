@@ -1,14 +1,17 @@
 Purse is available on the [Creator Store], [Wally], and [GitHub Releases].
 
-!!! tip
+Satchel uses [RunContext] to run anywhere, so you do not need to move it from [Workspace], though it is recommeneded to parent to [`ReplicatedStorage`][ReplicatedStorage] for best practices and organizational reasons.
 
-    While Purse can run anywhere because it uses [RunContext], it is recommeneded to parent Purse to [`ReplicatedStorage`][ReplicatedStorage] for best practices and organizational reasons.
+!!! danger
+
+    Do not parent the Purse to any starter containers or it will run multiple times.
 
   [Creator Store]: https://create.roblox.com/store/asset/112061170330936
   [Wally]: https://wally.run/package/ryanlua/purse
   [GitHub Releases]: https://github.com/RyanLua/Purse/releases
   [ReplicatedStorage]: https://create.roblox.com/docs/reference/engine/classes/ReplicatedStorage
   [RunContext]: https://devforum.roblox.com/t/1938784
+  [Workspace]: https://create.roblox.com/docs/reference/engine/classes/Workspace
 
 ## Creator Store <small>recommended</small> { #creator-store data-toc-label="Creator Store" }
 
