@@ -10,7 +10,7 @@ Purse is a fork of the [default Roblox backpack] decoupled from the CoreGui, all
 
 What Purse is not is being a major improvement over the CoreGui backpack but a copy of it so that developers can iterate on it themselves. They are no additional features beyond what the CoreGui backpack provides.
 
-  [default Roblox backpack]: https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/roblox/scripts/CoreScripts/Modules/BackpackScript.lua
+  [default Roblox backpack]: https://github.com/Roblox/Core-Scripts/blob/master/CoreScriptsRoot/Modules/BackpackScript.lua
 
 ## Demo
 
