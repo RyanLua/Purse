@@ -1,6 +1,6 @@
 Purse is available on the [Creator Store], [Wally], and [GitHub Releases].
 
-Satchel uses [RunContext] to run anywhere, so you do not need to move it from [Workspace], though it is recommeneded to parent to [`ReplicatedStorage`][ReplicatedStorage] for best practices and organizational reasons.
+Purse uses [RunContext] to run anywhere, so you do not need to move it from [Workspace], though it is recommeneded to parent to [`ReplicatedStorage`][ReplicatedStorage] for best practices and organizational reasons.
 
 !!! danger
 
