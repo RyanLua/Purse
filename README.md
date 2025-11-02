@@ -21,4 +21,4 @@ For more information, see the [documentation](https://purse.luau.page/).
 
 ## License
 
-Purse is available under the Apache 2.0 license. See [LICENSE](LICENSE) for details.
+Purse is available under the Apache 2.0 license. See [LICENSE.md](LICENSE.md) for details.
