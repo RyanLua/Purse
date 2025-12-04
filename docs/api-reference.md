@@ -1,6 +1,6 @@
 Purse unlocks APIs for the CoreGui backpack which were previously locked to other CoreGui scripts. To access the APIs, just require Purse like any other [module script]:
 
-``` lua title="Toggle Inventory Example"
+``` lua title="Toggle Inventory Example" linenums="1"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Purse = require(ReplicatedStorage.Purse)
