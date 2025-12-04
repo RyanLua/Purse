@@ -1,7 +1,7 @@
 site_name: Purse Documentation
 site_url: https://purse.luau.page
-repo_name: RyanLua/Purse
-repo_url: https://github.com/RyanLua/Purse
+repo_name: ryanlua/purse
+repo_url: https://github.com/ryanlua/purse
 
 copyright: Copyright &copy; Ryan Luu
 
@@ -36,7 +36,7 @@ theme:
 extra:
   social:
     - icon: simple/github
-      link: https://github.com/RyanLua/Purse
+      link: https://github.com/ryanlua/purse
       name: GitHub
     - icon: simple/roblox
       link: https://create.roblox.com/store/asset/112061170330936

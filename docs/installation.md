@@ -8,7 +8,7 @@ Purse uses [RunContext] to run anywhere, so you do not need to move it from [Wor
 
   [Creator Store]: https://create.roblox.com/store/asset/112061170330936
   [Wally]: https://wally.run/package/ryanlua/purse
-  [GitHub Releases]: https://github.com/RyanLua/Purse/releases
+  [GitHub Releases]: https://github.com/ryanlua/purse/releases
   [ReplicatedStorage]: https://create.roblox.com/docs/reference/engine/classes/ReplicatedStorage
   [RunContext]: https://devforum.roblox.com/t/1938784
   [Workspace]: https://create.roblox.com/docs/reference/engine/classes/Workspace
