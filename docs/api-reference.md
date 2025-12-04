@@ -21,7 +21,7 @@ button.Activated:Connect(onButtonActivated)
 
 ### OpenClose
 
-``` lua
+```
 OpenClose(): ()
 ```
 
@@ -29,7 +29,7 @@ Toggles whether or not the inventory is visible.
 
 ### IsInventoryEmpty
 
-``` lua
+```
 IsInventoryEmpty(): boolean
 ```
 
@@ -39,7 +39,7 @@ Returns true if the inventory is empty.
 
 ### IsHotbarVisible
 
-``` lua
+```
 IsHotbarVisible: boolean
 ```
 
@@ -47,7 +47,7 @@ Determines whether or not the hotbar is visible.
 
 ### IsOpen
 
-``` lua
+```
 IsOpen: boolean
 ```
 
@@ -55,34 +55,41 @@ Returns true if the inventory is open.
 
 ### ModuleName
 
-``` lua
-ModuleName: "Backpack"
 ```
+ModuleName: string
+```
+
+Returns "Backpack".
 
 ### KeepVRTopbarOpen
 
-``` lua
-KeepVRTopbarOpen: true
+```
+KeepVRTopbarOpen: boolean
 ```
 
+Returns true.
 
 ### VRIsExclusive
 
-``` lua
-VRIsExclusive: true
 ```
+VRIsExclusive: boolean
+```
+
+Returns true.
 
 ### VRClosesNonExclusive
 
-``` lua
-VRClosesNonExclusive: true
 ```
+VRClosesNonExclusive: boolean
+```
+
+Returns true.
 
 ## Events
 
 ### StateChanged
 
-``` lua
+```
 StateChanged(isNowOpen: boolean): BindableEvent
 ```
 
@@ -90,7 +97,7 @@ Fires after the inventory is opened or closed.
 
 ### BackpackEmpty
 
-``` lua
+```
 BackpackEmpty(): BindableEvent
 ```
 
@@ -98,7 +105,7 @@ Fires when the backpack becomes empty.
 
 ### BackpackItemAdded
 
-``` lua
+```
 BackpackItemAdded(): BindableEvent
 ```
 
@@ -106,7 +113,7 @@ Fires when an item is added to the backpack.
 
 ### BackpackItemRemoved
 
-``` lua
+```
 BackpackItemRemoved(): BindableEvent
 ```
 
