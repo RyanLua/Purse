@@ -43,7 +43,7 @@ Determines whether or not the hotbar is visible.
 IsOpen: boolean
 ```
 
-Returns `true` if the inventory is open.
+Returns true if the inventory is open.
 
 ### ModuleName
 
@@ -59,7 +59,7 @@ Returns "Backpack".
 KeepVRTopbarOpen: boolean
 ```
 
-Returns `true`.
+Returns true.
 
 ### VRIsExclusive
 
@@ -67,7 +67,7 @@ Returns `true`.
 VRIsExclusive: boolean
 ```
 
-Returns `true`.
+Returns true.
 
 ### VRClosesNonExclusive
 
@@ -75,7 +75,7 @@ Returns `true`.
 VRClosesNonExclusive: boolean
 ```
 
-Returns `true`.
+Returns true.
 
 ### IsInventoryEmpty
 
@@ -83,7 +83,7 @@ Returns `true`.
 IsInventoryEmpty: boolean
 ```
 
-Returns `true` if the inventory is empty.
+Returns true if the inventory is empty.
 
 ## Events
 
