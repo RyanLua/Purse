@@ -21,7 +21,7 @@ button.Activated:Connect(onButtonActivated)
 
 ### OpenClose
 
-```
+``` lua
 OpenClose(): ()
 ```
 
@@ -31,7 +31,7 @@ Toggles whether or not the inventory is visible.
 
 ### IsHotbarVisible
 
-```
+``` lua
 IsHotbarVisible: boolean
 ```
 
@@ -39,7 +39,7 @@ Determines whether or not the hotbar is visible.
 
 ### IsOpen
 
-```
+``` lua
 IsOpen: boolean
 ```
 
@@ -47,39 +47,32 @@ Returns true if the inventory is open.
 
 ### ModuleName
 
+``` lua
+ModuleName: "Backpack"
 ```
-ModuleName: string
-```
-
-Returns "Backpack".
 
 ### KeepVRTopbarOpen
 
-```
-KeepVRTopbarOpen: boolean
+``` lua
+KeepVRTopbarOpen: true
 ```
 
-Returns true.
 
 ### VRIsExclusive
 
+``` lua
+VRIsExclusive: true
 ```
-VRIsExclusive: boolean
-```
-
-Returns true.
 
 ### VRClosesNonExclusive
 
+``` lua
+VRClosesNonExclusive: true
 ```
-VRClosesNonExclusive: boolean
-```
-
-Returns true.
 
 ### IsInventoryEmpty
 
-```
+``` lua
 IsInventoryEmpty: boolean
 ```
 
@@ -89,35 +82,35 @@ Returns true if the inventory is empty.
 
 ### StateChanged
 
-```
-StateChanged: BindableEvent
+``` lua
+StateChanged(isNowOpen: boolean): BindableEvent
 ```
 
-Fires when the inventory is toggled.
+Fires after the inventory is opened or closed.
 
 ### BackpackEmpty
 
-```
-BackpackEmpty: BindableEvent
+``` lua
+BackpackEmpty(): BindableEvent
 ```
 
-Fires when the inventory is empty.
+Fires when the backpack becomes empty.
 
 ### BackpackItemAdded
 
-```
-BackpackItemAdded: BindableEvent
+``` lua
+BackpackItemAdded(): BindableEvent
 ```
 
-Fires when a item is added to the inventory.
+Fires when an item is added to the backpack.
 
 ### BackpackItemRemoved
 
-```
-BackpackItemRemoved: BindableEvent
+``` lua
+BackpackItemRemoved(): BindableEvent
 ```
 
-Fires when a item is removed from the inventory.
+Fires when an item is removed from the backpack.
 
   [BindableEvent]: https://create.roblox.com/docs/reference/engine/classes/BindableEvent
   [boolean]: https://create.roblox.com/docs/luau/booleans
