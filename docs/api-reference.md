@@ -27,6 +27,14 @@ OpenClose(): ()
 
 Toggles whether or not the inventory is visible.
 
+### IsInventoryEmpty
+
+``` lua
+IsInventoryEmpty(): boolean
+```
+
+Returns true if the inventory is empty.
+
 ## Properties
 
 ### IsHotbarVisible
@@ -69,14 +77,6 @@ VRIsExclusive: true
 ``` lua
 VRClosesNonExclusive: true
 ```
-
-### IsInventoryEmpty
-
-``` lua
-IsInventoryEmpty: boolean
-```
-
-Returns true if the inventory is empty.
 
 ## Events
 
