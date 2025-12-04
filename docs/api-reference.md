@@ -14,99 +14,97 @@ Purse.OpenClose() -- Toggle the inventory
 
 ### OpenClose
 
-Toggles the backpack open/closed state. If the backpack is currently open, it will close it. If closed, it will open it.
+```
+OpenClose(): ()
+```
+
+Toggles the inventory open/closed state. If the inventory is currently open, it will close it. If closed, it will open it.
 
 ## Properties
 
 ### IsHotbarVisible
 
-Returns if the hotbar is currently visible to the player.
-
-#### Returns
-
-[boolean]
+```
+IsHotbarVisible: boolean
+```
 
 ### IsOpen
 
-Returns if the inventory is currently open to the player.
-
-#### Returns
-
-[boolean]
+```
+IsOpen: boolean
+```
 
 ### ModuleName
 
-Returns the module name. This will always return "Backpack".
+```
+ModuleName: string
+```
 
-#### Returns
-
-[string]
+Returns "Backpack".
 
 ### KeepVRTopbarOpen
 
+```
+KeepVRTopbarOpen: boolean
+```
+
 Returns `true`.
-
-#### Returns
-
-[boolean]
 
 ### VRIsExclusive
 
+```
+VRIsExclusive: boolean
+```
+
 Returns `true`.
-
-#### Returns
-
-[boolean]
 
 ### VRClosesNonExclusive
 
+```
+VRClosesNonExclusive: boolean
+```
+
 Returns `true`.
-
-#### Returns
-
-[boolean]
 
 ### IsInventoryEmpty
 
-Returns if the inventory is empty.
+```
+IsInventoryEmpty: boolean
+```
 
-#### Returns
-
-[boolean]
+Returns `true` if the inventory is empty.
 
 ## Events
 
 ### StateChanged
 
-Fires when the backpack is closed or opened.
-
-#### Returns
-
-[BindableEvent]
+```
+StateChanged: BindableEvent
+```
 
 ### BackpackEmpty
 
+```
+BackpackEmpty: BindableEvent
+```
+
 Fires when the inventory is empty.
-
-#### Returns
-
-[BindableEvent]
 
 ### BackpackItemAdded
 
+```
+BackpackItemAdded: BindableEvent
+```
+
 Fires when a item is added to the inventory.
-
-#### Returns
-
-[BindableEvent]
 
 ### BackpackItemRemoved
 
+```
+BackpackItemRemoved: BindableEvent
+```
+
 Fires when a item is removed from the inventory.
-
-#### Returns
-
-[BindableEvent]
 
   [BindableEvent]: https://create.roblox.com/docs/reference/engine/classes/BindableEvent
   [boolean]: https://create.roblox.com/docs/luau/booleans
