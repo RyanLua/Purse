@@ -1,11 +1,17 @@
-Purse unlocks APIs for the CoreGui backpack which were previously locked to other CoreGui scripts. To access the APIs, just require Purse like any other [module script]:
+Purse unlocks APIs for the CoreGui backpack which were previously locked to other CoreGui scripts. To access the APIs, just require Purse like any other [module script].
 
-``` lua title="Toggle Inventory Example"
+``` lua title="LocalScript - Inventory Toggle Button" linenums="1"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Purse = require(ReplicatedStorage.Purse)
 
-Purse.OpenClose() -- Toggle the inventory
+local button = script.Parent
+
+local function onButtonActivated()
+	Purse.OpenClose() -- Toggle the inventory
+end
+
+button.Activated:Connect(onButtonActivated)
 ```
 
   [module script]: https://create.roblox.com/docs/reference/engine/classes/ModuleScript
@@ -14,99 +20,103 @@ Purse.OpenClose() -- Toggle the inventory
 
 ### OpenClose
 
-Toggles the backpack open/closed state. If the backpack is currently open, it will close it. If closed, it will open it.
+```
+OpenClose(): ()
+```
+
+Toggles whether or not the inventory is visible.
+
+### IsInventoryEmpty
+
+```
+IsInventoryEmpty(): boolean
+```
+
+Returns true if the inventory is empty.
 
 ## Properties
 
 ### IsHotbarVisible
 
-Returns if the hotbar is currently visible to the player.
+```
+IsHotbarVisible: boolean
+```
 
-#### Returns
-
-[boolean]
+Determines whether or not the hotbar is visible.
 
 ### IsOpen
 
-Returns if the inventory is currently open to the player.
+```
+IsOpen: boolean
+```
 
-#### Returns
-
-[boolean]
+Returns true if the inventory is open.
 
 ### ModuleName
 
-Returns the module name. This will always return "Backpack".
+```
+ModuleName: string
+```
 
-#### Returns
-
-[string]
+Returns "Backpack".
 
 ### KeepVRTopbarOpen
 
-Returns `true`.
+```
+KeepVRTopbarOpen: boolean
+```
 
-#### Returns
-
-[boolean]
+Returns true.
 
 ### VRIsExclusive
 
-Returns `true`.
+```
+VRIsExclusive: boolean
+```
 
-#### Returns
-
-[boolean]
+Returns true.
 
 ### VRClosesNonExclusive
 
-Returns `true`.
+```
+VRClosesNonExclusive: boolean
+```
 
-#### Returns
-
-[boolean]
-
-### IsInventoryEmpty
-
-Returns if the inventory is empty.
-
-#### Returns
-
-[boolean]
+Returns true.
 
 ## Events
 
 ### StateChanged
 
-Fires when the backpack is closed or opened.
+```
+StateChanged(isNowOpen: boolean): BindableEvent
+```
 
-#### Returns
-
-[BindableEvent]
+Fires after the inventory is opened or closed.
 
 ### BackpackEmpty
 
-Fires when the inventory is empty.
+```
+BackpackEmpty(): BindableEvent
+```
 
-#### Returns
-
-[BindableEvent]
+Fires when the backpack becomes empty.
 
 ### BackpackItemAdded
 
-Fires when a item is added to the inventory.
+```
+BackpackItemAdded(): BindableEvent
+```
 
-#### Returns
-
-[BindableEvent]
+Fires when an item is added to the backpack.
 
 ### BackpackItemRemoved
 
-Fires when a item is removed from the inventory.
+```
+BackpackItemRemoved(): BindableEvent
+```
 
-#### Returns
-
-[BindableEvent]
+Fires when an item is removed from the backpack.
 
   [BindableEvent]: https://create.roblox.com/docs/reference/engine/classes/BindableEvent
   [boolean]: https://create.roblox.com/docs/luau/booleans
