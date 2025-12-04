@@ -18,7 +18,7 @@ Purse.OpenClose() -- Toggle the inventory
 OpenClose(): ()
 ```
 
-Toggles the inventory open/closed state. If the inventory is currently open, it will close it. If closed, it will open it.
+Toggles whether or not the inventory is visible.
 
 ## Properties
 
@@ -28,11 +28,15 @@ Toggles the inventory open/closed state. If the inventory is currently open, it 
 IsHotbarVisible: boolean
 ```
 
+Determines whether or not the hotbar is visible.
+
 ### IsOpen
 
 ```
 IsOpen: boolean
 ```
+
+Returns `true` if the inventory is open.
 
 ### ModuleName
 
@@ -81,6 +85,8 @@ Returns `true` if the inventory is empty.
 ```
 StateChanged: BindableEvent
 ```
+
+Fires when the inventory is toggled.
 
 ### BackpackEmpty
 
