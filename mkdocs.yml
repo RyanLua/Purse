@@ -53,10 +53,7 @@ markdown_extensions:
   - attr_list
   - toc:
       permalink: true
-      toc_depth: 3
   - pymdownx.superfences
-  - pymdownx.highlight:
-      linenums: true
 
 nav:
   - Home: index.md
