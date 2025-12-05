@@ -1,7 +1,5 @@
 --!strict
 
-local UserInputService = game:GetService("UserInputService")
-
 local BackpackScript = require(script.Parent)
 local Icon = require(script.Parent.Parent.topbarplus)
 
