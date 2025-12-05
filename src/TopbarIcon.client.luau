@@ -8,8 +8,8 @@ local ICON_DESELECTED_IMAGE = "rbxasset://textures/ui/TopBar/inventoryOff.png"
 
 local icon = Icon.new()
 icon:setCaption("Inventory")
-icon:setImage(iconSelectedImage, "Selected")
-icon:setImage(iconDeselectedImage, "Deselected")
+icon:setImage(ICON_SELECTED_IMAGE, "Selected")
+icon:setImage(ICON_DESELECTED_IMAGE, "Deselected")
 icon:setImageScale(1)
 icon:autoDeselect(false)
 icon:setOrder(-1)
