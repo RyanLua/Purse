@@ -822,7 +822,8 @@
 
 <p>Purse unlocks APIs for the CoreGui backpack which were previously locked to other CoreGui scripts. To access the APIs, just require Purse like any other <a href="https://create.roblox.com/docs/reference/engine/classes/ModuleScript">module script</a>.</p>
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">LocalScript - Inventory Toggle Button</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p>The following code sample, placed within a child <code>LocalScript</code> of a <code>GuiButton</code>, uses <a href="#openclose"><code>OpenClose()</code></a> to toggle the inventory on the button's <code>Activated</code> event.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Inventory Toggle Button</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -878,6 +879,29 @@
 </code></pre></div>
 <p>Returns true.</p>
 <h2 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h2>
+<p>The following code sample, placed within a child <code>LocalScript</code> of <code>StarterPlayerScripts</code>, uses <a href="#statechanged"><code>StateChanged</code></a> to detect when the inventory is toggled and prints its state to output.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Detect Inventory State</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">ReplicatedStorage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">game</span><span class="p">:</span><span class="nf">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
+
+<span class="kd">local</span><span class="w"> </span><span class="nv">Purse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="nv">ReplicatedStorage</span><span class="p">.</span><span class="py">Purse</span><span class="p">)</span>
+
+<span class="nv">Purse</span><span class="p">.</span><span class="py">StateChanged</span><span class="p">.</span><span class="py">Event</span><span class="p">:</span><span class="nf">Connect</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="nv">isNowOpen</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">isNowOpen</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inventory opened&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">else</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inventory closed&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="kr">end</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="statechanged">StateChanged<a class="headerlink" href="#statechanged" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>StateChanged(isNowOpen: boolean): BindableEvent
 </code></pre></div>
