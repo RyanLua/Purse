@@ -88,7 +88,7 @@ Returns true.
 
 ## Events
 
-The following code sample, placed within a child `LocalScript` of `StarterPlayerScripts`, uses [`StateChanged`](#statechanged) detect when the inventory is toggled and prints it's state to output.
+The following code sample, placed within a child `LocalScript` of `StarterPlayerScripts`, uses [`StateChanged`](#statechanged) to detect when the inventory is toggled and prints its state to output.
 
 ``` lua title="Detect Inventory State" linenums="1"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
