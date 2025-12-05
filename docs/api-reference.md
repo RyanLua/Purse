@@ -1,5 +1,9 @@
 Purse unlocks APIs for the CoreGui backpack which were previously locked to other CoreGui scripts. To access the APIs, just require Purse like any other [module script].
 
+  [module script]: https://create.roblox.com/docs/reference/engine/classes/ModuleScript
+
+## Methods
+
 ``` lua title="LocalScript - Inventory Toggle Button" linenums="1"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
@@ -13,10 +17,6 @@ end
 
 button.Activated:Connect(onButtonActivated)
 ```
-
-  [module script]: https://create.roblox.com/docs/reference/engine/classes/ModuleScript
-
-## Methods
 
 ### OpenClose
 
