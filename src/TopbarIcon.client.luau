@@ -17,15 +17,16 @@ icon:autoDeselect(false)
 icon:setOrder(-1)
 icon:bindToggleKey(Enum.KeyCode.Backquote)
 
-UserInputService.InputBegan:Connect(function(input: InputObject, gameProcessedEvent: boolean): ()
-	local inputType = input.UserInputType
-	if not gameProcessedEvent then
-		if inputType == Enum.UserInputType.MouseButton1 or inputType == Enum.UserInputType.Touch then
-			icon:deselect()
-		end
+BackpackScript.StateChanged.Event:Connect(function(isNowOpen)
+	if isNowOpen then
+		icon:select()
+	else
+		icon:deselect()
 	end
 end)
 
-icon.toggled:Connect(function(): ()
-	BackpackScript.OpenClose()
+icon.toggled:Connect(function(_isSelected, fromSource)
+	if fromSource == "User" then
+		BackpackScript.OpenClose()
+	end
 end)
