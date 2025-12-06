@@ -1,15 +1,18 @@
 {
 	"Deviation block - start": {
+		"scope": "luau",
 		"prefix": "deviation-start",
 		"body": "-- ROBLOX deviation START: ${0:description}",
-		"description": "Roblox deviation start marker"
+		"description": "Roblox deviation start marker",
 	},
 	"Deviation block - end": {
+		"scope": "luau",
 		"prefix": "deviation-end",
 		"body": "-- ROBLOX deviation END",
 		"description": "Roblox deviation end marker"
 	},
 	"Deviation block": {
+		"scope": "luau",
 		"prefix": "deviation-block",
 		"body": [
 			"-- ROBLOX deviation START: ${0:changed because}",
@@ -20,6 +23,7 @@
 		"description": "Roblox deviation end marker",
 	},
 	"Deviation block - type": {
+		"scope": "luau",
 		"prefix": "deviation-block-type",
 		"body": [
 			"-- ROBLOX deviation START: ${0:import as type instead of local}",
@@ -30,6 +34,7 @@
 		"description": "Roblox deviation end marker",
 	},
 	"Deviation block - add": {
+		"scope": "luau",
 		"prefix": "deviation-block-add",
 		"body": [
 			"-- ROBLOX deviation START: ${0:add some code}",
@@ -40,6 +45,7 @@
 		"description": "Roblox deviation end marker",
 	},
 	"Deviation block - skip": {
+		"scope": "luau",
 		"prefix": "deviation-block-skipped",
 		"body": [
 			"-- ROBLOX deviation START: ${0:changed because}",
@@ -49,6 +55,7 @@
 		"description": "Roblox deviation end marker",
 	},
 	"Deviation line": {
+		"scope": "luau",
 		"prefix": "deviation-line",
 		"body": [
 			"-- ROBLOX deviation START: ${0:changed because}",
@@ -59,6 +66,7 @@
 		"description": "Roblox deviation end marker"
 	},
 	"Deviation line - skipped": {
+		"scope": "luau",
 		"prefix": "deviation-line-skipped",
 		"body": [
 			"-- ROBLOX deviation START: ${0:changed because}",
