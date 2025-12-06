@@ -1,5 +1,3 @@
---!strict
-
 local ContextActionService = game:GetService("ContextActionService")
 local BackpackScript = require(script.Parent)
 
