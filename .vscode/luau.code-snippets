@@ -1,0 +1,70 @@
+{
+	"Deviation block - start": {
+		"prefix": "deviation-start",
+		"body": "-- ROBLOX deviation START: ${0:description}",
+		"description": "Roblox deviation start marker"
+	},
+	"Deviation block - end": {
+		"prefix": "deviation-end",
+		"body": "-- ROBLOX deviation END",
+		"description": "Roblox deviation end marker"
+	},
+	"Deviation block": {
+		"prefix": "deviation-block",
+		"body": [
+			"-- ROBLOX deviation START: ${0:changed because}",
+			"-- ${TM_SELECTED_TEXT/\n/\n-- /g}",
+			"$TM_SELECTED_TEXT",
+			"-- ROBLOX deviation END"
+		],
+		"description": "Roblox deviation end marker",
+	},
+	"Deviation block - type": {
+		"prefix": "deviation-block-type",
+		"body": [
+			"-- ROBLOX deviation START: ${0:import as type instead of local}",
+			"-- ${TM_SELECTED_TEXT/\n/\n-- /g}",
+			"${TM_SELECTED_TEXT/^local /type /gm}",
+			"-- ROBLOX deviation END"
+		],
+		"description": "Roblox deviation end marker",
+	},
+	"Deviation block - add": {
+		"prefix": "deviation-block-add",
+		"body": [
+			"-- ROBLOX deviation START: ${0:add some code}",
+			"${TM_SELECTED_TEXT}",
+			"${1}",
+			"-- ROBLOX deviation END"
+		],
+		"description": "Roblox deviation end marker",
+	},
+	"Deviation block - skip": {
+		"prefix": "deviation-block-skipped",
+		"body": [
+			"-- ROBLOX deviation START: ${0:changed because}",
+			"-- ${TM_SELECTED_TEXT/\n/\n-- /g}",
+			"-- ROBLOX deviation END"
+		],
+		"description": "Roblox deviation end marker",
+	},
+	"Deviation line": {
+		"prefix": "deviation-line",
+		"body": [
+			"-- ROBLOX deviation START: ${0:changed because}",
+			"-- $TM_CURRENT_LINE",
+			"$TM_CURRENT_LINE",
+			"-- ROBLOX deviation END"
+		],
+		"description": "Roblox deviation end marker"
+	},
+	"Deviation line - skipped": {
+		"prefix": "deviation-line-skipped",
+		"body": [
+			"-- ROBLOX deviation START: ${0:changed because}",
+			"-- $TM_CURRENT_LINE",
+			"-- ROBLOX deviation END"
+		],
+		"description": "Roblox deviation end marker"
+	}
+}
