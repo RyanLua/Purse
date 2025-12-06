@@ -11,7 +11,7 @@ local GuiService = game:GetService("GuiService") -- ROBLOX deviation: use GuiSer
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local playerGui = player.PlayerGui
-local BackpackGui = Instance.new("ScreenGui") -- ROBLOX deviation: Use BackpackGui instead of RobloxGui (CoreGui only)
+local BackpackGui = Instance.new("ScreenGui") -- ROBLOX deviation: use BackpackGui instead of RobloxGui (CoreGui only)
 BackpackGui.Name = "BackpackGui"
 BackpackGui.ResetOnSpawn = false
 BackpackGui.Parent = playerGui
@@ -126,7 +126,7 @@ local function Create(instanceType) -- ROBLOX deviation: use a custom Create fun
 		return obj
 	end
 end
--- local GameTranslator = require(script.GameTranslator) -- ROBLOX deviation: Remove GameTranslator
+-- local GameTranslator = require(script.GameTranslator) -- ROBLOX deviation: remove GameTranslator
 
 pcall(function()
 	local LocalizationService = game:GetService("LocalizationService")
@@ -143,7 +143,7 @@ end
 
 local GamepadActionsBound = false
 
-local IS_PHONE = UserInputService.TouchEnabled and workspace.CurrentCamera.ViewportSize.X < HOTBAR_SLOTS_WIDTH_CUTOFF -- ROBLOX deviation: Use workspace.CurrentCamera.ViewportSize instead of GuiService:GetScreenResolution()
+local IS_PHONE = UserInputService.TouchEnabled and workspace.CurrentCamera.ViewportSize.X < HOTBAR_SLOTS_WIDTH_CUTOFF -- ROBLOX deviation: use workspace.CurrentCamera.ViewportSize instead of GuiService:GetScreenResolution()
 
 local Player = PlayersService.LocalPlayer
 
@@ -171,7 +171,7 @@ local Dragging = {} -- Only used to check if anything is being dragged, to disab
 local FullHotbarSlots = 0 -- Now being used to also determine whether or not LB and RB on the gamepad are enabled.
 local ActiveHopper = nil -- NOTE: HopperBin
 local StarterToolFound = false -- Special handling is required for the gear currently equipped on the site
-local WholeThingEnabled = true -- ROBLOX deviation: Always emulate being enabled
+local WholeThingEnabled = true -- ROBLOX deviation: always emulate being enabled
 local TextBoxFocused = false -- ANY TextBox, not just the search box
 local ViewingSearchResults = false -- If the results of a search are currently being viewed
 local HotkeyStrings = {} -- Used for eating/releasing hotkeys
@@ -412,10 +412,10 @@ local function MakeSlot(parent, index)
 				ToolName.Visible = true
 			end
 
-			ToolName.Text = tool.Name -- ROBLOX deviation: Remove GameTranslator
+			ToolName.Text = tool.Name -- ROBLOX deviation: remove GameTranslator
 
 			if ToolTip and tool:IsA("Tool") then --NOTE: HopperBin
-				ToolTip.Text = tool.ToolTip -- ROBLOX deviation: Remove GameTranslator
+				ToolTip.Text = tool.ToolTip -- ROBLOX deviation: remove GameTranslator
 				local width = ToolTip.TextBounds.X + TOOLTIP_BUFFER
 				ToolTip.Size = UDim2.fromOffset(width, TOOLTIP_HEIGHT)
 				ToolTip.Position = UDim2.new(0.5, -width / 2, 0, TOOLTIP_OFFSET)
@@ -1428,7 +1428,7 @@ function gamepadConnected()
 	end
 end
 
--- ROBLOX deviation: Disable CoreGui toggling for Backpack
+-- ROBLOX deviation START: disable CoreGui toggling for backpack
 -- local function OnCoreGuiChanged(coreGuiType, enabled)
 -- 	-- Check for enabling/disabling the whole thing
 -- 	if coreGuiType == Enum.CoreGuiType.Backpack or coreGuiType == Enum.CoreGuiType.All then
@@ -1462,6 +1462,7 @@ end
 -- 		end
 -- 	end
 -- end
+-- ROBLOX deviation END
 
 local function MakeVRRoundButton(name, image)
 	local newButton = NewGui("ImageButton", name)
@@ -1936,7 +1937,7 @@ do -- Make the Inventory expand/collapse arrow (unless TopBar)
 
 	-- 	openClose()
 	-- end
-	StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false) -- ROBLOX deviation: Disable CoreGui Backpack
+	StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false) -- ROBLOX deviation: disable CoreGui Backpack
 	BackpackScript.OpenClose = openClose -- Exposed
 end
 
@@ -1999,19 +2000,19 @@ do -- Hotkey stuff
 	end)
 end
 
--- ROBLOX deviation: Disable CoreGui toggling for Backpack
+-- ROBLOX deviation START: disable CoreGui toggling for backpack
 -- function BackpackScript:TopbarEnabledChanged(enabled)
 -- 	TopbarEnabled = enabled
 -- 	-- Update coregui to reflect new topbar status
 -- 	OnCoreGuiChanged(Enum.CoreGuiType.Backpack, StarterGui:GetCoreGuiEnabled(Enum.CoreGuiType.Backpack))
 -- end
 
--- ROBLOX deviation: Disable CoreGui toggling for Backpack
--- Listen to enable/disable signals from the StarterGui
+-- -- Listen to enable/disable signals from the StarterGui
 -- StarterGui.CoreGuiChangedSignal:connect(OnCoreGuiChanged)
 -- local backpackType, healthType = Enum.CoreGuiType.Backpack, Enum.CoreGuiType.Health
 -- OnCoreGuiChanged(backpackType, StarterGui:GetCoreGuiEnabled(backpackType))
 -- OnCoreGuiChanged(healthType, StarterGui:GetCoreGuiEnabled(healthType))
+-- ROBLOX deviation END
 
 GuiService.MenuOpened:Connect(function()
 	-- ROBLOX deviation: remove FFlag isInExperienceUIVREnabled
@@ -2020,7 +2021,7 @@ GuiService.MenuOpened:Connect(function()
 	end
 end)
 
--- ROBLOX deviation: remove FFlag AppChatCoreUIConflictFix
+-- ROBLOX deviation START: remove FFlag AppChatCoreUIConflictFix
 -- if getFFlagAppChatCoreUIConflictFix() then
 -- 	InExperienceAppChatModal.default.visibilitySignal.Event:Connect(function(visible)
 -- 		if visible and BackpackScript.IsOpen then
@@ -2028,6 +2029,7 @@ end)
 -- 		end
 -- 	end)
 -- end
+-- ROBLOX deviation END
 
 local function OnPreferredTransparencyChanged()
 	local preferredTransparency = GuiService.PreferredTransparency -- ROBLOX deviation: use GuiService instead of UserGameSettings
