@@ -14,7 +14,7 @@ local Purse = require(ReplicatedStorage.Purse)
 local button = script.Parent
 
 local function onButtonActivated()
-	Purse.OpenClose() -- Toggle the inventory
+	Purse.OpenClose()
 end
 
 button.Activated:Connect(onButtonActivated)
