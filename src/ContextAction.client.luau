@@ -1,7 +1,7 @@
 local ContextActionService = game:GetService("ContextActionService")
 local BackpackScript = require(script.Parent)
 
-local ACTION_NAME = "RBXBackpackToggle"
+local ACTION_NAME = "BackpackToggle"
 
 local function handleAction(actionName, inputState, _inputObject)
 	if actionName == ACTION_NAME and inputState == Enum.UserInputState.Begin then
