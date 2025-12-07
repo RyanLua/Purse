@@ -1409,7 +1409,7 @@ end
 local function unbindBackpackHotbarAction()
 	disableGamepadInventoryControl()
 	GamepadActionsBound = false
-	ContextActionService:UnbindAction("BackpackHotbarEquip") -- ROBLOX deviation: change action name from Backpack to RBX
+	ContextActionService:UnbindAction("BackpackHotbarEquip") -- ROBLOX deviation: change action name from RBX to Backpack
 end
 
 function gamepadDisconnected()
