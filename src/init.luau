@@ -448,13 +448,15 @@ local function MakeSlot(parent, index)
 				if FullHotbarSlots >= 1 and not GamepadActionsBound then
 					-- Player added first item to a hotbar slot, enable BindCoreAction
 					GamepadActionsBound = true
+					-- ROBLOX deviation START: change action name from RBX to Backpack
 					ContextActionService:BindAction(
-						"RBXHotbarEquip",
+						"BackpackHotbarEquip",
 						changeToolFunc,
 						false,
 						Enum.KeyCode.ButtonL1,
 						Enum.KeyCode.ButtonR1
 					)
+					-- ROBLOX deviation END
 				end
 			end
 		end
@@ -487,7 +489,7 @@ local function MakeSlot(parent, index)
 			FullHotbarSlots = FullHotbarSlots - 1
 			if FullHotbarSlots < 1 then
 				GamepadActionsBound = false
-				ContextActionService:UnbindAction("RBXHotbarEquip")
+				ContextActionService:UnbindAction("BackpackHotbarEquip") -- ROBLOX deviation: change action name from RBX to Backpack
 			end
 		end
 
@@ -1104,8 +1106,10 @@ local selectDirection = Vector2.new(0, 0)
 local hotbarVisible = false
 
 function unbindAllGamepadEquipActions()
-	ContextActionService:UnbindAction("RBXBackpackHasGamepadFocus")
-	ContextActionService:UnbindAction("RBXCloseInventory")
+	-- ROBLOX deviation START: change action name from RBX to Backpack
+	ContextActionService:UnbindAction("BackpackHasGamepadFocus")
+	ContextActionService:UnbindAction("BackpackCloseInventory")
+	-- ROBLOX deviation END
 end
 
 local function setHotbarVisibility(visible, isInventoryScreen)
@@ -1355,14 +1359,16 @@ function enableGamepadInventoryControl()
 		end
 	end
 
-	ContextActionService:BindAction("RBXBackpackHasGamepadFocus", noOpFunc, false, Enum.UserInputType.Gamepad1)
+	-- ROBLOX deviation START: change action name from RBX to Backpack
+	ContextActionService:BindAction("BackpackHasGamepadFocus", noOpFunc, false, Enum.UserInputType.Gamepad1)
 	ContextActionService:BindAction(
-		"RBXCloseInventory",
+		"BackpackCloseInventory",
 		goBackOneLevel,
 		false,
 		Enum.KeyCode.ButtonB,
 		Enum.KeyCode.ButtonStart
 	)
+	-- ROBLOX deviation END
 
 	-- Gaze select will automatically select the object for us!
 	if not UseGazeSelection() then
@@ -1388,20 +1394,22 @@ end
 local function bindBackpackHotbarAction()
 	if WholeThingEnabled and not GamepadActionsBound then
 		GamepadActionsBound = true
+		-- ROBLOX deviation START: change action name from RBX to Backpack
 		ContextActionService:BindAction(
-			"RBXHotbarEquip",
+			"BackpackHotbarEquip",
 			changeToolFunc,
 			false,
 			Enum.KeyCode.ButtonL1,
 			Enum.KeyCode.ButtonR1
 		)
+		-- ROBLOX deviation END
 	end
 end
 
 local function unbindBackpackHotbarAction()
 	disableGamepadInventoryControl()
 	GamepadActionsBound = false
-	ContextActionService:UnbindAction("RBXHotbarEquip")
+	ContextActionService:UnbindAction("BackpackHotbarEquip") -- ROBLOX deviation: change action name from Backpack to RBX
 end
 
 function gamepadDisconnected()
@@ -1414,7 +1422,7 @@ end
 function gamepadConnected()
 	if not VRService.VREnabled then
 		GamepadEnabled = true
-		GuiService:AddSelectionParent("RBXBackpackSelection", MainFrame)
+		GuiService:AddSelectionParent("BackpackSelection", MainFrame) -- ROBLOX deviation: change action name from RBX to Backpack
 
 		if FullHotbarSlots >= 1 then
 			bindBackpackHotbarAction()
@@ -1918,11 +1926,13 @@ do -- Make the Inventory expand/collapse arrow (unless TopBar)
 			disableGamepadInventoryControl()
 		end
 
+		-- ROBLOX deviation START: change action name from RBX to Backpack
 		if InventoryFrame.Visible then
-			ContextActionService:BindAction("RBXRemoveSlot", removeHotBarSlot, false, Enum.KeyCode.ButtonX)
+			ContextActionService:BindAction("BackpackRemoveSlot", removeHotBarSlot, false, Enum.KeyCode.ButtonX)
 		else
-			ContextActionService:UnbindAction("RBXRemoveSlot")
+			ContextActionService:UnbindAction("BackpackRemoveSlot")
 		end
+		-- ROBLOX deviation END
 
 		BackpackScript.IsOpen = InventoryFrame.Visible
 		BackpackScript.StateChanged:Fire(InventoryFrame.Visible)
