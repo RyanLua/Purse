@@ -1,1 +1,7 @@
 std = "roblox"
+
+[lints]
+deprecated = "allow"
+shadowing = "allow"
+unscoped_variables = "allow"
+unused_variable = "allow"
