@@ -19,9 +19,9 @@ Purse uses [RunContext] to run anywhere, so you do not need to move it from [Wor
 
 1. Open Roblox Studio and create a new place or open an existing place.
 
-1. From the [View] tab, open the [Toolbox] and select the **Inventory** tab.
+1. From Studio's Window menu or Home tab toolbar, open the [Toolbox] and select the **Inventory** tab.
 
-    ![View Tab Toolbox](https://prod.docsiteassets.roblox.com/assets/studio/general/View-Tab-Toolbox.png)
+    ![Toolbox](https://prod.docsiteassets.roblox.com/assets/studio/general/Toolbar-Toolbox.png)
 
     ![Inventory Tab](https://prod.docsiteassets.roblox.com/assets/studio/toolbox/Inventory-Tab.png)
 
@@ -29,7 +29,6 @@ Purse uses [RunContext] to run anywhere, so you do not need to move it from [Wor
 
 1. In the [Explorer] window, move the **Purse** model into [`ReplicatedStorage`][ReplicatedStorage].
 
-  [View]: https://create.roblox.com/docs/studio/view-tab
   [Toolbox]: https://create.roblox.com/docs/projects/assets/toolbox
   [Explorer]: https://create.roblox.com/docs/studio/explorer
 
