@@ -1,5 +1,7 @@
+local Packages = script.Parent.Packages
+
 local BackpackScript = require(script.Parent)
-local Icon = require(script.Parent.Parent.topbarplus)
+local Icon = require(Packages.topbarplus)
 
 local ICON_SELECTED_IMAGE = "rbxasset://textures/ui/TopBar/inventoryOn.png"
 local ICON_DESELECTED_IMAGE = "rbxasset://textures/ui/TopBar/inventoryOff.png"

@@ -6,7 +6,10 @@
     "ReplicatedStorage": {
       "$className": "ReplicatedStorage",
       "Purse": {
-        "$path": "models/Purse"
+        "$path": "src",
+        "Packages": {
+          "$path": "Packages"
+        }
       }
     }
   }
