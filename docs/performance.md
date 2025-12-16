@@ -10,4 +10,12 @@ All performance benchmarks are measured on the client using the [Developer Conso
 
 ## Memory
 
-## CPU time
+Typically around 0.1 to 0.2 MBs of memory is used.
+
+## CPU
+
+There is no meaningful CPU impact that the [MicroProfiler] or [Script Profiler]
+within the [Developer Console] can measure. No per-frame calculations are made and code is entirely event-driven.
+
+  [MicroProfiler]: https://create.roblox.com/docs/en-us/performance-optimization/microprofiler
+  [Script Profiler]: https://create.roblox.com/docs/en-us/studio/optimization/scriptprofiler
