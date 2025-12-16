@@ -58,5 +58,6 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Installation: installation.md
+  - Performance: performance.md
   - Philosophy: philosophy.md
   - API Reference: api-reference.md
