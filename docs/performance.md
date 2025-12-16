@@ -10,7 +10,7 @@ All performance benchmarks are measured on the client using the [Developer Conso
 
 ## Memory
 
-Typically around 0.10 to 0.20 MBs of memory is used. Purse uses [TopbarPlus] which uses around 0.16 MBs of memory on top of typical memory consumption.
+Typically around 0.10 to 0.20 MB of memory is used. Purse uses [TopbarPlus], which adds around 0.16 MB of memory on top of the typical memory consumption.
 
   [TopbarPlus]: https://1foreverhd.github.io/TopbarPlus/
 
