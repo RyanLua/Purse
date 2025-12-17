@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://purse.luau.page/installation/">
+        <link rel="canonical" href="https://purse.luau.page/performance/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../installation/">
       
       
-        <link rel="next" href="../performance/">
+        <link rel="next" href="../philosophy/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Installation - Purse Documentation</title>
+        <title>Performance - Purse Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creator-store" class="md-skip">
+        <a href="#memory" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation
+              Performance
             
           </span>
         </div>
@@ -290,6 +290,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -307,7 +334,7 @@
   <span class="md-ellipsis">
     
   
-    Installation
+    Performance
   
 
     
@@ -325,7 +352,7 @@
   <span class="md-ellipsis">
     
   
-    Installation
+    Performance
   
 
     
@@ -349,10 +376,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creator-store" class="md-nav__link">
+  <a href="#memory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creator Store
+        Memory
       
     </span>
   </a>
@@ -360,21 +387,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#github-releases" class="md-nav__link">
+  <a href="#cpu" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GitHub Releases
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wally" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Wally
+        CPU
       
     </span>
   </a>
@@ -385,33 +401,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../performance/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Performance
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -495,10 +484,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creator-store" class="md-nav__link">
+  <a href="#memory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creator Store
+        Memory
       
     </span>
   </a>
@@ -506,21 +495,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#github-releases" class="md-nav__link">
+  <a href="#cpu" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GitHub Releases
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#wally" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Wally
+        CPU
       
     </span>
   </a>
@@ -547,70 +525,19 @@
   
 
 
-  <h1>Installation</h1>
+  <h1>Performance</h1>
 
-<p>Purse is available on the <a href="https://create.roblox.com/store/asset/112061170330936">Creator Store</a>, <a href="https://wally.run/package/ryanlua/purse">Wally</a>, and <a href="https://github.com/ryanlua/purse/releases">GitHub Releases</a>.</p>
-<p>Purse uses <a href="https://devforum.roblox.com/t/1938784">RunContext</a> to run anywhere, so you do not need to move it from <a href="https://create.roblox.com/docs/reference/engine/classes/Workspace">Workspace</a>, though it is recommeneded to parent to <a href="https://create.roblox.com/docs/reference/engine/classes/ReplicatedStorage"><code>ReplicatedStorage</code></a> for best practices and organizational reasons.</p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>Do not parent the Purse to any starter containers or it will run multiple times.</p>
+<p>Purse only runs on the client and has zero performance impact on the server.</p>
+<p>All performance benchmarks are measured on the client using the <a href="https://create.roblox.com/docs/en-us/studio/developer-console">Developer Console</a> in Roblox Studio testing.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Benchmarks may be optimistic due to the optimization level of the Luau compiler in Studio testing being lower than in live games.</p>
 </div>
-<h2 id="creator-store">Creator Store <small>recommended</small><a class="headerlink" href="#creator-store" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Get the <strong>Purse</strong> model from the <a href="https://create.roblox.com/store/asset/112061170330936">Creator Store</a>.</p>
-</li>
-<li>
-<p>Open Roblox Studio and create a new place or open an existing place.</p>
-</li>
-<li>
-<p>From Studio's Window menu or Home tab toolbar, open the <a href="https://create.roblox.com/docs/projects/assets/toolbox">Toolbox</a> and select the <strong>Inventory</strong> tab.</p>
-<p><img alt="Toolbox" src="https://prod.docsiteassets.roblox.com/assets/studio/general/Toolbar-Toolbox.png" /></p>
-<p><img alt="Inventory Tab" src="https://prod.docsiteassets.roblox.com/assets/studio/toolbox/Inventory-Tab.png" /></p>
-</li>
-<li>
-<p>Locate the <strong>Purse</strong> model and click it, or drag-and-drop it into the 3D view.</p>
-</li>
-<li>
-<p>In the <a href="https://create.roblox.com/docs/studio/explorer">Explorer</a> window, move the <strong>Purse</strong> model into <a href="https://create.roblox.com/docs/reference/engine/classes/ReplicatedStorage"><code>ReplicatedStorage</code></a>.</p>
-</li>
-</ol>
-<h2 id="github-releases">GitHub Releases<a class="headerlink" href="#github-releases" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p>Download the <code>Purse.rbxm</code> or <code>Purse.rbxmx</code> model file from <a href="https://github.com/ryanlua/purse/releases">GitHub Releases</a>.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Binary (<code>.rbxm</code>) and XML (<code>.rbxmx</code>) model files contain the exact same model. <code>.rbxm</code> is a smaller file size to download.</p>
-</div>
-</li>
-<li>
-<p>Open Roblox Studio and create a new place or open an existing place.</p>
-</li>
-<li>
-<p>In the <a href="https://create.roblox.com/docs/studio/explorer">Explorer</a> window, insert <strong>Purse</strong> into <a href="https://create.roblox.com/docs/reference/engine/classes/ReplicatedStorage"><code>ReplicatedStorage</code></a>.</p>
-<p><img alt="Contextual menu" src="https://prod.docsiteassets.roblox.com/assets/studio/explorer/Context-Menu-Service.png.webp" /></p>
-</li>
-<li>
-<p>Select the <strong>Purse</strong> model file you downloaded from GitHub.</p>
-</li>
-</ol>
-<h2 id="wally">Wally<a class="headerlink" href="#wally" title="Permanent link">&para;</a></h2>
-<p>You are expected to already have Wally setup in your Rojo project and basic knowledge on how to use Wally packages.</p>
-<ol>
-<li>
-<p>Open your Rojo project in the code editor of your choice.</p>
-</li>
-<li>
-<p>In the <code>wally.toml</code> file, add the <a href="https://wally.run/package/ryanlua/purse">latest Wally version for Purse</a>. Your dependencies should look similar to this:</p>
-<div class="highlight"><span class="filename">wally.toml</span><pre><span></span><code><span class="k">[dependencies]</span>
-<span class="n">purse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ryanlua/purse@1.0.0&quot;</span>
-</code></pre></div>
-</li>
-<li>
-<p>Install Purse from Wally by running <code>wally install</code>.</p>
-</li>
-</ol>
+<h2 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h2>
+<p>Typically around 0.10 to 0.20 MB of memory is used. Purse uses <a href="https://1foreverhd.github.io/TopbarPlus/">TopbarPlus</a>, which adds around 0.16 MB of memory on top of the typical memory consumption.</p>
+<h2 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h2>
+<p>There is no meaningful CPU impact that the <a href="https://create.roblox.com/docs/en-us/performance-optimization/microprofiler">MicroProfiler</a> or <a href="https://create.roblox.com/docs/en-us/studio/optimization/scriptprofiler">Script Profiler</a>
+within the <a href="https://create.roblox.com/docs/en-us/studio/developer-console">Developer Console</a> can measure. No per-frame calculations are made and code is entirely event-driven.</p>
 
 
 
@@ -646,7 +573,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+          <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -656,20 +583,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Home
+                Installation
               </div>
             </div>
           </a>
         
         
           
-          <a href="../performance/" class="md-footer__link md-footer__link--next" aria-label="Next: Performance">
+          <a href="../philosophy/" class="md-footer__link md-footer__link--next" aria-label="Next: Philosophy">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Performance
+                Philosophy
               </div>
             </div>
             <div class="md-footer__button md-icon">
