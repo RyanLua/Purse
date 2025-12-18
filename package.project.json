@@ -2,6 +2,9 @@
   "name": "Purse",
   "emitLegacyScripts": false,
   "tree": {
-    "$path": "models"
+    "$path": "models/Purse",
+    "ThumbnailCamera": {
+      "$path": "models/ThumbnailCamera.model.json"
+    }
   }
 }
