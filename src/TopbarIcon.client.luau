@@ -1,3 +1,5 @@
+--!nonstrict
+
 local BackpackScript = require(script.Parent)
 local Icon = require(script.Parent.Parent.topbarplus)
 
