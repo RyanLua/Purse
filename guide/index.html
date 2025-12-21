@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://purse.luau.page/performance/">
+        <link rel="canonical" href="https://purse.luau.page/guide/">
       
       
-        <link rel="prev" href="../guide/">
+        <link rel="prev" href="../installation/">
       
       
-        <link rel="next" href="../philosophy/">
+        <link rel="next" href="../performance/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Performance - Purse Documentation</title>
+        <title>Guide - Purse Documentation</title>
       
     
     
@@ -75,11 +75,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#memory" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Performance
+              Guide
             
           </span>
         </div>
@@ -317,10 +312,17 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -336,6 +338,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -344,35 +347,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Performance
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
         
   
   
@@ -388,46 +366,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#memory" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Memory
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cpu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CPU
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -504,36 +442,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#memory" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Memory
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cpu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CPU
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -552,19 +460,13 @@
   
 
 
-  <h1>Performance</h1>
+  <h1>Guide</h1>
 
-<p>Purse only runs on the client and has zero performance impact on the server.</p>
-<p>All performance benchmarks are measured on the client using the <a href="https://create.roblox.com/docs/en-us/studio/developer-console">Developer Console</a> in Roblox Studio testing.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Benchmarks may be optimistic due to the optimization level of the Luau compiler in Studio testing being lower than in live games.</p>
-</div>
-<h2 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h2>
-<p>Typically around 0.10 to 0.20 MB of memory is used. Purse uses <a href="https://1foreverhd.github.io/TopbarPlus/">TopbarPlus</a>, which adds around 0.16 MB of memory on top of the typical memory consumption.</p>
-<h2 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h2>
-<p>There is no meaningful CPU impact that the <a href="https://create.roblox.com/docs/en-us/performance-optimization/microprofiler">MicroProfiler</a> or <a href="https://create.roblox.com/docs/en-us/studio/optimization/scriptprofiler">Script Profiler</a>
-within the <a href="https://create.roblox.com/docs/en-us/studio/developer-console">Developer Console</a> can measure. No per-frame calculations are made and code is entirely event-driven.</p>
+<p>Purse's source code is located in <a href="https://github.com/ryanlua/purse/blob/main/src/init.luau"><code>src/init.luau</code></a> where you can make modifications to the backpack's functionality and appearance.</p>
+<p>For example, you can make the slot's equip color red by changing the <code>SLOT_EQUIP_COLOR</code> to the below:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">SLOT_EQUIP_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Color3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">233</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="Screenshot of the hotbar with a slot equipped with a red selection outline" src="../assets/red-slot-equip-color.png" /></p>
 
 
 
@@ -600,7 +502,7 @@ within the <a href="https://create.roblox.com/docs/en-us/studio/developer-consol
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Guide">
+          <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -610,20 +512,20 @@ within the <a href="https://create.roblox.com/docs/en-us/studio/developer-consol
                 Previous
               </span>
               <div class="md-ellipsis">
-                Guide
+                Installation
               </div>
             </div>
           </a>
         
         
           
-          <a href="../philosophy/" class="md-footer__link md-footer__link--next" aria-label="Next: Philosophy">
+          <a href="../performance/" class="md-footer__link md-footer__link--next" aria-label="Next: Performance">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Philosophy
+                Performance
               </div>
             </div>
             <div class="md-footer__button md-icon">
