@@ -397,6 +397,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#removing-topbar-icon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing Topbar Icon
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -532,6 +543,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#removing-topbar-icon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing Topbar Icon
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -632,6 +654,14 @@
 <li>Changed from 3 hotbar slots to 5 hotbar slots</li>
 </ol>
 <p><img alt="Screenshot of the hotbar and inventory with modified mini size" src="../assets/hotbar-inventory-sample.png" /></p>
+<h2 id="removing-topbar-icon">Removing Topbar Icon<a class="headerlink" href="#removing-topbar-icon" title="Permanent link">&para;</a></h2>
+<p>The topbar icon is decoupled from Purse's functionality, so you can remove it by disabling the <a href="https://github.com/ryanlua/purse/blob/main/src/TopbarIcon.client.luau"><code>TopbarIcon</code></a> script. In addition, a <a href="https://github.com/ryanlua/purse/blob/main/src/ContextAction.client.luau"><code>ContextAction</code></a> script is included to bind opening and closing the inventory to a keycode (set to backquote <kbd>`</kbd> by default).</p>
+<p>Your explorer window should look similar to the following when you disable the <code>TopbarIcon</code> script and enable the <code>ContextAction</code> script.</p>
+<p><img alt="Explorer window showing TopbarIcon disabled and ContextAction enabled under Purse" src="../assets/disable-topbar.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you do not enable the <code>ContextAction</code> script, players will not be able to open the backpack since the topbar icon which handles binding is disabled.</p>
+</div>
 
 
 
