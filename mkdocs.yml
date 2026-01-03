@@ -8,6 +8,7 @@ copyright: Copyright &copy; Ryan Luu
 theme:
   name: material
   features:
+    - content.code.annotate
     - content.code.copy
     - content.tooltips
     - navigation.footer
@@ -53,7 +54,9 @@ markdown_extensions:
   - attr_list
   - toc:
       permalink: true
+  - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.inlinehilite
 
 nav:
   - Home: index.md
