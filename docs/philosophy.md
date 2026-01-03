@@ -4,7 +4,7 @@ The basic rundown is that **Purse aims to be as close to the CoreGui** while **S
 
   [Satchel]: https://satchel.luau.page
 
-## Design principles
+## Design Principles
 
 * **As close to CoreGui as possible**: Purse aims to be as similar to Roblox's CoreGui as possible so players barely notice the difference
 * **Sync with upstream**: We document changes and keep track of any deviations from the [CoreGui Backpack upstream] which allows us to easily sync to the upstream.
