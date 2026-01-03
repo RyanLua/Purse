@@ -2,7 +2,7 @@ Through source code modifications, you can change Purse's behavior and appearanc
 
 ## Changing Equip Color
 
-You can change the slot's equip color which is blue, by modifying the `SLOT_EQUIP_COLOR` constant in its source.
+You can change the slot's equip color, which is blue, by modifying the `SLOT_EQUIP_COLOR` constant in its source.
 
 The following code sample changes the equip color to red.
 
@@ -12,7 +12,7 @@ local SLOT_EQUIP_COLOR = Color3.new(233 / 255, 90 / 255, 90 / 255) -- (1)!
 --8<-- "src/init.luau:46:49"
 ```
 
-1.  Changed from blue `#!lua Color3.new(90 / 255, 142 / 255, 233 / 255)` to red `#!lua Color3.new(90 / 255, 142 / 255, 233 / 255)`
+1.  Changed from blue `#!lua Color3.new(90 / 255, 142 / 255, 233 / 255)` to red `#!lua Color3.new(233 / 255, 90 / 255, 90 / 255)`
 
 ![Screenshot of the hotbar with a slot equipped with a red selection outline](assets/red-slot-equip-color.png)
 
