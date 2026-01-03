@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#changing-equip-color" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -322,6 +327,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -338,6 +361,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changing-equip-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing Equip Color
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -442,6 +493,25 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#changing-equip-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing Equip Color
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -462,10 +532,25 @@
 
   <h1>Guide</h1>
 
-<p>Purse's source code is located in <a href="https://github.com/ryanlua/purse/blob/main/src/init.luau"><code>src/init.luau</code></a> where you can make modifications to the backpack's functionality and appearance.</p>
-<p>For example, you can make the slot's equip color red by changing the <code>SLOT_EQUIP_COLOR</code> to the below:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">SLOT_EQUIP_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Color3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">233</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span>
-</code></pre></div>
+<p>Through source code modifications, you can change Purse's behavior and appearance. Here are a few examples of what you can do with Purse.</p>
+<h2 id="changing-equip-color">Changing Equip Color<a class="headerlink" href="#changing-equip-color" title="Permanent link">&para;</a></h2>
+<p>You can make the slot's equip color which is blue, by changing the <code>SLOT_EQUIP_COLOR</code> constant in it's source.</p>
+<p>This code sample changes the equip color to red.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">SLOT_DRAGGABLE_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Color3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">49</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">49</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">49</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span>
+<span class="hll"><span class="kd">local</span><span class="w"> </span><span class="nv">SLOT_EQUIP_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Color3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">233</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="c1">-- (1)!</span>
+</span><span class="kd">local</span><span class="w"> </span><span class="nv">SLOT_EQUIP_THICKNESS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="c1">-- Relative</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">SLOT_FADE_LOCKED_DEFAULT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.50</span><span class="w"> </span><span class="c1">-- Locked means undraggable</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">slotFadeLocked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">SLOT_FADE_LOCKED_DEFAULT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">GuiService</span><span class="p">.</span><span class="py">PreferredTransparency</span><span class="w"> </span><span class="c1">-- ROBLOX deviation: use GuiService instead of UserGameSettings</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">SLOT_BORDER_COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Color3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Appears when dragging</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Changed from blue <code class="highlight"><span class="nv">Color3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">90</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">142</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">233</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span></code> to red <code class="highlight"><span class="nv">Color3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">90</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">142</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">233</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span></code></li>
+</ol>
 <p><img alt="Screenshot of the hotbar with a slot equipped with a red selection outline" src="../assets/red-slot-equip-color.png" /></p>
 
 
@@ -603,7 +688,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.tooltips", "navigation.footer", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
