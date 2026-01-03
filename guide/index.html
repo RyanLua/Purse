@@ -386,6 +386,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#increasing-hotbar-slots-and-inventory-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Increasing Hotbar Slots and Inventory Rows
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -510,6 +521,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#increasing-hotbar-slots-and-inventory-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Increasing Hotbar Slots and Inventory Rows
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -534,8 +556,8 @@
 
 <p>Through source code modifications, you can change Purse's behavior and appearance. Here are a few examples of what you can do with Purse.</p>
 <h2 id="changing-equip-color">Changing Equip Color<a class="headerlink" href="#changing-equip-color" title="Permanent link">&para;</a></h2>
-<p>You can make the slot's equip color which is blue, by changing the <code>SLOT_EQUIP_COLOR</code> constant in it's source.</p>
-<p>This code sample changes the equip color to red.</p>
+<p>You can change the slot's equip color which is blue, by modifying the <code>SLOT_EQUIP_COLOR</code> constant in its source.</p>
+<p>The following code sample changes the equip color to red.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">44</span>
 <span class="normal">45</span>
 <span class="normal">46</span>
@@ -552,6 +574,64 @@
 <li>Changed from blue <code class="highlight"><span class="nv">Color3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">90</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">142</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">233</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span></code> to red <code class="highlight"><span class="nv">Color3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">90</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">142</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">233</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span></code></li>
 </ol>
 <p><img alt="Screenshot of the hotbar with a slot equipped with a red selection outline" src="../assets/red-slot-equip-color.png" /></p>
+<h2 id="increasing-hotbar-slots-and-inventory-rows">Increasing Hotbar Slots and Inventory Rows<a class="headerlink" href="#increasing-hotbar-slots-and-inventory-rows" title="Permanent link">&para;</a></h2>
+<p>Purse shows a set number of hotbar slots and inventory rows based on the device.</p>
+<figure>
+<p><img alt="Screenshot of the hotbar and inventory with full size" src="../assets/hotbar-inventory-full.png" /></p>
+<figcaption>
+<p>Computer, console, and VR have 10 hotbar slots and 4 inventory rows</p>
+</figcaption>
+</figure>
+<figure>
+<p><img alt="Screenshot of the hotbar and inventory with mini size" src="../assets/hotbar-inventory-mini.png" /></p>
+<figcaption>
+<p>Phone and tablet devices have 3 hotbar slots and 2 inventory rows</p>
+</figcaption>
+</figure>
+<p>It's possible to increase the number of hotbar slots and inventory rows shown by changing the constants in the source code.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Formerly VR devices used different constants for hotbar slots and inventory rows but now use the same as computer and console devices.</p>
+<p><code>HOTBAR_SLOTS_VR</code> and <code>INVENTORY_ROWS_VR</code> are no longer used but are still included in the code. VR devices now use <code>INVENTORY_ROWS_FULL</code> and <code>HOTBAR_SLOTS_FULL</code>.</p>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">HOTBAR_SLOTS_FULL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">HOTBAR_SLOTS_VR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">HOTBAR_SLOTS_MINI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">HOTBAR_SLOTS_WIDTH_CUTOFF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="c1">-- Anything smaller is MINI</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">HOTBAR_OFFSET_FROMBOTTOM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">30</span><span class="w"> </span><span class="c1">-- Offset to make room for the Health GUI</span>
+
+<span class="kd">local</span><span class="w"> </span><span class="nv">INVENTORY_ROWS_FULL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">INVENTORY_ROWS_VR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">INVENTORY_ROWS_MINI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">INVENTORY_HEADER_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">INVENTORY_ARROWS_BUFFER_VR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40</span>
+</code></pre></div></td></tr></table></div>
+<p>Constants suffixed with <code>_FULL</code> are for computer, console, and VR devices while constants suffixed with <code>_MINI</code> are for phone and tablet devices.</p>
+<p>The following code sample changes phone and tablet devices to have 5 hotbar slots.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">HOTBAR_SLOTS_FULL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">HOTBAR_SLOTS_VR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span>
+<span class="hll"><span class="kd">local</span><span class="w"> </span><span class="nv">HOTBAR_SLOTS_MINI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="c1">-- (1)!</span>
+</span><span class="kd">local</span><span class="w"> </span><span class="nv">HOTBAR_SLOTS_WIDTH_CUTOFF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="c1">-- Anything smaller is MINI</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">HOTBAR_OFFSET_FROMBOTTOM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">30</span><span class="w"> </span><span class="c1">-- Offset to make room for the Health GUI</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Changed from 3 hotbar slots to 5 hotbar slots</li>
+</ol>
+<p><img alt="Screenshot of the hotbar and inventory with modified mini size" src="../assets/hotbar-inventory-sample.png" /></p>
 
 
 
