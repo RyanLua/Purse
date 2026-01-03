@@ -56,3 +56,14 @@ local HOTBAR_SLOTS_MINI = 5 -- (1)!
 
 ![Screenshot of the hotbar and inventory with modified mini size](assets/hotbar-inventory-sample.png)
 
+## Removing Topbar Icon
+
+The topbar icon is decoupled from Purse's functionality, so you can remove it by disabling the [`TopbarIcon`](https://github.com/ryanlua/purse/blob/main/src/TopbarIcon.client.luau) script. In addition, a [`ContextAction`](https://github.com/ryanlua/purse/blob/main/src/ContextAction.client.luau) script is included to bind opening and closing the inventory to a keycode (set to backquote <kbd>`</kbd> by default).
+
+Your explorer window should look similar to the following when you disable the `TopbarIcon` script and enable the `ContextAction` script.
+
+![Explorer window showing TopbarIcon disabled and ContextAction enabled under Purse](assets/disable-topbar.png)
+
+!!! warning
+
+    If you do not enable the `ContextAction` script, players will not be able to open the backpack since the topbar icon which handles binding is disabled.
