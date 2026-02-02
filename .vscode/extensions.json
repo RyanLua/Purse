@@ -1,9 +1,9 @@
 {
-    "recommendations": [
-        "evaera.vscode-rojo",
-        "kampfkarren.selene-vscode",
-        "johnnymorganz.stylua",
-        "johnnymorganz.luau-lsp",
-        "redhat.vscode-yaml"
-    ]
+  "recommendations": [
+    "evaera.vscode-rojo",
+    "kampfkarren.selene-vscode",
+    "johnnymorganz.stylua",
+    "johnnymorganz.luau-lsp",
+    "redhat.vscode-yaml"
+  ]
 }
