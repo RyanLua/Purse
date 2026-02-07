@@ -34,6 +34,8 @@ end)
 
 icon.toggled:Connect(function(_isSelected, fromSource)
 	if fromSource == "User" then
-		BackpackScript.OpenClose()
+		if BackpackScript.OpenClose then
+			BackpackScript.OpenClose()
+		end
 	end
 end)
