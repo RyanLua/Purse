@@ -7,6 +7,8 @@ Purse unlocks APIs for the CoreGui backpack which were previously locked to othe
 The following code sample, placed within a child `LocalScript` of a `GuiButton`, uses [`OpenClose()`](#openclose) to toggle the inventory on the button's `Activated` event.
 
 ``` lua title="Inventory Toggle Button" linenums="1"
+--!strict
+
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Purse = require(ReplicatedStorage.Purse)
@@ -93,6 +95,8 @@ Returns true.
 The following code sample, placed within a child `LocalScript` of `StarterPlayerScripts`, uses [`StateChanged`](#statechanged) to detect when the inventory is toggled and prints its state to output.
 
 ``` lua title="Detect Inventory State" linenums="1"
+--!strict
+
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local Purse = require(ReplicatedStorage.Purse)
