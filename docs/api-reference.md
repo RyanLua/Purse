@@ -14,8 +14,8 @@ local Purse = require(ReplicatedStorage.Purse)
 local button = script.Parent
 
 local function onButtonActivated()
-	if BackpackScript.OpenClose then
-		BackpackScript.OpenClose()
+	if Purse.OpenClose then
+		Purse.OpenClose()
 	end
 end
 
