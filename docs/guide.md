@@ -86,3 +86,32 @@ Your explorer window should look similar to the following when you disable the `
 
   [TopbarIcon]: https://github.com/ryanlua/purse/blob/main/src/TopbarIcon.client.luau
   [ContextAction]: https://github.com/ryanlua/purse/blob/main/src/ContextAction.client.luau
+
+## Changing Inventory Key
+
+The default key to open the inventory is the backquote <kbd>\`</kbd> key, but you can change this by modifying the `bindToggleKey` argument in the `TopbarIcon` script.
+
+The following code sample changes the inventory toggle key to the <kbd>I</kbd> key.
+
+``` lua title="TopbarIcon" linenums="6" hl_lines="18"
+--8<-- "src/TopbarIcon.client.luau:6:22"
+icon:bindToggleKey(Enum.KeyCode.I) -- (1)!
+--8<-- "src/TopbarIcon.client.luau:24:26"
+```
+
+1.  Changed from backquote <kbd>\`</kbd> key `#!lua Enum.KeyCode.Backquote` to <kbd>I</kbd> key `#!lua Enum.KeyCode.I`
+
+![Screenshot of the hotbar with a slot equipped with a red selection outline](assets/inventory-key-caption.png)
+/// caption
+Topbar icon with inventory toggle key changed to <kbd>I</kbd>
+///
+
+It is also possible to bind the inventory toggle when using the `ContextAction` script. The following code sample binds the inventory toggle to the <kbd>I</kbd> key.
+
+``` lua title="ContextAction" linenums="16" hl_lines="1"
+ContextActionService:BindAction(ACTION_NAME, handleAction, false, Enum.KeyCode.I) -- (1)!
+```
+
+1.  Changed from backquote <kbd>\`</kbd> key `#!lua Enum.KeyCode.Backquote` to <kbd>I</kbd> key `#!lua Enum.KeyCode.I`
+
+If you don't want any key to be bound to toggling the inventory, you delete the line that binds the inventory toggle for either the `TopbarIcon` or `ContextAction` script which you use.
