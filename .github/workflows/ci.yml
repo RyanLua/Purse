@@ -29,7 +29,7 @@ jobs:
       - name: Setup Wally
         run: |
           wally install
-          rojo sourcemap develop.project.json --output sourcemap.json
+          rojo sourcemap $BUILD_PROJECT --output sourcemap.json
           wally-package-types --sourcemap sourcemap.json Packages/
 
       - name: Run StyLua
