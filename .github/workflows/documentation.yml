@@ -7,6 +7,7 @@ on:
     paths:
       - ".github/workflows/documentation.yml"
       - "docs/**"
+      - "src/**"
       - "mkdocs.yml"
 
 permissions:
@@ -16,9 +17,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout repository
+        uses: actions/checkout@v6
         with:
-          fetch-depth: 0
           sparse-checkout: |
             docs
             src

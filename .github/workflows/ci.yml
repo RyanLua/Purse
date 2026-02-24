@@ -2,13 +2,7 @@ name: CI
 
 on:
   pull_request:
-    paths:
-      - ".github/workflows/ci.yml"
-      - "**.luau"
   push:
-    paths:
-      - ".github/workflows/ci.yml"
-      - "**.luau"
 
 permissions:
   contents: read
@@ -21,12 +15,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout repository
+        uses: actions/checkout@v6
 
-      - name: Setup Rokit
+      - name: Install Rokit toolchain
         uses: CompeyDev/setup-rokit@v0.1.2
 
-      - name: Setup Wally
+      - name: Install Wally packages
         run: |
           wally install
           rojo sourcemap $BUILD_PROJECT --output sourcemap.json
@@ -38,7 +33,7 @@ jobs:
       - name: Run selene
         run: selene src/ models/
 
-      - name: Build using Rojo
+      - name: Build Rojo project
         run: |
           mkdir builds
           rojo build --output builds/$OUTPUT_NAME.rbxm $BUILD_PROJECT
