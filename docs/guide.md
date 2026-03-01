@@ -1,3 +1,7 @@
+---
+icon: lucide/cooking-pot
+---
+
 Through source code modifications, you can change Purse's behavior and appearance. Here are a few examples of what you can do with Purse.
 
 ## Changing Equip Color
