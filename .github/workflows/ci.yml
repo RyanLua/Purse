@@ -45,4 +45,3 @@ jobs:
           name: ${{ env.OUTPUT_NAME }}
           path: builds/
           if-no-files-found: error
-          archive: false
