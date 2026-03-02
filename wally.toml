@@ -12,4 +12,4 @@ exclude = ["**"]
 include = ["src", "src/**", "wally.toml", "wally.lock", "default.project.json", "LICENSE", "README.md"]
 
 [dependencies]
-topbarplus = "1foreverhd/topbarplus@3.4.0"
+topbarplus = "ryanlua/topbarplus@1.0.0"
