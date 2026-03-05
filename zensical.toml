@@ -71,7 +71,7 @@ nav = [
 # Read more: https://zensical.org/docs/customization/#additional-javascript
 #extra_javascript = ["javascripts/extra.js"]
 
-repo_url = "https://github.com/ryanlua/satchel"
+repo_url = "https://github.com/ryanlua/purse"
 
 # ----------------------------------------------------------------------------
 # Section for configuring theme options
