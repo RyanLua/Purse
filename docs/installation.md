@@ -1,5 +1,5 @@
 ---
-icon: lucide/package-plus
+icon: lucide/package-open
 ---
 
 Purse is available on the [Creator Store], [Wally], and [GitHub Releases].
