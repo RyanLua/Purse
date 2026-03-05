@@ -1,4 +1,5 @@
 ---
+title: API Reference
 icon: lucide/book-marked
 ---
 

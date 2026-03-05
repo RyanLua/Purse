@@ -46,11 +46,11 @@ Copyright &copy; 2026 Ryan Luu
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
   { "Home" = "index.md" },
-  { "Installation" = "installation.md" },
-  { "Guide" = "guide.md" },
-  { "Performance" = "performance.md" },
-  { "Philosophy" = "philosophy.md" },
-  { "API Reference" = "api-reference.md" },
+  "installation.md",
+  "guide.md",
+  "performance.md",
+  "philosophy.md",
+  "api-reference.md",
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
