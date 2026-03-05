@@ -310,4 +310,4 @@ repo = "lucide/github"
 #icon = "fontawesome/brands/github"
 #link = "https://github.com/user/repo"
 
-
+[project.markdown_extensions.pymdownx.snippets]
