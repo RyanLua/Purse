@@ -312,6 +312,26 @@ toggle.name = "Switch to light mode"
 #icon = "fontawesome/brands/github"
 #link = "https://github.com/user/repo"
 
+[[project.extra.social]]
+icon = "simple/github"
+link = "https://github.com/ryanlua/purse"
+name = "GitHub"
+
+[[project.extra.social]]
+icon = "simple/roblox"
+link = "https://create.roblox.com/store/asset/112061170330936"
+name = "Creator Store"
+
+[[project.extra.social]]
+icon = "simple/robloxstudio"
+link = "https://devforum.roblox.com/t/4040755"
+name = "DevForum"
+
+[[project.extra.social]]
+icon = "simple/discord"
+link = "https://discord.gg/N2KEnHzrsW"
+name = "Discord"
+
 [project.markdown_extensions.admonition]
 [project.markdown_extensions.pymdownx.blocks.caption]
 [project.markdown_extensions.pymdownx.snippets]
