@@ -89,7 +89,7 @@ Your explorer window should look similar to the following when you disable the `
 
 ## Changing Inventory Key
 
-The default key to open the inventory is the backquote <kbd>\`</kbd> key, but you can change this by modifying the `bindToggleKey` argument in the `TopbarIcon` script.
+The default key to open the inventory is the backquote <kbd>\`</kbd> key, but you can change this by modifying the `bindToggleKey` argument in the [`TopbarIcon`][TopbarIcon] script.
 
 The following code sample changes the inventory toggle key to the <kbd>I</kbd> key.
 
@@ -106,7 +106,7 @@ icon:bindToggleKey(Enum.KeyCode.I) -- (1)!
 Topbar icon with inventory toggle key changed to <kbd>I</kbd>
 ///
 
-It is also possible to bind the inventory toggle when using the `ContextAction` script. The following code sample binds the inventory toggle to the <kbd>I</kbd> key.
+It is also possible to bind the inventory toggle when using the [`ContextAction`][ContextAction] script. The following code sample binds the inventory toggle to the <kbd>I</kbd> key.
 
 ``` lua title="ContextAction" linenums="16" hl_lines="1"
 ContextActionService:BindAction(ACTION_NAME, handleAction, false, Enum.KeyCode.I) -- (1)!
