@@ -18,7 +18,7 @@ local SLOT_EQUIP_COLOR = Color3.new(233 / 255, 90 / 255, 90 / 255) -- (1)!
 
 1.  Changed from blue `#!lua Color3.new(90 / 255, 142 / 255, 233 / 255)` to red `#!lua Color3.new(233 / 255, 90 / 255, 90 / 255)`
 
-![Screenshot of the hotbar with a slot equipped with a red selection outline](images/red-slot-equip-color.png)
+![Screenshot of the hotbar with a slot equipped with a red selection outline](assets/red-slot-equip-color.png)
 /// caption
 Hotbar with a red equip outline
 ///
@@ -27,12 +27,12 @@ Hotbar with a red equip outline
 
 Purse shows a set number of hotbar slots and inventory rows based on the device.
 
-![Screenshot of the hotbar and inventory with full size](images/hotbar-inventory-full.png)
+![Screenshot of the hotbar and inventory with full size](assets/hotbar-inventory-full.png)
 /// caption
 Computer, console, and VR have 10 hotbar slots and 4 inventory rows
 ///
 
-![Screenshot of the hotbar and inventory with mini size](images/hotbar-inventory-mini.png)
+![Screenshot of the hotbar and inventory with mini size](assets/hotbar-inventory-mini.png)
 /// caption
 Phone and tablet devices have 3 hotbar slots and 2 inventory rows
 ///
@@ -61,7 +61,7 @@ local HOTBAR_SLOTS_MINI = 5 -- (1)!
 
 1.  Changed from 3 hotbar slots to 5 hotbar slots
 
-![Screenshot of the hotbar and inventory with modified mini size](images/hotbar-inventory-sample.png)
+![Screenshot of the hotbar and inventory with modified mini size](assets/hotbar-inventory-sample.png)
 /// caption
 Increased hotbar slots on phone and tablet devices
 ///
@@ -70,19 +70,19 @@ Increased hotbar slots on phone and tablet devices
 
 The topbar icon is decoupled from Purse's functionality, so you can remove it by disabling the [`TopbarIcon`][TopbarIcon] script. In addition, a [`ContextAction`][ContextAction] script is included to bind opening and closing the inventory to a keycode (set to backquote <kbd>`</kbd> by default).
 
-![Screenshot of topbar icon enabled](images/topbar-icon-enabled.png)
+![Screenshot of topbar icon enabled](assets/topbar-icon-enabled.png)
 /// caption
 Topbar icon enabled
 ///
 
-![Screenshot of topbar icon disabled](images/topbar-icon-disabled.png)
+![Screenshot of topbar icon disabled](assets/topbar-icon-disabled.png)
 /// caption
 Topbar icon disabled
 ///
 
 Your explorer window should look similar to the following when you disable the `TopbarIcon` script and enable the `ContextAction` script.
 
-![Explorer window showing TopbarIcon disabled and ContextAction enabled under Purse](images/disable-topbar.png)
+![Explorer window showing TopbarIcon disabled and ContextAction enabled under Purse](assets/disable-topbar.png)
 
 !!! warning
 
@@ -105,7 +105,7 @@ icon:bindToggleKey(Enum.KeyCode.I) -- (1)!
 
 1.  Changed from backquote <kbd>\`</kbd> key `#!lua Enum.KeyCode.Backquote` to <kbd>I</kbd> key `#!lua Enum.KeyCode.I`
 
-![Screenshot of the hotbar with a slot equipped with a red selection outline](images/inventory-key-caption.png)
+![Screenshot of the hotbar with a slot equipped with a red selection outline](assets/inventory-key-caption.png)
 /// caption
 Topbar icon with inventory toggle key changed to <kbd>I</kbd>
 ///

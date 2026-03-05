@@ -31,8 +31,8 @@ theme:
         name: Switch to system preference
   icon:
     repo: fontawesome/brands/github
-  favicon: assets/favicon.svg
-  logo: assets/logo.svg
+  favicon: images/purse.svg
+  logo: images/purse.svg
 
 extra:
   social:
