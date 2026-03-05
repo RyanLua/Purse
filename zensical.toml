@@ -311,5 +311,6 @@ toggle.name = "Switch to light mode"
 #link = "https://github.com/user/repo"
 
 [project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.blocks.caption]
 [project.markdown_extensions.pymdownx.snippets]
 [project.markdown_extensions.pymdownx.superfences]
