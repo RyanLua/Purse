@@ -345,5 +345,6 @@ name = "Figma"
 
 [project.markdown_extensions.admonition]
 [project.markdown_extensions.pymdownx.blocks.caption]
+[project.markdown_extensions.pymdownx.inlinehilite]
 [project.markdown_extensions.pymdownx.snippets]
 [project.markdown_extensions.pymdownx.superfences]

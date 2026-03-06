@@ -59,7 +59,7 @@ local HOTBAR_SLOTS_MINI = 5 -- (1)!
 --8<-- "src/init.luau:65:66"
 ```
 
-1.  Changed from 3 hotbar slots to 5 hotbar slots
+1.  Changed from `#!lua 3` hotbar slots to `#!lua 5` hotbar slots
 
 ![Screenshot of the hotbar and inventory with modified mini size](assets/hotbar-inventory-sample.png)
 /// caption
