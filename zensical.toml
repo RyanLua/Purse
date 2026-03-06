@@ -49,7 +49,6 @@ nav = [
   "installation.md",
   "guide.md",
   "performance.md",
-  "design.md",
   "philosophy.md",
   "api-reference.md",
 ]
