@@ -5,43 +5,39 @@ on:
     branches:
       - main
     paths:
-      - ".github/workflows/documentation.yml"
+      - ".github/workflows/docs.yml"
       - "docs/**"
       - "src/**"
-      - "mkdocs.yml"
+      - "zensical.toml"
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
       - name: Checkout repository
         uses: actions/checkout@v6
-        with:
-          sparse-checkout: |
-            docs
-            src
-
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-
-      - uses: actions/setup-python@v6
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.x
-
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-
-      - uses: actions/cache@v5
+      - name: Install Zensical
+        run: pip install zensical
+      - name: Build documentation
+        run: zensical build --clean
+      - name: Upload documentation
+        uses: actions/upload-pages-artifact@v4
         with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: ~/.cache
-          restore-keys: |
-            mkdocs-material-
-
-      - run: pip install mkdocs-material
-
-      - run: mkdocs gh-deploy --force
+          path: site
+      - name: Deploy documentation
+        uses: actions/deploy-pages@v4
+        id: deployment

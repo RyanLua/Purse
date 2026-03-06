@@ -17,28 +17,22 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
-
       - name: Install Rokit toolchain
         uses: CompeyDev/setup-rokit@v0.1.2
-
       - name: Install Wally packages
         run: |
           wally install
           rojo sourcemap $BUILD_PROJECT --output sourcemap.json
           wally-package-types --sourcemap sourcemap.json Packages/
-
       - name: Run StyLua
         run: stylua --check src/ models/
-
       - name: Run selene
         run: selene src/ models/
-
       - name: Build Rojo project
         run: |
           mkdir builds
           rojo build --output builds/$OUTPUT_NAME.rbxm $BUILD_PROJECT
           rojo build --output builds/$OUTPUT_NAME.rbxmx $BUILD_PROJECT
-
       - name: Archive build files
         uses: actions/upload-artifact@v7
         with:

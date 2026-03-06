@@ -3,7 +3,6 @@
     "evaera.vscode-rojo",
     "kampfkarren.selene-vscode",
     "johnnymorganz.stylua",
-    "johnnymorganz.luau-lsp",
-    "redhat.vscode-yaml"
+    "johnnymorganz.luau-lsp"
   ]
 }

@@ -1,3 +1,7 @@
+---
+icon: lucide/house
+---
+
 # Purse
 
 Purse is a fork of the [default Roblox backpack] decoupled from the CoreGui, allowing developers access to APIs that were previously unavailable and allowing for code modifications.

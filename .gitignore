@@ -5,7 +5,7 @@ sourcemap.json
 Packages/
 DevPackages/
 
-# MkDocs documentation
+# Documentation
 site/
 
 # Builds
