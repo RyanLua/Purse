@@ -49,6 +49,7 @@ nav = [
   "installation.md",
   "guide.md",
   "performance.md",
+  "design.md",
   "philosophy.md",
   "api-reference.md",
 ]
@@ -337,6 +338,11 @@ name = "DevForum"
 icon = "simple/discord"
 link = "https://discord.gg/N2KEnHzrsW"
 name = "Discord"
+
+[[project.extra.social]]
+icon = "simple/figma"
+link = "https://www.figma.com/design/LijzAgQwAa6cOKEVVJMMVo"
+name = "Figma"
 
 [project.markdown_extensions.admonition]
 [project.markdown_extensions.pymdownx.blocks.caption]
