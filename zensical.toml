@@ -344,7 +344,11 @@ link = "https://www.figma.com/design/LijzAgQwAa6cOKEVVJMMVo"
 name = "Figma"
 
 [project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
 [project.markdown_extensions.pymdownx.blocks.caption]
+[project.markdown_extensions.pymdownx.emoji]
+emoji_index = "zensical.extensions.emoji.twemoji"
+emoji_generator = "zensical.extensions.emoji.to_svg"
 [project.markdown_extensions.pymdownx.inlinehilite]
 [project.markdown_extensions.pymdownx.snippets]
 [project.markdown_extensions.pymdownx.superfences]

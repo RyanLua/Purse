@@ -20,7 +20,9 @@ What Purse is not is a major improvement over the CoreGui backpack, but a copy o
 
 You can play the [Purse Demo] on Roblox to try out Purse before using it. The place is uncopylocked so you can access an editable copy of the experience
 
-  [Purse Demo]: https://www.roblox.com/games/106146309450120
+[Play on Roblox :lucide-play:][Purse Demo]{ .md-button .md-button--primary }
+
+  [Purse Demo]: https://www.roblox.com/join/sc1eh
 
 ## Notes
 
