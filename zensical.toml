@@ -72,7 +72,6 @@ nav = [
 #extra_javascript = ["javascripts/extra.js"]
 
 repo_url = "https://github.com/ryanlua/purse"
-repo_name = "ryanlua/purse"
 
 # ----------------------------------------------------------------------------
 # Section for configuring theme options
