@@ -1,7 +1,3 @@
----
-icon: lucide/circle-gauge
----
-
 Purse only runs on the client and has zero performance impact on the server.
 
 All performance benchmarks are measured on the client using the [Developer Console] in Roblox Studio testing.
