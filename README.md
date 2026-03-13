@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="docs/assets/purse.svg" width="64">
+  <img src="docs/assets/favicon.svg" width="64">
   <br>
   Purse
 </h1>
