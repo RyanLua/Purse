@@ -8,7 +8,7 @@ on:
       - ".github/workflows/docs.yml"
       - "docs/**"
       - "src/**"
-      - "zensical.toml"
+      - "mkdocs.yml"
 
 permissions:
   contents: read
