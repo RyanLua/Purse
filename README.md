@@ -9,7 +9,7 @@
   [![CI](https://github.com/ryanlua/purse/actions/workflows/ci.yml/badge.svg)](https://github.com/ryanlua/purse/actions/workflows/ci.yml)
   [![GitHub Release](https://img.shields.io/github/v/release/ryanlua/purse)](https://github.com/ryanlua/purse/releases)
   [![Docs](https://img.shields.io/badge/docs-website-green)](https://purse.luau.page/)
-  [![Demo](https://img.shields.io/badge/demo-experience-blue)](https://www.roblox.com/games/106146309450120)
+  [![Demo](https://img.shields.io/badge/demo-experience-blue)](https://www.roblox.com/join/sc1eh)
   [![Discord](https://discord.com/api/guilds/1162303282002272359/widget.png)](https://discord.gg/N2KEnHzrsW)
   [![Mentioned in Awesome Roblox](https://awesome.re/mentioned-badge.svg)](https://github.com/awesome-roblox/awesome-roblox)
 </div>
