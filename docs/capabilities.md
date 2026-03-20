@@ -2,7 +2,7 @@
 
 !!! danger
 
-    Malicious clones may remove script capabilities sandboxing. Double check script [`Capabilities`][Capabilities] and that the [`Sandboxed`][Sandboxed] property is enabled.
+    Malicious clones may remove script capabilities sandboxing. Double check the [`Capabilities`][Capabilities] property and [`Sandboxed`][Sandboxed] is enabled.
 
   [Script capabilities]: https://create.roblox.com/docs/scripting/capabilities
   [Capabilities]: https://create.roblox.com/docs/scripting/capabilities#capabilities
