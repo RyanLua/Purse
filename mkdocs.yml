@@ -67,5 +67,6 @@ nav:
   - Installation: installation.md
   - Guide: guide.md
   - Performance: performance.md
+  - Capabilities: capabilities.md
   - Philosophy: philosophy.md
   - API Reference: api-reference.md
