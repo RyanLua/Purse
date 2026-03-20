@@ -1,4 +1,4 @@
-[Script capabilities] is used to sandbox Purse to ensure safety and prevent malicious code starting in versions v1.1.4 and later.
+[Script capabilities] is used to sandbox Purse to ensure safety and prevent malicious code.
 
 !!! danger
 
