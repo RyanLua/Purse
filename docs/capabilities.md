@@ -17,7 +17,7 @@ Purse uses the following capabilities:
 * **Basic** - Run Purse
 * **CreateInstances** - Create GUI instances for backpack
 * **Input** - Binding for equipping slots and toggling inventory
-* **Players** - Access player GUI and backpack
-* **UI** - Access GUI for backpack
+* **Players** - Access player backpack
+* **UI** - Access player GUI
 
   [AssetManagement]: https://create.roblox.com/docs/scripting/capabilities#:~:text=AssetManagement
