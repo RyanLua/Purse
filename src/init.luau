@@ -23,7 +23,12 @@ local BackpackScript = {}
 BackpackScript.OpenClose = nil -- Function to toggle open/close
 BackpackScript.IsHotbarVisible = false
 BackpackScript.IsOpen = false
-BackpackScript.StateChanged = Instance.new("BindableEvent") -- Fires after any open/close, passes IsNowOpen
+
+-- ROBLOX deviation START: parent to script for script capabilities
+local stateChangedBindableEvent = Instance.new("BindableEvent")
+stateChangedBindableEvent.Parent = script
+BackpackScript.StateChanged = stateChangedBindableEvent -- Fires after any open/close, passes IsNowOpen
+-- ROBLOX deviation END
 
 BackpackScript.ModuleName = "Backpack"
 BackpackScript.KeepVRTopbarOpen = true
@@ -184,14 +189,17 @@ local lastEquippedSlot = nil
 
 BackpackScript.BackpackEmpty = Create("BindableEvent")({
 	Name = "BackpackEmpty",
+	Parent = script, -- ROBLOX deviation: parent to script for script capabilities
 })
 
 BackpackScript.BackpackItemAdded = Create("BindableEvent")({
 	Name = "BackpackAdded",
+	Parent = script, -- ROBLOX deviation: parent to script for script capabilities
 })
 
 BackpackScript.BackpackItemRemoved = Create("BindableEvent")({
 	Name = "BackpackRemoved",
+	Parent = script, -- ROBLOX deviation: parent to script for script capabilities
 })
 
 local function NewGui(className, objectName)
