@@ -1,0 +1,43 @@
+name: Documentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/docs.yml"
+      - "docs/**"
+      - "src/**"
+      - "mkdocs.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.x
+      - name: Install Material for MkDocs
+        run: pip install mkdocs-material
+      - name: Build documentation
+        run: mkdocs build --clean
+      - name: Upload documentation
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - name: Deploy documentation
+        uses: actions/deploy-pages@v4
+        id: deployment

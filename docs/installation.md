@@ -13,7 +13,7 @@ Purse uses [RunContext] to run anywhere, so you do not need to move it from [Wor
   [RunContext]: https://devforum.roblox.com/t/1938784
   [Workspace]: https://create.roblox.com/docs/reference/engine/classes/Workspace
 
-## Creator Store <small>recommended</small> { #creator-store data-toc-label="Creator Store" }
+## Creator Store
 
 1. Get the **Purse** model from the [Creator Store].
 
