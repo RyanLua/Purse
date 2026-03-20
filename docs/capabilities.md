@@ -6,7 +6,7 @@
 
   [Script capabilities]: https://create.roblox.com/docs/scripting/capabilities
   [Capabilities]: https://create.roblox.com/docs/scripting/capabilities#capabilities
-  [Sandboxed]: https://create.roblox.com/docs/reference/engine/classes/Instance#Sandboxed
+  [Sandboxed]: https://create.roblox.com/docs/scripting/capabilities#sandboxed-container
 
 Purse uses the following capabilities:
 
