@@ -15,7 +15,7 @@ Purse uses the following capabilities:
 * **[AssetManagement]** - Check for latest version
     * This capability does not allow read, create, or update operations on assets
 * **Basic** - Run Purse
-* **CreateInstances** - Create GUI instances for backpack
+* **CreateInstances** - Create GUI instances
 * **Input** - Binding for equipping slots and toggling inventory
 * **Players** - Access player backpack
 * **UI** - Access player GUI
