@@ -44,8 +44,6 @@ Purse uses [RunContext] to run anywhere, so you do not need to move it from [Wor
 
 1. In the [Explorer] window, insert **Purse** into [`ReplicatedStorage`][ReplicatedStorage].
 
-    ![Contextual menu](https://prod.docsiteassets.roblox.com/assets/studio/explorer/Context-Menu-Service.png.webp)
-
 1. Select the **Purse** model file you downloaded from GitHub.
 
 ## Wally
