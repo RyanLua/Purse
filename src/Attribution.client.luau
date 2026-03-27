@@ -31,9 +31,6 @@
 local MarketplaceService = game:GetService("MarketplaceService")
 local RunService = game:GetService("RunService")
 
-local asset = MarketplaceService:GetProductInfoAsync(112061170330936)
-local latestVersion = string.match(asset.Name, "v(%d+%.%d+%.%d+)")
-
 local VERSION = "1.1.4"
 
 -- Print attribution. Do not modify without reading above
@@ -42,6 +39,16 @@ if not RunService:IsStudio() then
 end
 
 -- Check for updates. You may modify the below
+local latestVersion: string?
+
+local success, result = pcall(function()
+	return MarketplaceService:GetProductInfoAsync(112061170330936)
+end)
+
+if success then
+	latestVersion = string.match(result.Name, "v(%d+%.%d+%.%d+)")
+end
+
 if latestVersion and latestVersion ~= VERSION then
 	warn(
 		`A new version of Purse (v{VERSION} -> v{latestVersion}) is available: https://create.roblox.com/store/asset/112061170330936`
