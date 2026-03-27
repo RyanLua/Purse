@@ -43,5 +43,7 @@ end
 
 -- Check for updates. You may modify the below
 if latestVersion and latestVersion ~= VERSION then
-	warn(`A new version of Purse (v{VERSION} -> v{latestVersion}) is available: https://create.roblox.com/store/asset/112061170330936`)
+	warn(
+		`A new version of Purse (v{VERSION} -> v{latestVersion}) is available: https://create.roblox.com/store/asset/112061170330936`
+	)
 end
