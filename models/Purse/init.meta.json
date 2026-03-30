@@ -1,8 +1,8 @@
 {
   "properties": {
     "Capabilities": {
-      "SecurityCapabilities": 224447170816
+      "SecurityCapabilities": 9007424238782720
     },
-    "Sandboxed": true
+    "Sandboxed": false
   }
 }
