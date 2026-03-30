@@ -1,10 +1,10 @@
 [Script capabilities] is used to sandbox Purse and tools to ensure safety and prevent malicious code.
 
-This is optional and disabled by default by can be enabled using the [`Sandboxed`][Sandboxed] property.
+This is optional and disabled by default but can be enabled using the [`Sandboxed`][Sandboxed] property.
 
 !!! warning
 
-    By enabling script capabilities, any tools will be sandboxed. Make sure you have [`Capabilities`][Capabilities] for your tools set on top of Purse or your tools will error.
+    By enabling script capabilities, all tools will be sandboxed. Make sure you have [`Capabilities`][Capabilities] for your tools set on top of Purse or they will error.
 
   [Script capabilities]: https://create.roblox.com/docs/scripting/capabilities
   [Capabilities]: https://create.roblox.com/docs/scripting/capabilities#capabilities
