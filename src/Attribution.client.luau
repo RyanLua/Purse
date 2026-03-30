@@ -31,7 +31,7 @@
 local MarketplaceService = game:GetService("MarketplaceService")
 local RunService = game:GetService("RunService")
 
-local VERSION = "1.1.4"
+local VERSION = "1.1.5"
 
 -- Print attribution. Do not modify without reading above
 if not RunService:IsStudio() then
