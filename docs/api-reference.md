@@ -9,13 +9,13 @@ The following code sample, placed within a child `LocalScript` of a `GuiButton`,
 ``` lua title="Inventory Toggle Button" linenums="1"
 --!strict
 
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
+const ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local Purse = require(ReplicatedStorage.Purse)
+const Purse = require(ReplicatedStorage.Purse)
 
-local button = script.Parent
+const button = script.Parent
 
-local function onButtonActivated()
+const function onButtonActivated()
 	if Purse.OpenClose then
 		Purse.OpenClose()
 	end
@@ -97,9 +97,9 @@ The following code sample, placed within a child `LocalScript` of `StarterPlayer
 ``` lua title="Detect Inventory State" linenums="1"
 --!strict
 
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
+const ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local Purse = require(ReplicatedStorage.Purse)
+const Purse = require(ReplicatedStorage.Purse)
 
 Purse.StateChanged.Event:Connect(function(isNowOpen)
 	if isNowOpen then

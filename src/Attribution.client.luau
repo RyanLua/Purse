@@ -28,10 +28,10 @@
 	Thank you for supporting Purse.
 ]]
 
-local MarketplaceService = game:GetService("MarketplaceService")
-local RunService = game:GetService("RunService")
+const MarketplaceService = game:GetService("MarketplaceService")
+const RunService = game:GetService("RunService")
 
-local VERSION = "1.1.5"
+const VERSION = "1.1.5"
 
 -- Print attribution. Do not modify without reading above
 if not RunService:IsStudio() then
@@ -41,7 +41,7 @@ end
 -- Check for updates. You may modify the below
 local latestVersion: string?
 
-local success, result = pcall(function()
+const success, result = pcall(function()
 	return MarketplaceService:GetProductInfoAsync(112061170330936)
 end)
 

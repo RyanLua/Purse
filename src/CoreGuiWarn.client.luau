@@ -1,6 +1,6 @@
 --!strict
 
-local StarterGui = game:GetService("StarterGui")
+const StarterGui = game:GetService("StarterGui")
 
 task.spawn(function()
 	while task.wait(3) do
