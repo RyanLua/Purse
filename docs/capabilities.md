@@ -15,6 +15,8 @@ Purse uses the following capabilities:
 * **AssetRead** - Check for latest version
 * **AssetManagement** - Preload icon images
     * This capability does not allow read, create, or update operations on assets
+* **AvatarAppearance** - Equip and unequip tools
+* **AvatarBehavior** - Equip and unequip tools
 * **Basic** - Run Purse
 * **CreateInstances** - Create GUI instances
 * **Input** - Binding for equipping slots and toggling inventory
