@@ -1,11 +1,11 @@
 --!strict
 
-local ContextActionService = game:GetService("ContextActionService")
-local BackpackScript = require(script.Parent)
+const ContextActionService = game:GetService("ContextActionService")
+const BackpackScript = require(script.Parent)
 
-local ACTION_NAME = "BackpackToggle"
+const ACTION_NAME = "BackpackToggle"
 
-local function handleAction(actionName, inputState, _inputObject)
+const function handleAction(actionName, inputState, _inputObject)
 	if actionName == ACTION_NAME and inputState == Enum.UserInputState.Begin then
 		if BackpackScript.OpenClose then
 			BackpackScript.OpenClose()

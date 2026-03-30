@@ -1,9 +1,9 @@
 --!strict
 
-local BackpackScript = require(script.Parent)
-local Icon = require(script.Parent.Parent.topbarplus)
+const BackpackScript = require(script.Parent)
+const Icon = require(script.Parent.Parent.topbarplus)
 
-local icon = Icon.new()
+const icon = Icon.new()
 icon:modifyTheme({ "IconLabelContainer", "TargetWidth", 0 }) -- Force minimum width
 icon:setLabel("backpack")
 icon:setOrder(-1)
