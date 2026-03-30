@@ -1,8 +1,10 @@
-[Script capabilities] is used to sandbox Purse to ensure safety and prevent malicious code.
+[Script capabilities] is used to sandbox Purse and tools to ensure safety and prevent malicious code.
 
-!!! danger
+This is optional and disabled by default but can be enabled using the [`Sandboxed`][Sandboxed] property.
 
-    Malicious clones may remove script capabilities sandboxing. Double check the [`Capabilities`][Capabilities] property and that [`Sandboxed`][Sandboxed] is enabled.
+!!! warning
+
+    By enabling script capabilities, all tools will be sandboxed. Make sure you have [`Capabilities`][Capabilities] for your tools set on top of Purse or they will error.
 
   [Script capabilities]: https://create.roblox.com/docs/scripting/capabilities
   [Capabilities]: https://create.roblox.com/docs/scripting/capabilities#capabilities
@@ -15,6 +17,8 @@ Purse uses the following capabilities:
 * **AssetRead** - Check for latest version
 * **AssetManagement** - Preload icon images
     * This capability does not allow read, create, or update operations on assets
+* **AvatarAppearance** - Equip and unequip tools
+* **AvatarBehavior** - Equip and unequip tools
 * **Basic** - Run Purse
 * **CreateInstances** - Create GUI instances
 * **Input** - Binding for equipping slots and toggling inventory
