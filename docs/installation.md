@@ -1,6 +1,6 @@
 Purse is available on the [Creator Store], [Wally], and [GitHub Releases].
 
-[Creator Store][Creator Store]{ .md-button .md-button--primary } [GitHub Releases][GitHub Releases]{ .md-button } [Wally][Wally]{ .md-button }
+[Creator Store][Creator Store]{ .md-button } [GitHub Releases][GitHub Releases]{ .md-button } [Wally][Wally]{ .md-button }
 
 Purse uses [RunContext] to run anywhere, so you do not need to move it from [Workspace], though it is recommeneded to parent to [`ReplicatedStorage`][ReplicatedStorage] for best practices and organizational reasons.
 
