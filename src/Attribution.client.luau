@@ -34,7 +34,7 @@ const RunService = game:GetService("RunService")
 const VERSION = "1.1.5"
 
 -- Print attribution. Do not modify without reading above
-if not RunService:IsStudio() then
+if not RunService:IsStudio() and RunService:IsClient() then
 	print(`👛 Running Purse v{VERSION} by @WinnersTakesAll`)
 end
 
