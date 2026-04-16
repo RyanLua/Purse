@@ -9,7 +9,7 @@
   [![Docs](assets/link-docs.svg)](https://purse.luau.page/)
   [![Get it on Creator Store](assets/link-creator-store.svg)](https://create.roblox.com/store/asset/112061170330936)
   [![Try in Roblox](assets/link-roblox-experience.svg)](https://www.roblox.com/join/sc1eh)
-  [![GitHub](assets/link-github-releases.svg)](https://github.com/ryanlua/purse/releases)
+  [![GitHub](assets/link-github.svg)](https://github.com/ryanlua/purse/releases)
   [![Wally](assets/link-wally.svg)](https://wally.run/package/ryanlua/purse)
   [![Discord](assets/link-discord.svg)](https://discord.gg/N2KEnHzrsW)
 </div>
