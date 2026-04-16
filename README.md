@@ -6,12 +6,12 @@
 
 <div align="center">
 
-  [![CI](https://github.com/ryanlua/purse/actions/workflows/ci.yml/badge.svg)](https://github.com/ryanlua/purse/actions/workflows/ci.yml)
-  [![GitHub Release](https://img.shields.io/github/v/release/ryanlua/purse)](https://github.com/ryanlua/purse/releases)
-  [![Docs](https://img.shields.io/badge/docs-website-green)](https://purse.luau.page/)
-  [![Demo](https://img.shields.io/badge/demo-experience-blue)](https://www.roblox.com/join/sc1eh)
-  [![Discord](https://discord.com/api/guilds/1162303282002272359/widget.png)](https://discord.gg/N2KEnHzrsW)
-  [![Mentioned in Awesome Roblox](https://awesome.re/mentioned-badge.svg)](https://github.com/awesome-roblox/awesome-roblox)
+  [![Docs](assets/link-docs.svg)](https://purse.luau.page/)
+  [![Get it on Creator Store](assets/link-creator-store.svg)](https://create.roblox.com/store/asset/112061170330936)
+  [![Try in Roblox](assets/link-roblox-experience.svg)](https://www.roblox.com/join/sc1eh)
+  [![GitHub](assets/link-github.svg)](https://github.com/ryanlua/purse/releases)
+  [![Wally](assets/link-wally.svg)](https://wally.run/package/ryanlua/purse)
+  [![Discord](assets/link-discord.svg)](https://discord.gg/N2KEnHzrsW)
 </div>
 
 Purse is a fork of the [default Roblox backpack](https://github.com/Roblox/Core-Scripts/blob/master/CoreScriptsRoot/Modules/BackpackScript.lua) decoupled from the CoreGui, allowing developers access to APIs that were previously unavailable and allowing for code modifications.
