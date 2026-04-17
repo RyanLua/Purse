@@ -1,5 +1,5 @@
 {
-  "name": "Develop Purse",
+  "name": "Purse",
   "emitLegacyScripts": false,
   "tree": {
     "$className": "DataModel",
