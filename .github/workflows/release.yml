@@ -62,3 +62,9 @@ jobs:
           generate_release_notes: true
       - name: Publish to Wally
         run: wally publish
+      - name: Publish to Roblox
+        uses: ryanlua/update-roblox-asset@v0.1.0
+        with:
+          api-key: ${{ secrets.OPEN_CLOUD_API_KEY }}
+          asset-id: 112061170330936
+          file: dist/$OUTPUT_NAME.rbxm
