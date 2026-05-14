@@ -3,6 +3,7 @@ sourcemap.json
 
 # Wally
 Packages/
+ServerPackages/
 DevPackages/
 
 # Documentation
