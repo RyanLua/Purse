@@ -31,8 +31,24 @@ Purse uses [RunContext] to run anywhere, so you do not need to move it from [Wor
 
 1. In the [Explorer] window, move the **Purse** model into [`ReplicatedStorage`][ReplicatedStorage].
 
+1. With the **Purse** model selected, paste the following code into the [Command Bar]:
+
+    ```lua
+    local Selection = game:GetService("Selection")
+
+    for _, instance in Selection:Get() do
+    	instance.Sandboxed = false
+    end
+    ```
+
+    !!! warning
+
+        Models on the Creator Store including Purse are [sandboxed by default]. You must disable the sandboxing on Purse for it to work properly using the above command.
+
   [Toolbox]: https://create.roblox.com/docs/projects/assets/toolbox
   [Explorer]: https://create.roblox.com/docs/studio/explorer
+  [Command Bar]: https://create.roblox.com/docs/studio/ui-overview#command-bar
+  [sandboxed by default]: https://devforum.roblox.com/t/4634642
 
 ## GitHub Releases
 
