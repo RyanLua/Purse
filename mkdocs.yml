@@ -62,6 +62,10 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.inlinehilite
 
+plugins:
+  - search
+  - macros
+
 nav:
   - Home: index.md
   - Installation: installation.md

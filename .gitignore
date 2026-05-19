@@ -8,6 +8,8 @@ DevPackages/
 
 # Documentation
 site/
+__pycache__/
+*.py[cod]
 
 # Builds
 dist/

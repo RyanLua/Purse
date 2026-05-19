@@ -58,7 +58,7 @@ You are expected to already have Wally setup in your Rojo project and basic know
 
     ``` toml title="wally.toml"
     [dependencies]
-    purse = "ryanlua/purse@1.0.0"
+    purse = "ryanlua/purse@{{ wally_version }}"
     ```
 
 1. Install Purse from Wally by running `wally install`.

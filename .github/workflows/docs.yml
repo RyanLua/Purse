@@ -31,7 +31,7 @@ jobs:
         with:
           python-version: 3.x
       - name: Install Material for MkDocs
-        run: pip install mkdocs-material
+        run: pip install mkdocs-material mkdocs-macros-plugin
       - name: Build documentation
         run: mkdocs build --clean
       - name: Upload documentation
