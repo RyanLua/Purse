@@ -9,7 +9,7 @@
   <defs>
     <linearGradient id="a" gradientTransform="rotate(90)">
       <stop stop-color="#4fa2d9"/>
-      <stop offset="1" stop-color="#93c5db"/>
+      <stop offset="1" stop-color="#87bed9"/>
     </linearGradient>
   </defs>
 </svg>

@@ -12,7 +12,7 @@
   <path fill="#bdbebe" d="M192.89 120v-8.4h1.22v8.4z"/>
   <defs>
     <linearGradient id="a" gradientTransform="rotate(90)">
-      <stop stop-color="#63afda"/>
+      <stop stop-color="#4fa2d9"/>
       <stop offset="1" stop-color="#99c7da"/>
     </linearGradient>
   </defs>
