@@ -66,12 +66,12 @@ Increased hotbar slots on phone and tablet devices
 
 The topbar icon is decoupled from Purse's functionality, so you can remove it by disabling the [`TopbarIcon`][TopbarIcon] script. In addition, a [`ContextAction`][ContextAction] script is included to bind opening and closing the inventory to a keycode (set to backquote <kbd>`</kbd> by default).
 
-![Screenshot of topbar icon enabled](assets/topbar-icon-enabled.png)
+![Screenshot of topbar icon enabled](assets/topbar-icon-enabled.svg){ width="852" }
 /// caption
 Topbar icon enabled
 ///
 
-![Screenshot of topbar icon disabled](assets/topbar-icon-disabled.png)
+![Screenshot of topbar icon disabled](assets/topbar-icon-disabled.svg){ width="852" }
 /// caption
 Topbar icon disabled
 ///
@@ -101,7 +101,7 @@ icon:bindToggleKey(Enum.KeyCode.I) -- (1)!
 
 1.  Changed from backquote <kbd>\`</kbd> key `#!lua Enum.KeyCode.Backquote` to <kbd>I</kbd> key `#!lua Enum.KeyCode.I`
 
-![Screenshot of the hotbar with a slot equipped with a red selection outline](assets/inventory-key-caption.png)
+![Screenshot of the hotbar with a slot equipped with a red selection outline](assets/inventory-key-caption.svg){ width="552" }
 /// caption
 Topbar icon with inventory toggle key changed to <kbd>I</kbd>
 ///
