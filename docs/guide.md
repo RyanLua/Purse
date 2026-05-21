@@ -93,10 +93,10 @@ The default key to open the inventory is the backquote <kbd>\`</kbd> key, but yo
 
 The following code sample changes the inventory toggle key to the <kbd>I</kbd> key.
 
-``` lua title="TopbarIcon" linenums="6" hl_lines="18"
---8<-- "src/TopbarIcon.client.luau:6:22"
+``` lua title="TopbarIcon" linenums="6" hl_lines="21"
+--8<-- "src/TopbarIcon.client.luau:6:25"
 icon:bindToggleKey(Enum.KeyCode.I) -- (1)!
---8<-- "src/TopbarIcon.client.luau:24:26"
+--8<-- "src/TopbarIcon.client.luau:27:28"
 ```
 
 1.  Changed from backquote <kbd>\`</kbd> key `#!lua Enum.KeyCode.Backquote` to <kbd>I</kbd> key `#!lua Enum.KeyCode.I`
