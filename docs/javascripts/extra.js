@@ -1,0 +1,5 @@
+document.querySelectorAll('.highlight .nv').forEach(token => {
+  if (token.textContent === 'const') {
+    token.classList.replace('nv', 'kd');
+  }
+});

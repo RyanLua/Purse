@@ -52,6 +52,9 @@ extra:
       link: https://www.figma.com/design/LijzAgQwAa6cOKEVVJMMVo
       name: Figma
 
+extra_javascript:
+  - javascripts/extra.js
+
 markdown_extensions:
   - admonition
   - attr_list
