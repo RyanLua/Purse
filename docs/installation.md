@@ -34,7 +34,7 @@ Purse uses [RunContext] to run anywhere, so you do not need to move it from [Wor
 1. With the **Purse** model selected, paste the following code into the [Command Bar]:
 
     ``` lua title="Disable Sandboxing for Selected Instances" linenums="1"
-    local Selection = game:GetService("Selection")
+    const Selection = game:GetService("Selection")
 
     for _, instance in Selection:Get() do
     	instance.Sandboxed = false
