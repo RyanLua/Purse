@@ -38,6 +38,10 @@ Purse uses [RunContext] to run anywhere, so you do not need to move it from [Wor
 
     for _, instance in Selection:Get() do
     	instance.Sandboxed = false
+
+    	for _, descendant in instance:GetDescendants() do
+    		descendant.Sandboxed = false
+    	end
     end
     ```
 
