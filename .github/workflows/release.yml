@@ -62,8 +62,12 @@ jobs:
       #     generate_release_notes: true
       # - name: Publish to Wally
       #   run: wally publish
-      - name: List dist contents
-        run: ls -l dist/
+      - name: Check for rbxm file
+        run: |
+          if [ ! -f dist/Purse.rbxm ]; then
+            echo "dist/Purse.rbxm not found"
+            exit 1
+          fi
       - name: Publish to Roblox
         uses: ryanlua/update-roblox-asset@v0.1.0
         with:
