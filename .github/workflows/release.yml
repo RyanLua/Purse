@@ -60,8 +60,10 @@ jobs:
       #   with:
       #     files: dist/*
       #     generate_release_notes: true
-      - name: Publish to Wally
-        run: wally publish
+      # - name: Publish to Wally
+      #   run: wally publish
+      - name: List dist contents
+        run: ls -l dist/
       - name: Publish to Roblox
         uses: ryanlua/update-roblox-asset@v0.1.0
         with:
