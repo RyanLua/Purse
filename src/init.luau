@@ -331,7 +331,10 @@ local function GetOffset(guiObject, point)
 end
 
 local function DisableActiveHopper() --NOTE: HopperBin
-	ActiveHopper:ToggleSelect()
+	-- ROBLOX deviation START: remove HopperBin support (RobloxScriptSecurity)
+	-- ActiveHopper:ToggleSelect()
+	warn(`[Purse] Cannot deselect active hopper. HopperBin is deprecated and not supported.`)
+	-- ROBLOX deviation END
 	SlotsByTool[ActiveHopper]:UpdateEquipView()
 	ActiveHopper = nil
 end
@@ -348,7 +351,10 @@ end
 local function EquipNewTool(tool) --NOTE: HopperBin
 	UnequipAllTools()
 	if tool:IsA("HopperBin") then
-		tool:ToggleSelect()
+		-- ROBLOX deviation START: remove HopperBin support (RobloxScriptSecurity)
+		-- tool:ToggleSelect()
+		warn(`[Purse] Cannot select '{tool}' hopper. HopperBin is deprecated and not supported.`)
+		-- ROBLOX deviation END
 		SlotsByTool[tool]:UpdateEquipView()
 		ActiveHopper = tool
 	else
