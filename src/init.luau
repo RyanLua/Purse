@@ -331,9 +331,12 @@ local function GetOffset(guiObject, point)
 end
 
 local function DisableActiveHopper() --NOTE: HopperBin
-	ActiveHopper:ToggleSelect()
-	SlotsByTool[ActiveHopper]:UpdateEquipView()
-	ActiveHopper = nil
+	-- ROBLOX deviation START: remove HopperBin support (RobloxScriptSecurity)
+	warn(`[Purse] Cannot deselect active hopper. HopperBin is deprecated and not supported.`)
+	-- ActiveHopper:ToggleSelect()
+	-- SlotsByTool[ActiveHopper]:UpdateEquipView()
+	-- ActiveHopper = nil
+	-- ROBLOX deviation END
 end
 
 local function UnequipAllTools() --NOTE: HopperBin
@@ -348,9 +351,12 @@ end
 local function EquipNewTool(tool) --NOTE: HopperBin
 	UnequipAllTools()
 	if tool:IsA("HopperBin") then
-		tool:ToggleSelect()
-		SlotsByTool[tool]:UpdateEquipView()
-		ActiveHopper = tool
+		-- ROBLOX deviation START: remove HopperBin support (RobloxScriptSecurity)
+		warn(`[Purse] Cannot select '{tool}' hopper. HopperBin is deprecated and not supported.`)
+		-- tool:ToggleSelect()
+		-- SlotsByTool[tool]:UpdateEquipView()
+		-- ActiveHopper = tool
+		-- ROBLOX deviation END
 	else
 		--Humanoid:EquipTool(tool) --NOTE: This would also unequip current Tool
 		tool.Parent = Character --TODO: Switch back to above line after EquipTool is fixed!
