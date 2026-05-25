@@ -2,8 +2,8 @@ name: Create Release
 
 on:
   push:
-    # tags:
-    #   - v*.*.*
+    tags:
+      - v*.*.*
 
 permissions:
   contents: write
@@ -55,13 +55,13 @@ jobs:
         with:
           name: ${{ env.OUTPUT_NAME }}
           path: dist/
-      # - name: Create release
-      #   uses: softprops/action-gh-release@v3
-      #   with:
-      #     files: dist/*
-      #     generate_release_notes: true
-      # - name: Publish to Wally
-      #   run: wally publish
+      - name: Create release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: dist/*
+          generate_release_notes: true
+      - name: Publish to Wally
+        run: wally publish
       - name: Publish to Roblox
         uses: ryanlua/update-roblox-asset@v0.1.0
         with:
