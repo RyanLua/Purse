@@ -73,5 +73,5 @@ jobs:
         with:
           api-key: ${{ secrets.OPEN_CLOUD_API_KEY }}
           asset-id: 112061170330936
-          file: dist/$OUTPUT_NAME.rbxm
+          file: dist/${{ env.OUTPUT_NAME }}.rbxm
           display-name: ${{ env.OUTPUT_NAME }} ${{ github.ref_name }}
