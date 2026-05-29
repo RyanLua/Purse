@@ -23,14 +23,15 @@ jobs:
           wally-package-types --sourcemap sourcemap.json Packages/
       - name: Build Rojo project
         run: |
-          mkdir dist
-          rojo build package.project.json --output dist/Purse.rbxm
-          rojo build package.project.json --output dist/Purse.rbxmx
+          rojo build package.project.json --output Purse.rbxm
+          rojo build package.project.json --output Purse.rbxmx
       - name: Archive build files
         uses: actions/upload-artifact@v7
         with:
           name: Purse
-          path: dist/
+          path: |
+            *.rbxm
+            *.rbxmx
           if-no-files-found: error
   release:
     needs: build
@@ -50,11 +51,12 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: Purse
-          path: dist/
       - name: Create release
         uses: softprops/action-gh-release@v3
         with:
-          files: dist/*
+          files: |
+            *.rbxm
+            *.rbxmx
           generate_release_notes: true
       - name: Publish to Wally
         run: wally publish
@@ -63,5 +65,5 @@ jobs:
         with:
           api-key: ${{ secrets.OPEN_CLOUD_API_KEY }}
           asset-id: 112061170330936
-          file: dist/Purse.rbxm
+          file: Purse.rbxm
           display-name: Purse ${{ github.ref_name }}
