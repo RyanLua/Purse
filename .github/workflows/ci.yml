@@ -7,10 +7,6 @@ on:
 permissions:
   contents: read
 
-env:
-  OUTPUT_NAME: Purse
-  ROJO_PROJECT: package.project.json
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,7 +18,7 @@ jobs:
       - name: Install Wally packages
         run: |
           wally install
-          rojo sourcemap $ROJO_PROJECT --output sourcemap.json
+          rojo sourcemap package.project.json --output sourcemap.json
           wally-package-types --sourcemap sourcemap.json Packages/
       - name: Run StyLua
         run: stylua --check src/ models/
@@ -31,11 +27,11 @@ jobs:
       - name: Build Rojo project
         run: |
           mkdir dist
-          rojo build $ROJO_PROJECT --output dist/$OUTPUT_NAME.rbxm
-          rojo build $ROJO_PROJECT --output dist/$OUTPUT_NAME.rbxmx
+          rojo build package.project.json --output dist/Purse.rbxm
+          rojo build package.project.json --output dist/Purse.rbxmx
       - name: Archive build files
         uses: actions/upload-artifact@v7
         with:
-          name: ${{ env.OUTPUT_NAME }}
+          name: Purse
           path: dist/
           if-no-files-found: error
