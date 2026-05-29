@@ -2,11 +2,11 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Build Rojo project",
+      "label": "Build model",
       "type": "shell",
-      "command": "./scripts/build.sh",
+      "command": "rojo build package.project.json --output dist/Purse.rbxm && rojo build package.project.json --output dist/Purse.rbxmx",
       "windows": {
-        "command": ".\\scripts\\build.cmd"
+        "command": "rojo build package.project.json --output dist/Purse.rbxm; rojo build package.project.json --output dist/Purse.rbxmx"
       },
       "problemMatcher": [],
       "group": {
