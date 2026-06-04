@@ -940,7 +940,11 @@ local function SetNumberOfHotbarSlots(numSlots)
 end
 
 local function OnChildAdded(child) -- To Character or Backpack
-	if not child:IsA("Tool") and not child:IsA("HopperBin") then --NOTE: HopperBin
+	if child:IsA("HopperBin") then
+		warn(`[Purse] Ignoring '{child}' hopper in backpack. HopperBin is deprecated and not supported.`)
+		return
+	end
+	if not child:IsA("Tool") then --NOTE: HopperBin
 		if child:IsA("Humanoid") and child.Parent == Character then
 			Humanoid = child
 		end
@@ -1007,7 +1011,10 @@ local function OnChildAdded(child) -- To Character or Backpack
 end
 
 local function OnChildRemoved(child) -- From Character or Backpack
-	if not child:IsA("Tool") and not child:IsA("HopperBin") then --NOTE: HopperBin
+	if child:IsA("HopperBin") then
+		return
+	end
+	if not child:IsA("Tool") then --NOTE: HopperBin
 		return
 	end
 	local tool = child
