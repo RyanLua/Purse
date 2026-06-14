@@ -2,7 +2,7 @@ Purse is available on the [Creator Store], [Wally], and [GitHub Releases].
 
 [Creator Store][Creator Store]{ .md-button } [GitHub Releases][GitHub Releases]{ .md-button } [Wally][Wally]{ .md-button }
 
-Purse uses [RunContext] to run anywhere, so you do not need to move it from [Workspace], though it is recommeneded to parent to [`ReplicatedStorage`][ReplicatedStorage] for best practices and organizational reasons.
+Purse uses [RunContext] to run anywhere, so you do not need to move it from [Workspace], though it is recommended to parent it to [`ReplicatedStorage`][ReplicatedStorage] for best practices and organizational reasons.
 
 !!! danger
 
@@ -70,7 +70,7 @@ Purse uses [RunContext] to run anywhere, so you do not need to move it from [Wor
 
 ## Wally
 
-You are expected to already have Wally setup in your Rojo project and basic knowledge on how to use Wally packages.
+You are expected to already have Wally set up in your Rojo project and basic knowledge of how to use Wally packages.
 
 1. Open your Rojo project in the code editor of your choice.
 

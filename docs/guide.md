@@ -2,7 +2,7 @@ Through source code modifications, you can change Purse's behavior and appearanc
 
 ## Changing Equip Color
 
-You can change the slot's equip color, which is blue, by modifying the `SLOT_EQUIP_COLOR` constant in its source.
+You can change the slot's equip color, currently blue, by modifying the `SLOT_EQUIP_COLOR` constant in its source.
 
 The following code sample changes the equip color to red.
 
@@ -33,11 +33,11 @@ Computer, console, and VR have 10 hotbar slots and 4 inventory rows
 Phone and tablet devices have 3 hotbar slots and 2 inventory rows
 ///
 
-It's possible to increase the number of hotbar slots and inventory rows shown by changing the constants in the source code.
+You can increase the number of hotbar slots and inventory rows shown by changing the constants in the source code.
 
 !!! note
 
-    Formerly VR devices used different constants for hotbar slots and inventory rows but now use the same as computer and console devices.
+    Formerly, VR devices used different constants for hotbar slots and inventory rows, but now they use the same values as computer and console devices.
 
     `HOTBAR_SLOTS_VR` and `INVENTORY_ROWS_VR` are no longer used but are still included in the code. VR devices now use `INVENTORY_ROWS_FULL` and `HOTBAR_SLOTS_FULL`.
 
@@ -82,7 +82,7 @@ Your explorer window should look similar to the following when you disable the `
 
 !!! warning
 
-    If you do not enable the `ContextAction` script, players will not be able to open the backpack since the topbar icon which handles binding is disabled.
+    If you do not enable the `ContextAction` script, players will not be able to open the backpack since the topbar icon, which handles binding, is disabled.
 
   [TopbarIcon]: https://github.com/ryanlua/purse/blob/main/src/TopbarIcon.client.luau
   [ContextAction]: https://github.com/ryanlua/purse/blob/main/src/ContextAction.client.luau
@@ -106,7 +106,7 @@ icon:bindToggleKey(Enum.KeyCode.I) -- (1)!
 Topbar icon with inventory toggle key changed to <kbd>I</kbd>
 ///
 
-It is also possible to bind the inventory toggle when using the [`ContextAction`][ContextAction] script. The following code sample binds the inventory toggle to the <kbd>I</kbd> key.
+You can also bind the inventory toggle when using the [`ContextAction`][ContextAction] script. The following code sample binds the inventory toggle to the <kbd>I</kbd> key.
 
 ``` lua title="ContextAction" linenums="16" hl_lines="1"
 ContextActionService:BindAction(ACTION_NAME, handleAction, false, Enum.KeyCode.I) -- (1)!
@@ -114,4 +114,4 @@ ContextActionService:BindAction(ACTION_NAME, handleAction, false, Enum.KeyCode.I
 
 1.  Changed from backquote <kbd>\`</kbd> key `#!lua Enum.KeyCode.Backquote` to <kbd>I</kbd> key `#!lua Enum.KeyCode.I`
 
-If you don't want any key to be bound to toggling the inventory, you delete the line that binds the inventory toggle for either the `TopbarIcon` or `ContextAction` script which you use.
+If you do not want any key to be bound to toggling the inventory, delete the line that binds the inventory toggle in whichever `TopbarIcon` or `ContextAction` script you use.

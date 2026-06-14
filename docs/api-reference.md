@@ -1,4 +1,4 @@
-Purse unlocks APIs for the CoreGui backpack which were previously locked to other CoreGui scripts. To access the APIs, just require Purse like any other [module script].
+Purse unlocks APIs for the CoreGui backpack which were previously locked to other CoreGui scripts. To access the APIs, simply require Purse like any other [module script].
 
   [module script]: https://create.roblox.com/docs/reference/engine/classes/ModuleScript
 
@@ -30,7 +30,7 @@ button.Activated:Connect(onButtonActivated)
 OpenClose(): ()
 ```
 
-Toggles whether or not the inventory is visible.
+Toggles whether the inventory is visible.
 
 ### IsInventoryEmpty
 
@@ -48,7 +48,7 @@ Returns true if the inventory is empty.
 IsHotbarVisible: boolean
 ```
 
-Determines whether or not the hotbar is visible.
+Determines whether the hotbar is visible.
 
 ### IsOpen
 

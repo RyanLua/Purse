@@ -1,6 +1,6 @@
 # Purse
 
-Purse is a fork of the [default Roblox backpack] decoupled from the CoreGui, allowing developers access to APIs that were previously unavailable and allowing for code modifications.
+Purse is a fork of the [default Roblox backpack] decoupled from the CoreGui, allowing developers to access APIs that were previously unavailable and to modify the code.
 
 * Source code modification
 * Developer APIs for controlling the inventory
@@ -8,7 +8,7 @@ Purse is a fork of the [default Roblox backpack] decoupled from the CoreGui, all
 
 ![Screenshot of Purse with the inventory open](assets/screenshot.png)
 
-What Purse is not is a major improvement over the CoreGui backpack, but a copy of it, so that developers can iterate on it themselves. There are no additional features beyond what the CoreGui backpack provides.
+Purse is not a major improvement over the CoreGui backpack; it is a copy of it, so developers can iterate on it themselves. There are no additional features beyond what the CoreGui backpack provides.
 
   [default Roblox backpack]: https://github.com/Roblox/Core-Scripts/blob/master/CoreScriptsRoot/Modules/BackpackScript.lua
 
@@ -22,6 +22,6 @@ You can play the [Purse Demo] on Roblox to try out Purse before using it. The pl
 
 ## Notes
 
-Because we can't access the topbar without CoreGui, we use [TopbarPlus]. This is one of the major differences in terms of functionality. TopbarPlus may not be as familiar to use on a controller.
+Because we can't access the topbar without CoreGui, we use [TopbarPlus]. This is one of the major differences in terms of functionality. TopbarPlus may be less familiar when used with a controller.
 
   [TopbarPlus]: https://devforum.roblox.com/t/topbarplus/1017485

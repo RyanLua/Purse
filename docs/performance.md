@@ -16,8 +16,7 @@ Typically around 0.10 to 0.20 MB of memory is used. Purse uses [TopbarPlus], whi
 
 ## CPU
 
-There is no meaningful CPU impact that the [MicroProfiler] or [Script Profiler]
-within the [Developer Console] can measure. No per-frame calculations are made and code is entirely event-driven.
+The [MicroProfiler] and [Script Profiler] within the [Developer Console] cannot measure any meaningful CPU impact. No per-frame calculations are made and the code is entirely event-driven.
 
   [MicroProfiler]: https://create.roblox.com/docs/en-us/performance-optimization/microprofiler
   [Script Profiler]: https://create.roblox.com/docs/en-us/studio/optimization/scriptprofiler

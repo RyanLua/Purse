@@ -1965,7 +1965,7 @@ do -- Make the Inventory expand/collapse arrow (unless TopBar)
 
 	-- 	openClose()
 	-- end
-	StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false) -- ROBLOX deviation: disable CoreGui Backpack
+	StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false) -- ROBLOX deviation: disable CoreGui backpack
 	BackpackScript.OpenClose = openClose -- Exposed
 end
 
