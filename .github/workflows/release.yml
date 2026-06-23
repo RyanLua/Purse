@@ -20,11 +20,7 @@ jobs:
       - name: Install Rokit toolchain
         uses: CompeyDev/setup-rokit@v0.2.1
       - name: Setup Wally
-        env:
-          WALLY_AUTH_TOKEN: ${{ secrets.WALLY_AUTH_TOKEN }}
-        run: |
-          wally login --token "$WALLY_AUTH_TOKEN"
-          wally install
+        run: wally login --token ${{ secrets.WALLY_AUTH_TOKEN }}
       - name: Download build files
         uses: actions/download-artifact@v8
         with:
