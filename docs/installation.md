@@ -17,6 +17,14 @@ Purse uses [RunContext] to run anywhere, so you do not need to move it from [Wor
 
 ## Creator Store
 
+???+ example
+
+    Below is a video on how to install Purse from the Creator Store.
+
+    <div style="position:relative;padding-top:56.25%;">
+      <iframe width=100% height=100% src="https://www.youtube-nocookie.com/embed/yqsc06CTXj4?si=lOvC-8h2bbSHUpk0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;"></iframe>
+    </div>
+
 1. Get the **Purse** model from the [Creator Store].
 
 1. Open Roblox Studio and create a new place or open an existing place.
